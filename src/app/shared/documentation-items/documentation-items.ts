@@ -3,7 +3,6 @@ import { Injectable } from '@angular/core';
 export interface DocItem {
   id: string;
   name: string;
-  packageName?: string;
   examples?: string[];
 }
 
@@ -38,12 +37,6 @@ const DOCS: { [key: string]: DocCategory[] } = {
     }
   ]
 };
-
-for (let category of DOCS[COMPONENTS]) {
-  for (let doc of category.items) {
-    doc.packageName = 'material';
-  }
-}
 
 const ALL_COMPONENTS = DOCS[COMPONENTS].reduce(
   (result, category) => result.concat(category.items), []);
