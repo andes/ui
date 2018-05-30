@@ -15,7 +15,7 @@ export class ComponentPageTitle {
     if (title !== '') {
       title = `${title} | `;
     }
-    this.bodyTitle.setTitle(`${title}Angular Material`);
+    this.bodyTitle.setTitle(`${title}Guías de UI para ANDES`);
   }
 
   constructor(private bodyTitle: Title) { }

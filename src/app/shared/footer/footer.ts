@@ -1,5 +1,4 @@
 import {Component, NgModule} from '@angular/core';
-import {materialVersion} from '../version/version';
 
 @Component({
   selector: 'app-footer',
@@ -7,7 +6,6 @@ import {materialVersion} from '../version/version';
   styleUrls: ['./footer.scss']
 })
 export class Footer {
-  version = materialVersion;
 }
 
 

@@ -3,8 +3,6 @@ import {Injectable} from '@angular/core';
 import {VERSION} from '@angular/material';
 import {ExampleData} from '@angular/material-examples';
 
-import {materialVersion} from '../version/version';
-
 const STACKBLITZ_URL = 'https://run.stackblitz.com/api/angular/v1';
 
 const COPYRIGHT =
@@ -25,9 +23,6 @@ const TAGS: string[] = ['angular', 'material', 'example'];
 const angularVersion = '>=6.0.0-beta.0 <7.0.0';
 
 const dependencies = {
-  '@angular/cdk': materialVersion,
-  '@angular/material': materialVersion,
-  '@angular/material-moment-adapter': materialVersion,
   '@angular/animations': angularVersion,
   '@angular/common': angularVersion,
   '@angular/compiler': angularVersion,
