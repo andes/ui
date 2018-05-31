@@ -32,7 +32,6 @@ export class ExampleViewer {
   @Input()
   set example(example: DocExample) {
     this._example = example;
-    debugger;
     this.selectedPortal = new ComponentPortal(example.component);
   }
 
