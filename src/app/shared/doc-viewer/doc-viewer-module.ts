@@ -1,6 +1,5 @@
 import {DocViewer} from './doc-viewer';
 import {ExampleViewer} from '../example-viewer/example-viewer';
-import {StackblitzButtonModule} from '../stackblitz/stackblitz-button';
 import {
   MatButtonModule,
   MatIconModule,
@@ -24,8 +23,7 @@ import {CopierService} from '../copier/copier.service';
     MatSnackBarModule,
     MatTabsModule,
     CommonModule,
-    PortalModule,
-    StackblitzButtonModule
+    PortalModule
   ],
   providers: [CopierService],
   declarations: [DocViewer, ExampleViewer, HeaderLink],

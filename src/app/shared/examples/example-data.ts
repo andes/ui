@@ -1,7 +1,3 @@
-// The example-module file will be auto-generated. As soon as the
-// examples are being compiled, the module file will be generated.
-import {EXAMPLE_COMPONENTS} from './example-module';
-
 /**
  * Example data
  *   with information about Component name, selector, files used in example, and path to examples
@@ -30,25 +26,12 @@ export class ExampleData {
   componentName: string;
 
   constructor(example: string) {
-    if (!example || !EXAMPLE_COMPONENTS.hasOwnProperty(example)) {
-      return;
-    }
-
-    const exampleConfig = EXAMPLE_COMPONENTS[example];
-
     // TODO(tinayuangao): Do not hard-code extensions
     this.exampleFiles = ['html', 'ts', 'css'].map(extension => `${example}-example.${extension}`);
-    this.examplePath = `/assets/stackblitz/examples/${example}/`;
+    this.examplePath = `/assets/documents/examples/${example}/`;
     this.selectorName = this.indexFilename = `${example}-example`;
-
-    if (exampleConfig.additionalFiles) {
-      this.exampleFiles.push(...exampleConfig.additionalFiles);
-    }
-
     const exampleName = example.replace(/(?:^\w|\b\w)/g, letter => letter.toUpperCase());
-
-    this.description = exampleConfig.title || exampleName.replace(/[\-]+/g, ' ') + ' Example';
-    this.componentName = exampleConfig.selectorName ||
-                          exampleName.replace(/[\-]+/g, '') + 'Example';
+    this.description = exampleName.replace(/[\-]+/g, ' ') + ' Example';
+    this.componentName = exampleName.replace(/[\-]+/g, '') + 'Example';
   }
 }

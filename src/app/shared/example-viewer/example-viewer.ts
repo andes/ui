@@ -1,9 +1,9 @@
-import {Component, Input} from '@angular/core';
-import {MatSnackBar} from '@angular/material';
-import {ComponentPortal} from '@angular/cdk/portal';
-
-import {EXAMPLE_COMPONENTS, LiveExample} from '@angular/material-examples';
-import {CopierService} from '../copier/copier.service';
+import { DocExample } from './../documentation-items/documentation-items';
+import { Component, Input } from '@angular/core';
+import { MatSnackBar } from '@angular/material';
+import { ComponentPortal } from '@angular/cdk/portal';
+import { CopierService } from '../copier/copier.service';
+import { DocumentationItems } from '../documentation-items/documentation-items';
 
 
 @Component({
@@ -16,9 +16,7 @@ export class ExampleViewer {
   selectedPortal: ComponentPortal<any>;
 
   /** String key of the currently displayed example. */
-  _example: string;
-
-  exampleData: LiveExample;
+  _example: DocExample;
 
   /** Whether the source for the example is being displayed. */
   showSource = false;
@@ -32,14 +30,10 @@ export class ExampleViewer {
   }
 
   @Input()
-  set example(example: string) {
-    if (example && EXAMPLE_COMPONENTS[example]) {
-      this._example = example;
-      this.exampleData = EXAMPLE_COMPONENTS[example];
-      this.selectedPortal = new ComponentPortal(this.exampleData.component);
-    } else {
-      console.log('MISSING EXAMPLE: ', example);
-    }
+  set example(example: DocExample) {
+    this._example = example;
+    debugger;
+    this.selectedPortal = new ComponentPortal(example.component);
   }
 
   toggleSourceView(): void {
@@ -47,14 +41,14 @@ export class ExampleViewer {
   }
 
   exampleFileUrl(extension: string) {
-    return `/assets/examples/${this.example}-example-${extension.toLowerCase()}.html`;
+    return `/assets/documents/examples/sourcecode/${this.example.title}-example-${extension.toLowerCase()}.html`;
   }
 
   copySource(text: string) {
     if (this.copier.copyText(text)) {
-      this.snackbar.open('Code copied', '', {duration: 2500});
+      this.snackbar.open('Code copied', '', { duration: 2500 });
     } else {
-      this.snackbar.open('Copy failed. Please try again!', '', {duration: 2500});
+      this.snackbar.open('Copy failed. Please try again!', '', { duration: 2500 });
     }
   }
 }
