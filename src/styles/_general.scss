@@ -53,3 +53,34 @@ code {
   vertical-align: middle;
 }
 
+// Extended
+.docs-navbar-header {
+  background-color: $andes-azul-oscuro!important;
+}
+
+.docs-header-headline {
+  >h1 {
+    color: $andes-azul-oscuro;
+  }
+
+  >h2 {
+    color: $andes-magenta;
+  }
+}
+
+.mat-raised-button{
+  color: white!important;
+  background-color: $andes-azul!important;
+  border-radius: 25px!important;
+}
+
+button {
+  .circular {
+    border-radius: 50%!important;
+  }
+
+  .rounded {
+    border-radius: 25px!important;
+  }
+
+}

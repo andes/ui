@@ -23,21 +23,21 @@ export interface DocCategory {
 
 const DOCS: DocCategory[] = [
   {
-    id: 'forms',
-    name: 'Form Controls',
+    id: 'componentes',
+    name: 'Componentes',
     items: [
       {
-        id: 'autocomplete',
-        name: 'Autocomplete',
+        id: 'layout',
+        name: 'Layout',
         examples: [
-          {
-            title: 'autocomplete-overview',
-            component: AutocompleteOverviewExample
-          },
-          {
-            title: 'autocomplete-optgroup',
-            component: AutocompleteOptgroupExample
-          }
+        //   {
+        //     title: 'autocomplete-overview',
+        //     component: AutocompleteOverviewExample
+        //   },
+        //   {
+        //     title: 'autocomplete-optgroup',
+        //     component: AutocompleteOptgroupExample
+        //   }
         ]
       },
     ]
