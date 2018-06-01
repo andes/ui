@@ -40,6 +40,20 @@ const DOCS: DocCategory[] = [
         //   }
         ]
       },
+      {
+        id: 'bool',
+        name: 'Bool',
+        examples: [
+        //   {
+        //     title: 'autocomplete-overview',
+        //     component: AutocompleteOverviewExample
+        //   },
+        //   {
+        //     title: 'autocomplete-optgroup',
+        //     component: AutocompleteOptgroupExample
+        //   }
+        ]
+      },
     ]
   }
 ];
