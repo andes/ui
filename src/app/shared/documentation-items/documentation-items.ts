@@ -23,23 +23,45 @@ export interface DocCategory {
 
 const DOCS: DocCategory[] = [
   {
+    id: 'layout',
+    name: 'Layout',
+    items: [
+      {
+        id: 'tipologias',
+        name: 'Tipologías',
+        examples: [
+        ]
+      },
+      {
+        id: 'navbar',
+        name: 'Navbar',
+        examples: [
+        ]
+      },
+      {
+        id: 'panel-principal',
+        name: 'Panel principal',
+        examples: [
+        ]
+      },
+      {
+        id: 'panel-lateral',
+        name: 'Panel lateral',
+        examples: [
+        ]
+      },
+      {
+        id: 'footer',
+        name: 'Footer',
+        examples: [
+        ]
+      },
+    ]
+  },
+  {
     id: 'componentes',
     name: 'Componentes',
     items: [
-      {
-        id: 'layout',
-        name: 'Layout',
-        examples: [
-        //   {
-        //     title: 'autocomplete-overview',
-        //     component: AutocompleteOverviewExample
-        //   },
-        //   {
-        //     title: 'autocomplete-optgroup',
-        //     component: AutocompleteOptgroupExample
-        //   }
-        ]
-      },
       {
         id: 'bool',
         name: 'Bool',
@@ -55,7 +77,7 @@ const DOCS: DocCategory[] = [
         ]
       },
     ]
-  }
+  },
 ];
 
 const ALL_COMPONENTS = DOCS.reduce(
