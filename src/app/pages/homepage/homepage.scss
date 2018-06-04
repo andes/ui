@@ -76,6 +76,9 @@ $margin-promotion-sections-small: 15px;
 .docs-homepage-promo-img,
 .docs-homepage-promo-desc {
   width: 50%;
+  >h2 {
+    color: #941b80;
+  }
 }
 
 .docs-homepage-promo-img {

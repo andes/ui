@@ -4,13 +4,51 @@
 
 <body>
     <div class="docs-markdown">
-        <p class="docs-markdown-p">tipologias</p>
-        <h3 id="simple-autocomplete" class="docs-header-link docs-markdown-h3"><span header-link="simple-autocomplete"></span> Simple autocomplete</h3>
-        <p class="docs-markdown-p">Start by adding a regular <code class="docs-markdown-code">matInput</code> to your template. Let's assume you're using the <code class="docs-markdown-code">formControl</code> directive from <code class="docs-markdown-code">ReactiveFormsModule</code>            to track the value of the input.</p>
-        <blockquote>
-            <p class="docs-markdown-p">Note: It is possible to use template-driven forms instead, if you prefer. We use reactive forms in this example because it makes subscribing to changes in the input's value easy. For this example, be sure to import <code class="docs-markdown-code">ReactiveFormsModule</code>                from <code class="docs-markdown-code">@angular/forms</code> into your <code class="docs-markdown-code">NgModule</code>. If you are unfamiliar with using reactive forms, you can read more about the subject in the <a href="https://angular.io/guide/reactive-forms"
-                    class="docs-markdown-a">Angular documentation</a>.</p>
-        </blockquote>
+        <badge class="breadcrump rounded">Layout</badge>
+        <h3 id="simple-autocomplete" class="docs-header-link docs-markdown-h3"><span header-link="simple-autocomplete"></span>Tipologías</h3>
+            <p class="docs-markdown-p">
+                El sistema de interfaces se genera a partir de diferentes esquemas de ordenamiento:
+            </p>
+        <cards-container>
+            <!-- Estándar -->
+            <div class="andes-card">
+                <h4 class="docs-markdown-h4">Estándar</h4>
+                <p class="docs-markdown-p">
+                    Presenta un panel claramente dominante sobre el otro.
+                </p>
+                <img src="assets/img/estandar.png" alt="" class="andes-img">
+                <h5 class="docs-markdown-h5">Cuándo se recomienda utilizar</h5>
+                <p class="note">
+                    Cuando debo crear, visualizar o modificar elementos que se alojan en el panel principal.<br>
+                    <strong>Ej.:</strong> Actualizar la información de un usuario o arrastrar una prestación para ser registrada.
+                </p>
+            </div>
+            <!-- Equilibrado -->
+            <div class="andes-card">
+                <h4 class="docs-markdown-h4">Equilibrado</h4>
+                <p class="docs-markdown-p">
+                    Se subdivide la pantalla en dos campos de igual dimensión.
+                </p>
+                <img src="assets/img/equal.png" alt="" class="andes-img">
+                <h5 class="docs-markdown-h5">Cuándo se recomienda utilizar</h5>
+                <p class="note">
+                    Cuando  el volumen y la calidad de la información en ambos paneles es igualmente relevante.<br><strong>Ej.:</strong> Comparación de conflicto de datos entre usuarios MPI.
+                </p>
+            </div>
+            <!-- Full-screen -->
+            <div class="andes-card">
+                <h4 class="docs-markdown-h4">Pantalla completa</h4>
+                <p class="docs-markdown-p">
+                    Se compone de un sólo panel que abarca la totalidad de la pantalla.
+                </p>
+                <img src="assets/img/full.png" alt="" class="andes-img">
+                <h5 class="docs-markdown-h5">Cuándo se recomienda utilizar</h5>
+                <p class="note">
+                    Cuando la operación que está siendo ejecutada requiere que el usuario este sólo enfocado en una pantalla.<br>
+                    <strong>Ej.:</strong> visualización de un informe o un resumen de consulta.
+                </p>
+            </div>
+        </cards-container>
     </div>
 </body>
 

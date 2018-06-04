@@ -13,26 +13,42 @@
 
 .docs-markdown-h2 {
   font-size: 24px;
+  @extend %base;
 }
 
-.docs-markdown-h3 {
-  font-size: 20px;
+%base {
+  font-weight: 400;
+  color: $andes-magenta;
+}
+
+[class$="-h3"],[class$="-h4"] {
+  @extend %base;
+  border-bottom: solid 1px $andes-magenta;
 }
 
 .docs-markdown-h2,
 .docs-markdown-h4 {
-  margin-top: 40px;
+  // margin-top: 40px;
 }
 
 .docs-markdown-h5 {
-  font-size: 18px;
+  font-size: 14px;
+  @extend %base;
+}
+
+p.note {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  font-style: italic;
+  color: gray;
 }
 
 .docs-markdown-p,
 .docs-markdown-ul,
 .docs-markdown-ol {
-  font-size: 16px;
-  line-height: 28px;
+    font-size: 16px;
+    line-height: 22px;
 }
 
 .docs-markdown-a {

@@ -27,7 +27,7 @@ import {ComponentPageTitle} from '../page-title/page-title';
 })
 export class ComponentViewer implements OnDestroy {
   componentDocItem: DocItem;
-  sections: Set<string> = new Set(['overview', 'api']);
+  sections: Set<string> = new Set(['descripción', 'api']);
   private _destroyed = new Subject();
 
   constructor(_route: ActivatedRoute,

@@ -58,6 +58,7 @@ code {
   background-color: $andes-azul-oscuro!important;
 }
 
+// Tipografia
 .docs-header-headline {
   >h1 {
     color: $andes-azul-oscuro;
@@ -68,19 +69,76 @@ code {
   }
 }
 
+.breadcrump {
+  font-size: 10px;
+  line-height: 16px;
+  text-transform: uppercase;
+  border: solid 1px $andes-azul;
+  color: $andes-azul;
+  padding: 5px 10px;
+  width: fit-content;
+  margin-bottom: 25px; 
+}
+
 .mat-raised-button{
   color: white!important;
   background-color: $andes-azul!important;
   border-radius: 25px!important;
 }
 
-button {
-  .circular {
+button,badge,span, div {
+  &.circular {
     border-radius: 50%!important;
   }
 
-  .rounded {
+  &.rounded {
     border-radius: 25px!important;
   }
 
+  &.outline {
+    // border: solid 1px $andes-magenta;
+    background-color: $andes-magenta;
+    color: white;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    margin-right: 10px;
+    justify-content: center;
+    align-items: center;
+  }
 }
+
+
+// Images
+cards-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  flex-direction: row;
+  align-content: flex-start;
+  width: 100%;
+
+  >.andes-card {
+    width: 45%;
+    max-width: 100%;
+    height: fit-content;
+
+    >.andes-card-header {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .andes-card {
+      width: 100%;
+    }
+  }
+
+}
+
+  img.andes-img {
+    width: 100%;
+    }

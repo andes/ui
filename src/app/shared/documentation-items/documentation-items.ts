@@ -24,8 +24,14 @@ export interface DocCategory {
 const DOCS: DocCategory[] = [
   {
     id: 'layout',
-    name: 'Layout',
+    name: 'Plex-layout',
     items: [
+      {
+        id: 'layout-intro',
+        name: 'Qué es un layout?',
+        examples: [
+        ]
+      },
       {
         id: 'tipologias',
         name: 'Tipologías',
@@ -53,6 +59,18 @@ const DOCS: DocCategory[] = [
       {
         id: 'footer',
         name: 'Footer',
+        examples: [
+        ]
+      },
+    ]
+  },
+  {
+    id: 'button',
+    name: 'Plex-button',
+    items: [
+      {
+        id: 'plex-button',
+        name: 'Botones',
         examples: [
         ]
       },

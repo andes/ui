@@ -24,6 +24,7 @@
     }
     .docs-primary-header {
         background: mat-color($primary);
+        background-color: $andes-azul;
         h1 {
             color: mat-color($primary, default-contrast);
         }
