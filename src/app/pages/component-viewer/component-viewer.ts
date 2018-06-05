@@ -46,8 +46,8 @@ export class ComponentViewer implements OnDestroy {
           if (this.componentDocItem) {
             this._componentPageTitle.title = `${this.componentDocItem.name}`;
             this.componentDocItem.examples.length ?
-                this.sections.add('examples') :
-                this.sections.delete('examples');
+                this.sections.add('ejemplos') :
+                this.sections.delete('ejemplos');
           } else {
             this.router.navigate(['/' + d.section]);
           }
@@ -99,7 +99,7 @@ export class ComponentApi extends ComponentOverview {}
   templateUrl: './component-examples.html',
   encapsulation: ViewEncapsulation.None,
 })
-export class ComponentExamples extends ComponentOverview {}
+export class Componentexamples extends ComponentOverview {}
 
 @NgModule({
   imports: [
@@ -110,7 +110,7 @@ export class ComponentExamples extends ComponentOverview {}
     TableOfContentsModule,
   ],
   exports: [ComponentViewer],
-  declarations: [ComponentViewer, ComponentOverview, ComponentApi, ComponentExamples],
+  declarations: [ComponentViewer, ComponentOverview, ComponentApi, Componentexamples],
   providers: [DocumentationItems, ComponentPageTitle],
 })
 export class ComponentViewerModule {}

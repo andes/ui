@@ -9,7 +9,7 @@ export class State {
 }
 
 /**
- * @title Autocomplete overview
+ * @title Layout overview
  */
 @Component({
   selector: 'autocomplete-overview-example',

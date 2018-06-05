@@ -1,7 +1,11 @@
 import { Injectable, Component } from '@angular/core';
+import { ComponentType } from '@angular/cdk/portal';
 import { AutocompleteOverviewExample } from '../examples/autocomplete-overview/autocomplete-overview-example';
 import { AutocompleteOptgroupExample } from '../examples/autocomplete-optgroup/autocomplete-optgroup-example';
-import { ComponentType } from '@angular/cdk/portal';
+import { LayoutOverviewExample } from '../examples/layout-overview/layout-overview-example';
+import { LayoutOptgroupExample } from '../examples/layout-optgroup/layout-optgroup-example';
+import { TipologiasOverviewExample } from '../examples/tipologias-overview/tipologias-overview-example';
+import { TipologiasOptgroupExample } from '../examples/tipologias-optgroup/tipologias-optgroup-example';
 
 export interface DocExample {
   title: string;
@@ -30,12 +34,28 @@ const DOCS: DocCategory[] = [
         id: 'layout-intro',
         name: 'Qué es un layout?',
         examples: [
+          {
+            title: 'tipologias-overview',
+            component: TipologiasOptgroupExample
+          },
+          {
+            title: 'tipologias-optgroup',
+            component: TipologiasOptgroupExample
+          }
         ]
       },
       {
         id: 'tipologias',
         name: 'Tipologías',
         examples: [
+          {
+            title: 'layout-overview',
+            component: LayoutOverviewExample
+          },
+          {
+            title: 'layout-optgroup',
+            component: LayoutOptgroupExample
+          }
         ]
       },
       {
@@ -84,14 +104,6 @@ const DOCS: DocCategory[] = [
         id: 'bool',
         name: 'Bool',
         examples: [
-        //   {
-        //     title: 'autocomplete-overview',
-        //     component: AutocompleteOverviewExample
-        //   },
-        //   {
-        //     title: 'autocomplete-optgroup',
-        //     component: AutocompleteOptgroupExample
-        //   }
         ]
       },
     ]

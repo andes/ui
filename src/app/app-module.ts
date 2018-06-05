@@ -21,14 +21,16 @@ import { SvgViewerModule } from './shared/svg-viewer/svg-viewer';
 import { NavBarModule } from './shared/navbar/navbar';
 import { DocumentationItems } from './shared/documentation-items/documentation-items';
 import { DocViewerModule } from './shared/doc-viewer/doc-viewer-module';
-import {
-  CanActivateComponentSidenav
-} from './pages/component-sidenav/component-sidenav-can-load-guard';
+import { CanActivateComponentSidenav } from './pages/component-sidenav/component-sidenav-can-load-guard';
 import { HttpClientModule } from '@angular/common/http';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { AutocompleteOverviewExample } from './shared/examples/autocomplete-overview/autocomplete-overview-example';
 import { AutocompleteOptgroupExample } from './shared/examples/autocomplete-optgroup/autocomplete-optgroup-example';
+import { LayoutOverviewExample } from './shared/examples/layout-overview/layout-overview-example';
+import { LayoutOptgroupExample } from './shared/examples/layout-optgroup/layout-optgroup-example';
+import { TipologiasOverviewExample } from './shared/examples/tipologias-overview/tipologias-overview-example';
+import { TipologiasOptgroupExample } from './shared/examples/tipologias-optgroup/tipologias-optgroup-example';
 
 @NgModule({
   imports: [
@@ -70,12 +72,18 @@ import { AutocompleteOptgroupExample } from './shared/examples/autocomplete-optg
   entryComponents: [
     AutocompleteOptgroupExample,
     AutocompleteOverviewExample,
+    LayoutOverviewExample,
+    LayoutOptgroupExample
   ],
   declarations: [
     MaterialDocsApp,
-    // Examples
+    // examples
     AutocompleteOptgroupExample,
-    AutocompleteOverviewExample],
+    AutocompleteOverviewExample,
+    LayoutOverviewExample,
+    LayoutOptgroupExample,
+    TipologiasOverviewExample,
+    TipologiasOptgroupExample],
   providers: [
     ComponentPageTitle,
     DocumentationItems,

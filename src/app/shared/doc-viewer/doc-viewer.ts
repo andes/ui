@@ -77,11 +77,11 @@ export class DocViewer implements OnDestroy {
       `Failed to load document: ${url}. Error: ${error.statusText}`;
   }
 
-  releadLiveExamples() {
+  releadLiveexamples() {
     // When the example viewer is dynamically loaded inside of md-tabs, they somehow end up in
     // the wrong place in the DOM after switching tabs. This function is a workaround to
     // put the live examples back in the right place.
-    this._clearLiveExamples();
+    this._clearLiveexamples();
     this._loadComponents('material-docs-example', ExampleViewer);
     this._loadComponents('header-link', HeaderLink);
   }
@@ -103,7 +103,7 @@ export class DocViewer implements OnDestroy {
     });
   }
 
-  private _clearLiveExamples() {
+  private _clearLiveexamples() {
     this._portalHosts.forEach(h => h.dispose());
     this._portalHosts = [];
   }
@@ -128,7 +128,7 @@ export class DocViewer implements OnDestroy {
   }
 
   ngOnDestroy() {
-    this._clearLiveExamples();
+    this._clearLiveexamples();
 
     if (this._documentFetchSubscription) {
       this._documentFetchSubscription.unsubscribe();

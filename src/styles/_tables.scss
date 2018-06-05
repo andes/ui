@@ -1,5 +1,10 @@
 @import './constants';
 
+xmp.andes-wrap {
+  white-space: pre-wrap;
+}
+
+
 .docs-api table,
 .docs-markdown-table {
   border-collapse: collapse;
@@ -23,7 +28,6 @@
   font-weight: 400;
   padding: 8px 16px;
 }
-
 
 @media (max-width: $small-breakpoint-width) {
   .docs-api table,

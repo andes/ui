@@ -3,7 +3,7 @@ import {ComponentList} from './pages/component-list';
 import {Routes} from '@angular/router';
 import {
   ComponentApi,
-  ComponentExamples,
+  Componentexamples,
   ComponentOverview,
   ComponentViewer
 } from './pages/component-viewer/component-viewer';
@@ -39,7 +39,7 @@ export const MATERIAL_DOCS_ROUTES: Routes = [
           {path: '', redirectTo: 'overview', pathMatch: 'full'},
           {path: 'overview', component: ComponentOverview, pathMatch: 'full'},
           {path: 'api', component: ComponentApi, pathMatch: 'full'},
-          {path: 'examples', component: ComponentExamples, pathMatch: 'full'},
+          {path: 'ejemplos', component: Componentexamples, pathMatch: 'full'},
           {path: '**', redirectTo: 'overview'},
         ],
       },
