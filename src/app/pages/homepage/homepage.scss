@@ -5,6 +5,8 @@ $margin-promotion-sections-small: 15px;
 .docs-header-background {
   overflow: hidden;
   background-image: url("/assets/img/homepage/andes-home-banner.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
   background-position-y: -75px;
   object-fit: fill;
 }

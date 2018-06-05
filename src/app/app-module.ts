@@ -31,6 +31,8 @@ import { LayoutOverviewExample } from './shared/examples/layout-overview/layout-
 import { LayoutOptgroupExample } from './shared/examples/layout-optgroup/layout-optgroup-example';
 import { TipologiasOverviewExample } from './shared/examples/tipologias-overview/tipologias-overview-example';
 import { TipologiasOptgroupExample } from './shared/examples/tipologias-optgroup/tipologias-optgroup-example';
+import { BoolOverviewExample } from './shared/examples/bool-overview/bool-overview-example';
+import { BoolOptgroupExample } from './shared/examples/bool-optgroup/bool-optgroup-example';
 
 @NgModule({
   imports: [
@@ -73,7 +75,11 @@ import { TipologiasOptgroupExample } from './shared/examples/tipologias-optgroup
     AutocompleteOptgroupExample,
     AutocompleteOverviewExample,
     LayoutOverviewExample,
-    LayoutOptgroupExample
+    LayoutOptgroupExample,
+    TipologiasOverviewExample,
+    TipologiasOptgroupExample,
+    BoolOverviewExample,
+    BoolOptgroupExample
   ],
   declarations: [
     MaterialDocsApp,
@@ -83,7 +89,10 @@ import { TipologiasOptgroupExample } from './shared/examples/tipologias-optgroup
     LayoutOverviewExample,
     LayoutOptgroupExample,
     TipologiasOverviewExample,
-    TipologiasOptgroupExample],
+    TipologiasOptgroupExample,
+    BoolOverviewExample,
+    BoolOptgroupExample
+  ],
   providers: [
     ComponentPageTitle,
     DocumentationItems,

@@ -6,6 +6,8 @@ import { LayoutOverviewExample } from '../examples/layout-overview/layout-overvi
 import { LayoutOptgroupExample } from '../examples/layout-optgroup/layout-optgroup-example';
 import { TipologiasOverviewExample } from '../examples/tipologias-overview/tipologias-overview-example';
 import { TipologiasOptgroupExample } from '../examples/tipologias-optgroup/tipologias-optgroup-example';
+// import { BoolOverviewExample } from '../examples/bool-overview/bool-overview-example';
+import { BoolOptgroupExample } from '../examples/bool-optgroup/bool-optgroup-example';
 
 export interface DocExample {
   title: string;
@@ -34,28 +36,28 @@ const DOCS: DocCategory[] = [
         id: 'layout-intro',
         name: 'Qué es un layout?',
         examples: [
-          {
-            title: 'tipologias-overview',
-            component: TipologiasOptgroupExample
-          },
-          {
-            title: 'tipologias-optgroup',
-            component: TipologiasOptgroupExample
-          }
+          // {
+          //   title: 'tipologias-overview',
+          //   component: TipologiasOptgroupExample
+          // },
+          // {
+          //   title: 'tipologias-optgroup',
+          //   component: TipologiasOptgroupExample
+          // }
         ]
       },
       {
         id: 'tipologias',
         name: 'Tipologías',
         examples: [
-          {
-            title: 'layout-overview',
-            component: LayoutOverviewExample
-          },
-          {
-            title: 'layout-optgroup',
-            component: LayoutOptgroupExample
-          }
+          // {
+          //   title: 'layout-overview',
+          //   component: LayoutOverviewExample
+          // },
+          // {
+          //   title: 'layout-optgroup',
+          //   component: LayoutOptgroupExample
+          // }
         ]
       },
       {
@@ -84,18 +86,18 @@ const DOCS: DocCategory[] = [
       },
     ]
   },
-  {
-    id: 'button',
-    name: 'Plex-button',
-    items: [
-      {
-        id: 'plex-button',
-        name: 'Botones',
-        examples: [
-        ]
-      },
-    ]
-  },
+  // {
+  //   id: 'button',
+  //   name: 'Plex-button',
+  //   items: [
+  //     {
+  //       id: 'plex-button',
+  //       name: 'Botones',
+  //       examples: [
+  //       ]
+  //     },
+  //   ]
+  // },
   {
     id: 'componentes',
     name: 'Componentes',
@@ -104,6 +106,14 @@ const DOCS: DocCategory[] = [
         id: 'bool',
         name: 'Bool',
         examples: [
+          // {
+          //   title: 'bool-overview',
+          //   component: BoolOverviewExample
+          // },
+          // {
+          //   title: 'bool-optgroup',
+          //   component: BoolOptgroupExample
+          // }
         ]
       },
     ]

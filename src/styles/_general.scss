@@ -118,17 +118,26 @@ cards-container {
   align-content: flex-start;
   width: 100%;
 
-  >.andes-card {
-    width: 45%;
+  %base {
     max-width: 100%;
     height: fit-content;
+  }
 
-    >.andes-card-header {
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-start;
-      align-items: center;
-    }
+  .andes-card-30 {
+    @extend %base;
+    width: 30%;
+  }
+
+  .andes-card {
+    @extend %base;
+    width: 45%;
+  }
+
+  .andes-card-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
   }
 
   @media screen and (max-width: 768px) {
