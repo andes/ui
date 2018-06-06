@@ -4,11 +4,16 @@ $margin-promotion-sections-small: 15px;
 
 .docs-header-background {
   overflow: hidden;
-  background-image: url("/assets/img/homepage/andes-home-banner.jpg");
-  background-repeat: no-repeat;
+  // background-image: url("");
+  // background-repeat: no-repeat;
   background-size: 100%;
   background-position-y: -75px;
-  object-fit: fill;
+
+  >.andes-bg-img {
+    object-fit: cover;
+    position: absolute;
+    z-index: -9999;
+  }
 }
 
 .docs-header-section {
