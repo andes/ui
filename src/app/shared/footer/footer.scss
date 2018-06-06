@@ -2,10 +2,17 @@
   padding: 12px;
   font-size: 12px;
   margin-top: 40px;
+
+  img {
+    align-self: center;
+    width: 400px;
+  }
 }
 
 .docs-footer-list {
   align-items: center;
+  justify-content: center;
+  align-content: center;
   display: flex;
   flex-flow: row wrap;
   padding: 8px;
@@ -54,5 +61,10 @@
 @media screen and (max-width: 884px){
   .docs-footer-list {
     flex-direction: column;
+
+    img {
+      align-self: center;
+      width: 300px;
+    }
   }
 }

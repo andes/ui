@@ -2,18 +2,18 @@
 $margin-promotion-sections: 60px;
 $margin-promotion-sections-small: 15px;
 
+
 .docs-header-background {
   overflow: hidden;
-  // background-image: url("");
-  // background-repeat: no-repeat;
+  background-image: url("/assets/img/homepage/andes-home-banner.jpg");
+  background-repeat: no-repeat;
   background-size: 100%;
   background-position-y: -75px;
 
-  >.andes-bg-img {
-    object-fit: cover;
-    position: absolute;
-    z-index: -9999;
-  }
+  @media screen and (max-width: 720px) {
+    background-size: 100vh;
+    background-position-y: 0px;
+    }
 }
 
 .docs-header-section {

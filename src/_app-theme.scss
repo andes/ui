@@ -30,7 +30,7 @@
         }
     }
     .docs-footer {
-        background: mat-color($primary);
+        background: #662482;
         color: mat-color($primary, default-contrast);
     }
     @include component-category-list-theme($theme);
