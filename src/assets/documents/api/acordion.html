@@ -1,0 +1,86 @@
+<div class="docs-api">
+    <h2>Plex Accordion</h2>
+    <p>
+        <code>
+            &#x3C;plex-accordion&#x3E;
+            &#x3C;plex-panel&#x3E;
+              &#x3C;div plex-accordion-title&#x3E;
+                T&#xED;tulo panel
+              &#x3C;/div&#x3E;
+              Contenido panel
+            &#x3C;/plex-panel&#x3E;
+            &#x3C;plex-panel&#x3E;
+              &#x3C;div plex-accordion-title&#x3E;
+                T&#xED;tulo panel 2
+              &#x3C;/div&#x3E;
+              Contenido panel 2
+            &#x3C;/plex-panel&#x3E;
+          &#x3C;/plex-accordion&#x3E;
+        </code>
+    </p>
+    <!-- <p class="docs-api-module-import"><code>import {MatAutocompleteModule} from '@angular/material/autocomplete';</code></p> -->
+    <h3 id="directives" class="docs-header-link docs-api-h3"><span header-link="directives"></span> Directives</h3>
+    <h4 id="MatAutocomplete" class="docs-header-link docs-api-h4 docs-api-class-name"><span header-link="MatAutocomplete"></span> <code>PlexAccordion</code></h4>
+    <p class="docs-api-directive-selectors"><span class="docs-api-class-selector-label">Selector:</span> <span class="docs-api-class-selector-name">plex-accordion</span></p>
+    <span class="docs-api-class-export-label">Exported as:</span> <span class="docs-api-class-export-name">PlexAccordionComponent</span>
+
+
+    <h3 id="directives" class="docs-header-link docs-api-h3"><span header-link="directives"></span> Directives</h3>
+    <h4 id="MatAutocomplete" class="docs-header-link docs-api-h4 docs-api-class-name"><span header-link="MatAutocomplete"></span> <code>PlexPanel</code></h4>
+    <p class="docs-api-directive-selectors"><span class="docs-api-class-selector-label">Selector:</span> <span class="docs-api-class-selector-name">plex-panel</span></p>
+    <span class="docs-api-class-export-label">Exported as:</span> <span class="docs-api-class-export-name">PlexPanelComponent</span>
+
+    <h5 class="docs-api-h5 docs-api-method-header">Propiedades</h5>
+    <table class="docs-api-properties-table">
+        <tr class="docs-api-properties-header-row">
+            <th class="docs-api-properties-th">Nombre</th>
+            <th class="docs-api-properties-th">Descripción</th>
+        </tr>
+        <tr class="docs-api-properties-row">
+            <td class="docs-api-properties-name-cell">
+                <div class="docs-api-input-marker">@Input()</div>
+                <p class="docs-api-property-name"><code>tituloPrincipal: string</code></p>
+            </td>
+            <td class="docs-api-property-description">
+                <p> Titulo principal para mostrar.</p>
+            </td>
+        </tr>
+        <tr class="docs-api-properties-row">
+            <td class="docs-api-properties-name-cell">
+                <div class="docs-api-input-marker">@Input()</div>
+                <p class="docs-api-property-name"><code>tituloSecundario: string</code></p>
+            </td>
+            <td class="docs-api-property-description">
+                <p> Titulo secundario para mostrar.</p>
+            </td>
+        </tr>
+        <tr class="docs-api-properties-row">
+            <td class="docs-api-properties-name-cell">
+                <div class="docs-api-input-marker">@Input()</div>
+                <p class="docs-api-property-name"><code>icon: string</code></p>
+            </td>
+            <td class="docs-api-property-description">
+                <p> Icono para mostrar con el icono.</p>
+            </td>
+        </tr>     
+                
+        <tr class="docs-api-properties-row">
+                <td class="docs-api-properties-name-cell">
+                    <div class="docs-api-input-marker">@Input()</div>
+                    <p class="docs-api-property-name"><code>active: boolean</code></p>
+                </td>
+                <td class="docs-api-property-description">
+                    <p>Determina si el panel esta desplegado o no.</p>
+                </td>
+            </tr>   
+        <tr class="docs-api-properties-row">
+            <td class="docs-api-properties-name-cell">
+                <div class="docs-api-output-marker">@Output()</div>
+                <p class="docs-api-property-name"><code>toggle: EventEmitter&lt;bool&gt;</code></p>
+            </td>
+            <td class="docs-api-property-description">
+                <p>Cuando el usuario hace click en el título del panel se muestra o no el contenido del mismo y se emite el evento <code>toogle</code>.</p>
+            </td>
+        </tr>             
+    </table>
+</div>
