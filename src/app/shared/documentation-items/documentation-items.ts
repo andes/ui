@@ -125,6 +125,11 @@ const DOCS: DocCategory[] = [
         id: 'button',
         name: 'Button',
         examples: []
+      },
+      {
+        id: 'badge',
+        name: 'Badge',
+        examples: []
       }
     ]
   },
