@@ -118,7 +118,13 @@ const DOCS: DocCategory[] = [
       },
       {
         id: 'accordion',
-        name: 'Accordion'
+        name: 'Accordion',
+        examples: []
+      },
+      {
+        id: 'button',
+        name: 'Button',
+        examples: []
       }
     ]
   },
