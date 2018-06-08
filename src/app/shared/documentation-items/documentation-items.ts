@@ -116,6 +116,10 @@ const DOCS: DocCategory[] = [
           // }
         ]
       },
+      {
+        id: 'accordion',
+        name: 'Accordion'
+      }
     ]
   },
 ];
