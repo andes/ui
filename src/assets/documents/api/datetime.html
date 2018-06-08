@@ -3,7 +3,14 @@
     <p>
         <code>
             <pre>
-&#x3C;plex-button label=&#x22;Success&#x22; type=&#x22;success&#x22; icon=&#x22;account&#x22;&#x3E;&#x3C;/plex-button&#x3E;
+    &#x3C;plex-datetime label=&#x22;Ingrese la fecha y la hora del evento&#x22; [(ngModel)]=&#x22;tModel.fechaHora&#x22; name=&#x22;fechaHora&#x22; required&#x3E;&#x3C;/plex-datetime&#x3E;
+            </pre>
+        </code>
+    </p> 
+    <p>
+        <code>
+            <pre>
+    &#x3C;plex-datetime label=&#x22;Ingrese la fecha del cumplea&#xF1;os mayor a 1/1/1970&#x22; type=&#x22;date&#x22; [(ngModel)]=&#x22;tModel.fecha&#x22; name=&#x22;fecha&#x22; [required]=&#x22;true&#x22; [min]=&#x22;tModel.min&#x22; [max]=&#x22;tModel.max&#x22;&#x3E;&#x3C;/plex-datetime&#x3E;
             </pre>
         </code>
     </p> 
