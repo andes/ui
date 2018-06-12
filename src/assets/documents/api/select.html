@@ -3,8 +3,16 @@
     <p>
         <code>
             <pre>
-    &#x3C;plex-text label=&#x22;Ingrese su usuario&#x22; placeholder=&#x22;Esta es una ayuda&#x22; prefix=&#x22;&#x3C;i class=&#x27;mdi mdi-barcode&#x27;&#x3E;&#x3C;/i&#x3E;&#x22; 
-            [(ngModel)]=&#x22;nombre&#x22; name=&#x22;usuario&#x22; [required]=&#x22;true&#x22; (focus)=&#x22;onFocus()&#x22; (focusout)=&#x22;onFocusout()&#x22;&#x3E;
+        &#x3C;plex-select [(ngModel)]=&#x22;modelo1.select&#x22; name=&#x22;select&#x22; [data]=&#x22;opciones&#x22; 
+            label-field=&#x22;nombre + &#x27; (&#x27; + continente + &#x27;)&#x27;&#x22; label=&#x22;Seleccione un pa&#xED;s&#x22;&#x3E;
+        &#x3C;/plex-select&#x3E;
+            </pre>
+        </code>
+    </p> 
+    <p>
+        <code>
+            <pre>
+        &#x3C;plex-select [(ngModel)]=&#x22;modelo2.select&#x22; name=&#x22;select&#x22; (getData)=&#x22;loadData($event)&#x22; label=&#x22;Select simple&#x22;&#x3E;
             </pre>
         </code>
     </p> 
