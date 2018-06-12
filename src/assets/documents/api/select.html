@@ -1,0 +1,173 @@
+<div class="docs-api">
+    <h2>Plex Button</h2>
+    <p>
+        <code>
+            <pre>
+    &#x3C;plex-text label=&#x22;Ingrese su usuario&#x22; placeholder=&#x22;Esta es una ayuda&#x22; prefix=&#x22;&#x3C;i class=&#x27;mdi mdi-barcode&#x27;&#x3E;&#x3C;/i&#x3E;&#x22; 
+            [(ngModel)]=&#x22;nombre&#x22; name=&#x22;usuario&#x22; [required]=&#x22;true&#x22; (focus)=&#x22;onFocus()&#x22; (focusout)=&#x22;onFocusout()&#x22;&#x3E;
+            </pre>
+        </code>
+    </p> 
+    <h3 id="components" class="docs-header-link docs-api-h3">
+        <span header-link="components"></span> Componente
+    </h3>
+    <h4 id="PlexSelect" class="docs-header-link docs-api-h4 docs-api-class-name">
+        <span header-link="PlexSelect"></span> 
+        <code>PlexText</code>
+    </h4>
+    <p class="docs-api-directive-selectors">
+        <span class="docs-api-class-selector-label">Selector:</span> 
+        <span class="docs-api-class-selector-name">plex-select</span>
+    </p>
+    <span class="docs-api-class-export-label">Exported as:</span> 
+    <span class="docs-api-class-export-name">PlexSelectComponent</span>
+
+    <h5 class="docs-api-h5 docs-api-method-header">Propiedades</h5>
+    <table class="docs-api-properties-table">
+        <tr class="docs-api-properties-header-row">
+            <th class="docs-api-properties-th">Nombre</th>
+            <th class="docs-api-properties-th">Descripción</th>
+        </tr>
+        <tr class="docs-api-properties-row">
+            <td class="docs-api-properties-name-cell">
+                <div class="docs-api-input-marker">@Input()</div>
+                <p class="docs-api-property-name"><code>label: string</code></p>
+            </td>
+            <td class="docs-api-property-description">
+                <p> Etiqueta para mostrar en el botón.</p>
+            </td>
+        </tr>
+        <tr class="docs-api-properties-row">
+            <td class="docs-api-properties-name-cell">
+                <div class="docs-api-input-marker">@Input()</div>
+                <p class="docs-api-property-name"><code>placeholder: string</code></p>
+            </td>
+            <td class="docs-api-property-description">
+                <p> Placeholder a mostrar en el input.</p>
+            </td>
+        </tr>  
+        <tr class="docs-api-properties-row">
+            <td class="docs-api-properties-name-cell">
+                <div class="docs-api-input-marker">@Input()</div>
+                <p class="docs-api-property-name"><code>readonly: bool</code></p>
+            </td>
+            <td class="docs-api-property-description">
+                <p> Controlador de solo lectura. No se puede editar.</p>
+            </td>
+        </tr>
+        <tr class="docs-api-properties-row">
+            <td class="docs-api-properties-name-cell">
+                <div class="docs-api-input-marker">@Input()</div>
+                <p class="docs-api-property-name"><code>required: bool</code></p>
+            </td>
+            <td class="docs-api-property-description">
+                <p> Campo requerido por el formulario. </p>
+            </td>
+        </tr>
+
+        <tr class="docs-api-properties-row">
+            <td class="docs-api-properties-name-cell">
+                <div class="docs-api-input-marker">@Input()</div>
+                <p class="docs-api-property-name"><code>multiple: bool</code></p>
+            </td>
+            <td class="docs-api-property-description">
+                <p> Habilita la selección multiple de elementos. </p>
+            </td>
+        </tr>
+
+        <tr class="docs-api-properties-row">
+            <td class="docs-api-properties-name-cell">
+                <div class="docs-api-input-marker">@Input()</div>
+                <p class="docs-api-property-name"><code>idField: string</code></p>
+            </td>
+            <td class="docs-api-property-description">
+                <p> Determina el del campo a utilizar como clave. Defualt: <code> 'id' </code> </p>
+            </td>
+        </tr>
+
+        <tr class="docs-api-properties-row">
+            <td class="docs-api-properties-name-cell">
+                <div class="docs-api-input-marker">@Input()</div>
+                <p class="docs-api-property-name"><code>labelField: string</code></p>
+            </td>
+            <td class="docs-api-property-description">
+                <p> Label dinámico para mostrar de cada elemento. Ejemplo: "apellido + nombre"</p>
+            </td>
+        </tr>
+
+        <tr class="docs-api-properties-row">
+            <td class="docs-api-properties-name-cell">
+                <div class="docs-api-input-marker">@Input()</div>
+                <p class="docs-api-property-name"><code>closeAfterSelect: bool</code></p>
+            </td>
+            <td class="docs-api-property-description">
+                <p> Cierra el listado de opciones luego de seleccionar una.</p>
+            </td>
+        </tr>
+
+        <tr class="docs-api-properties-row">
+            <td class="docs-api-properties-name-cell">
+                <div class="docs-api-input-marker">@Input()</div>
+                <p class="docs-api-property-name"><code>data: Array&lt;any&gt;</code></p>
+            </td>
+            <td class="docs-api-property-description">
+                <p> Listado de items disponible para elegir.</p>
+            </td>
+        </tr>
+  
+        <tr class="docs-api-properties-row">
+            <td class="docs-api-properties-name-cell">
+                <div class="docs-api-output-marker">@Output()</div>
+                <p class="docs-api-property-name"><code>getData: EventEmitter&lt;SelectEvent&gt;</code></p>
+            </td>
+            <td class="docs-api-property-description">
+                <p> Evento emitido cuando se escribe en el input. Permite realizar una request al servidor para traer resultados. </p>
+            </td>
+        </tr>    
+        
+        <tr class="docs-api-properties-row">
+            <td class="docs-api-properties-name-cell">
+                <div class="docs-api-output-marker">@Output()</div>
+                <p class="docs-api-property-name"><code>change: EventEmitter&lt;void&gt;</code></p>
+            </td>
+            <td class="docs-api-property-description">
+                <p> Evento emitido cuando se modifica el elemento. </p>
+            </td>
+        </tr> 
+    </table>
+
+    <h3 id="interface" class="docs-header-link docs-api-h3">
+        <span header-link="interface"></span> Interface
+    </h3>
+    <h4 id="SelectEvent" class="docs-header-link docs-api-h4 docs-api-class-name">
+        <span header-link="SelectEvent"></span> 
+        <code>SelectEvent</code>
+    </h4>
+    <span class="docs-api-class-export-label">Exported as:</span> 
+    <span class="docs-api-class-export-name">SelectEvent</span>
+
+    <h5 class="docs-api-h5 docs-api-method-header">Propiedades</h5>
+    <table class="docs-api-properties-table">
+        <tr class="docs-api-properties-header-row">
+            <th class="docs-api-properties-th">Nombre</th>
+            <th class="docs-api-properties-th">Descripción</th>
+        </tr>
+        <tr class="docs-api-properties-row">
+            <td class="docs-api-properties-name-cell">
+                <p class="docs-api-property-name"><code>query: string</code></p>
+            </td>
+            <td class="docs-api-property-description">
+                <p> Texto escrito por el usuario. </p>
+            </td>
+        </tr>
+        <tr class="docs-api-properties-row">
+            <td class="docs-api-properties-name-cell">
+                <p class="docs-api-property-name"><code>callback: Function</code></p>
+            </td>
+            <td class="docs-api-property-description">
+                <p> Función para devolver los items a mostrar luego de aplicar los filtros dinámicos. </p>
+            </td>
+        </tr>
+
+    </table>
+</div>

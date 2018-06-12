@@ -140,6 +140,11 @@ const DOCS: DocCategory[] = [
         id: 'text',
         name: 'Text',
         examples: []
+      },
+      {
+        id: 'select',
+        name: 'Select',
+        examples: []
       }
     ]
   },
