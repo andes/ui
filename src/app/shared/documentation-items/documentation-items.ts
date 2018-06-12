@@ -30,7 +30,7 @@ export interface DocCategory {
 const DOCS: DocCategory[] = [
   {
     id: 'layout',
-    name: 'Plex-layout',
+    name: 'Layout',
     items: [
       {
         id: 'layout-intro',
@@ -134,6 +134,11 @@ const DOCS: DocCategory[] = [
       {
         id: 'datetime',
         name: 'Datetime',
+        examples: []
+      },
+      {
+        id: 'text',
+        name: 'Text',
         examples: []
       }
     ]
