@@ -155,6 +155,11 @@ const DOCS: DocCategory[] = [
         id: 'phone',
         name: 'Phone',
         examples: []
+      },
+      {
+        id: 'icon',
+        name: 'Icono',
+        examples: []
       }
     ]
   },
