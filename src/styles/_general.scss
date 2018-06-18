@@ -80,6 +80,13 @@ code {
   margin-bottom: 25px; 
 }
 
+.andes-epigrafe {
+  font-style: italic;
+  font-size: 1rem;
+  font-weight: 300;
+  color: rgb(19, 13, 13);
+}
+
 .mat-raised-button{
   color: white!important;
   background-color: $andes-azul!important;
@@ -108,7 +115,6 @@ button,badge,span, div {
   }
 }
 
-
 // Images
 cards-container {
   display: flex;
@@ -133,6 +139,11 @@ cards-container {
     width: 45%;
   }
 
+  .andes-card-70 {
+    @extend %base;
+    width: 70%;
+  }
+
   .andes-card-header {
     display: flex;
     flex-direction: row;
@@ -141,7 +152,7 @@ cards-container {
   }
 
   @media screen and (max-width: 768px) {
-    .andes-card {
+    [class^="andes-card"] {
       width: 100%;
     }
   }
