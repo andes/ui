@@ -1,47 +1,116 @@
-# Angular Material Docs Site
+![ANDES](https://github.com/andes/andes.github.io/raw/master/images/logo.png)
 
-## Preview
-https://material2-docs-dev.firebaseapp.com/
+## Qué es ANDES
 
-## Deployment instructions
-```
-> npm install
+ANDES es un **ecosistema de aplicaciones de salud** coordinado a través de una capa de interoperabilidad, basado en estándares internacionales tales como **HL7/FHIR, SNOMED, LOINC y DICOM**, distribuido en forma **absolutamente libre y gratuita** bajo el licenciamiento GPL.
 
-# Development
-> npm run publish-dev
+Desde un punto de vista funcional, ANDES es una plataforma digital de servicios de salud que implementa la Historia Unificada Digital de Salud (HUDS) y permite a pacientes y profesionales de la salud acceder a los datos registrados en un modo seguro.
 
-# Production
-> npm run publish-prod
-```
+## Orígenes
 
-For development builds use the usual `ng serve` and `ng build` commands.
+Hacia fines del año 2015 se sanciona la Ley de **Historia Unificada Digital de Salud (HUDS)** en la provincia de Neuquén (Argentina), que involucra todo el ámbito público y privado de la salud.
+
+Pocos meses después comienza a gestarse un proyecto que tiene como desafío integrar todos los sistemas y herramientas informáticas existentes, permitiendo acceder a la información de salud en forma ordenada y segura. Este proyecto pasó a denominarse con el acrónimo **A.N.De.S: Aplicaciones Neuquinas de Salud**.
+
+## Arquitectura
+
+![Arquitectura](https://github.com/andes/andes.github.io/raw/master/images/arquitectura.png)
+
+1. **Core**: componentes básicos del núcleo de ANDES
+2. **Apps nativas**: aplicaciones básicas que implementan las herramientas administrativas y asistenciales más usadas en el ámbito de la salud.
+3. **Apps externas**: aplicaciones y sistemas existentes que interoperan con el Core
+4. **Interoperabilidad**: capa segura de comunicación HL7/FHIR entre las aplicaciones externas y los componentes del core
+
+### Core
+
+| Componente  | Descripción | Docs |
+| ------------- | ------------- | ------------- |
+| MPI  | Master Patient Index  | *Próximamente* |
+| HUDS  | Historia de Salud  | *Próximamente* |
+| TM  | Tablas Maestras | *Próximamente* |
+| TERM  | Servidor de terminología | *Próximamente* |
+
+### Apps nativas
+
+| Componente  | Descripción | Docs |
+| ------------- | ------------- | ------------- |
+| CITAS  | Agendas & Turnos | *Próximamente* |
+| RUP  | Registro Universal de Prestaciones  | *Próximamente* |
+| Mobile App | Aplicación móvil para acceso de pacientes y profesionales | *Próximamente* |
+
+## Proyecto
+
+El proyecto está integramente construido por profesionales médicos e informáticos del [Ministerio de Salud y Desarrollo Social del Neuquén](http://www.saludneuquen.gob.ar) utilizando las últimas tecnologías de desarrollo de aplicaciones.
+
+### Tecnologías
+| Componente  | Tecnología | Lenguaje de programación |
+| ------------- | ------------- | ------------- |
+| APP  | Angular 4  | Typescript / HTML |
+| API  | Node.JS  | Typescript |
+| Base de datos  | MongoDB | Typescript |
+| Mobile APP  | Ionic | Typescript |
 
 
-----------------------------------------------------------------------------------------------------------------
+### Metodología de trabajo
+
+El desarrollo se realiza utilizado metologías ágiles (Scrum) con dos equipos sincronizados que trabajan en locaciones diferentes (Subsecretaría de Salud y Hospital Provincial Neuquén). Trabajamos en sprints de 2 semanas guiados por un [Roadmap](https://github.com/andes/andes/wiki/Roadmap).
+
+## Integrantes del equipo
+
+### Project managers
+- Lic. Juan F. Gabriel
+- Lic. Marcelo D. Carrascal
+- Lic. Hugo H. Fernandez
+
+### Equipo médico
+- Dra. Laura Monteverde
+- Dr. Matías Neira
+- Dra. Adelaida Goldmann
+- Dr. Roberto D'Angelo
+
+### Developers
+- A.S. Luis Parada
+- A.S. Manuel Urbano
+- Lic. Silvina Roa
+- Lic. Natalia Huenchuman
+- A.S. Carolina Celeste
+- Andrés Velazquez Boc-Ho
+- Nicolás Dinolfo
+- Tec. Fernando Sastre
+- Lic. Mariano Botta
+
+### UI/UX Designer
+- Lic. Julio Santarelli
+
+### Q&A
+- Silvina Garcia
+
+### Plataforma & ANDES Cloud
+- Ing. Edgardo Kristensen
+- A.S. Pablo Silveira
+- Pablo Jeldrés
+- Manuel Pereyra
 
 
-This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.19-3.
 
-## Development server
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Sitio oficial
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class`.
+https://www.andes.gob.ar
 
-## Build
+## Documentación
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+https://github.com/andes/andes/wiki
 
-## Running unit tests
+## Roadmap
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+https://github.com/andes/andes/wiki/Roadmap
 
-## Running end-to-end tests
+## Partners
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+![Ministerio de Salud y Desarrollo Social](https://github.com/andes/andes.github.io/raw/master/images/logo-ministerio.png)
 
-## Further help
+![Facultad de Informática de la Universidad Nacional del Comahue](https://github.com/andes/andes.github.io/raw/master/images/logo-uncoma.png)
 
-To get more help on the `angular-cli` use `ng --help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+![Colegio Médico de Neuquén](https://raw.githubusercontent.com/andes/andes.github.io/master/images/logo-colegiomedico.png)
+
