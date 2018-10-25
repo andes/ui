@@ -3,7 +3,7 @@ import { Plex } from '@andes/plex';
 import { TemplateData } from './template-data.interface';
 
 @Component({
-    templateUrl: 'template.form.html'
+    templateUrl: 'template-form.html'
 })
 export class TemplateFormComponent implements OnInit {
     // Propiedades privadas

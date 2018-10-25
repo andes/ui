@@ -1,10 +1,6 @@
 import { Injectable, Component } from '@angular/core';
 import { ComponentType } from '@angular/cdk/portal';
-import { LayoutOverviewExample } from '../examples/layout-overview/layout-overview-example';
-import { LayoutOptgroupExample } from '../examples/layout-optgroup/layout-optgroup-example';
-import { TipologiasOverviewExample } from '../examples/tipologias-overview/tipologias-overview-example';
-import { TipologiasOptgroupExample } from '../examples/tipologias-optgroup/tipologias-optgroup-example';
-import { TemplateFormComponent } from '../examples/template-form/template.form.component';
+import { TemplateFormComponent } from '../examples/template-form/template-form';
 
 export interface DocExample {
   title: string;
@@ -32,38 +28,32 @@ const DOCS: DocCategory[] = [
       {
         id: 'layout-intro',
         name: 'Qué es un layout?',
-        examples: [
-        ]
+        examples: []
       },
       {
         id: 'tipologias',
         name: 'Tipologías',
-        examples: [
-        ]
+        examples: []
       },
       {
         id: 'navbar',
         name: 'Navbar',
-        examples: [
-        ]
+        examples: []
       },
       {
         id: 'panel-principal',
         name: 'Panel principal',
-        examples: [
-        ]
+        examples: []
       },
       {
         id: 'panel-lateral',
         name: 'Panel lateral',
-        examples: [
-        ]
+        examples: []
       },
       {
         id: 'footer',
         name: 'Footer',
-        examples: [
-        ]
+        examples: []
       },
     ]
   },
@@ -74,12 +64,7 @@ const DOCS: DocCategory[] = [
       {
         id: 'bool',
         name: 'Bool',
-        examples: [
-          {
-            title: 'template-form',
-            component: TemplateFormComponent
-          },
-        ]
+        examples: []
       },
       {
         id: 'accordion',
@@ -133,9 +118,12 @@ const DOCS: DocCategory[] = [
     name: 'Plantillas',
     items: [
       {
-        id: 'form',
+        id: 'template-form',
         name: 'Formulario',
-        examples: [
+        examples: [{
+          title: 'template-form',
+          component: TemplateFormComponent
+        },
         ]
       },
     ]

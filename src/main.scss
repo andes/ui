@@ -12,84 +12,85 @@ $accent: mat-palette($mat-pink, A200, A100, A400);
 $theme: mat-light-theme($primary, $accent);
 @include angular-material-theme($theme);
 @include material-docs-app-theme($theme);
+// 
 // Plex
 // @import '~@andes/plex/src/lib/styles.scss';
 // Core variables and mixins
-@import "~bootstrap/scss/variables";
-@import "~bootstrap/scss/mixins";
-// Reset and dependencies
-// @import "~bootstrap/scss/normalize";
-// @import "~bootstrap/scss/print";
-// Plex colors & variables
-@import "~@andes/plex/src/lib/css/variables";
-// Core CSS
-// @import "~bootstrap/scss/reboot";
-@import "~bootstrap/scss/type";
-@import "~bootstrap/scss/images";
-@import "~bootstrap/scss/code";
-@import "~bootstrap/scss/grid";
-@import "~bootstrap/scss/tables";
-@import "~bootstrap/scss/forms";
-@import "~bootstrap/scss/buttons";
-// Components
-// @import "~bootstrap/scss/transitions";
-@import "~bootstrap/scss/dropdown";
-@import "~bootstrap/scss/button-group";
-@import "~bootstrap/scss/input-group";
-@import "~bootstrap/scss/custom-forms";
-// @import "~bootstrap/scss/nav";
-// @import "~bootstrap/scss/navbar";
-// @import "~bootstrap/scss/card";
-// @import "~bootstrap/scss/breadcrumb";
-// @import "~bootstrap/scss/pagination";
-@import "~bootstrap/scss/badge";
-// @import "~bootstrap/scss/jumbotron";
-// @import "~bootstrap/scss/alert";
-// @import "~bootstrap/scss/progress";
-// @import "~bootstrap/scss/media";
-// @import "~bootstrap/scss/list-group";
-// @import "~bootstrap/scss/responsive-embed";
-// @import "~bootstrap/scss/close";
-// Components w/ JavaScript
-// @import "~bootstrap/scss/tooltip";
-// @import "~bootstrap/scss/popover";
-// Utility classes
-// @import "~bootstrap/scss/utilities";
-// Fonts
-$typoPRO-font-path: '~@andes/plex/src/lib/css/fonts/' !default;
-@import '~@andes/plex/src/lib/css/fonts/TypoPRO-SourceSansPro';
-// Icons
-$mdi-font-path: '~@mdi/font/fonts/';
-@import '~@mdi/font/scss/materialdesignicons';
-// Misc
-@import '~node-waves/src/scss/waves';
-// @import '~sweetalert2/src/sweetalert2';
-// @import '~animate.css/animate'; // DEPRECATION WARNING https://github.com/sass/node-sass/issues/2362
-// Plex core
-@import '~@andes/plex/src/lib/css/layout';
-@import '~@andes/plex/src/lib/css/alert';
-@import '~@andes/plex/src/lib/css/colors';
-// @import '~@andes/plex/src/lib/css/nav';
-@import '~@andes/plex/src/lib/css/classes';
-@import '~@andes/plex/src/lib/css/fonts';
-@import '~@andes/plex/src/lib/css/badge';
-@import '~@andes/plex/src/lib/css/forms';
-@import '~@andes/plex/src/lib/css/list-group';
-// Third party
-// @import '~@andes/plex/src/lib/css/toast';
-// @import '~@andes/plex/src/lib/css/modals';
-// Plex Components
-@import '~@andes/plex/src/lib/css/plex-accordion';
-@import '~@andes/plex/src/lib/css/plex-bool';
-@import '~@andes/plex/src/lib/css/plex-box';
-@import '~@andes/plex/src/lib/css/plex-button';
-@import '~@andes/plex/src/lib/css/plex-datetime';
-@import '~@andes/plex/src/lib/css/plex-dropdown';
-@import '~@andes/plex/src/lib/css/plex-loader';
-@import '~@andes/plex/src/lib/css/plex-radio';
-@import '~@andes/plex/src/lib/css/plex-ribbon';
-@import '~@andes/plex/src/lib/css/plex-select';
-@import '~@andes/plex/src/lib/css/plex-tabs';
-@import '~@andes/plex/src/lib/css/plex-text';
-@import '~@andes/plex/src/lib/css/plex-text-rich';
+// @import "~bootstrap/scss/variables";
+// @import "~bootstrap/scss/mixins";
+// // Reset and dependencies
+// // @import "~bootstrap/scss/normalize";
+// // @import "~bootstrap/scss/print";
+// // Plex colors & variables
+// @import "~@andes/plex/src/lib/css/variables";
+// // Core CSS
+// // @import "~bootstrap/scss/reboot";
+// @import "~bootstrap/scss/type";
+// @import "~bootstrap/scss/images";
+// @import "~bootstrap/scss/code";
+// @import "~bootstrap/scss/grid";
+// @import "~bootstrap/scss/tables";
+// @import "~bootstrap/scss/forms";
+// @import "~bootstrap/scss/buttons";
+// // Components
+// // @import "~bootstrap/scss/transitions";
+// @import "~bootstrap/scss/dropdown";
+// @import "~bootstrap/scss/button-group";
+// @import "~bootstrap/scss/input-group";
+// @import "~bootstrap/scss/custom-forms";
+// // @import "~bootstrap/scss/nav";
+// // @import "~bootstrap/scss/navbar";
+// // @import "~bootstrap/scss/card";
+// // @import "~bootstrap/scss/breadcrumb";
+// // @import "~bootstrap/scss/pagination";
+// @import "~bootstrap/scss/badge";
+// // @import "~bootstrap/scss/jumbotron";
+// // @import "~bootstrap/scss/alert";
+// // @import "~bootstrap/scss/progress";
+// // @import "~bootstrap/scss/media";
+// // @import "~bootstrap/scss/list-group";
+// // @import "~bootstrap/scss/responsive-embed";
+// // @import "~bootstrap/scss/close";
+// // Components w/ JavaScript
+// // @import "~bootstrap/scss/tooltip";
+// // @import "~bootstrap/scss/popover";
+// // Utility classes
+// // @import "~bootstrap/scss/utilities";
+// // Fonts
+// $typoPRO-font-path: '~@andes/plex/src/lib/css/fonts/' !default;
+// @import '~@andes/plex/src/lib/css/fonts/TypoPRO-SourceSansPro';
+// // Icons
+// $mdi-font-path: '~@mdi/font/fonts/';
+// @import '~@mdi/font/scss/materialdesignicons';
+// // Misc
+// @import '~node-waves/src/scss/waves';
+// // @import '~sweetalert2/src/sweetalert2';
+// // @import '~animate.css/animate'; // DEPRECATION WARNING https://github.com/sass/node-sass/issues/2362
+// // Plex core
+// @import '~@andes/plex/src/lib/css/layout';
+// @import '~@andes/plex/src/lib/css/alert';
+// @import '~@andes/plex/src/lib/css/colors';
+// // @import '~@andes/plex/src/lib/css/nav';
+// @import '~@andes/plex/src/lib/css/classes';
+// @import '~@andes/plex/src/lib/css/fonts';
+// @import '~@andes/plex/src/lib/css/badge';
+// @import '~@andes/plex/src/lib/css/forms';
+// @import '~@andes/plex/src/lib/css/list-group';
+// // Third party
+// // @import '~@andes/plex/src/lib/css/toast';
+// // @import '~@andes/plex/src/lib/css/modals';
+// // Plex Components
+// @import '~@andes/plex/src/lib/css/plex-accordion';
+// @import '~@andes/plex/src/lib/css/plex-bool';
+// @import '~@andes/plex/src/lib/css/plex-box';
+// @import '~@andes/plex/src/lib/css/plex-button';
+// @import '~@andes/plex/src/lib/css/plex-datetime';
+// @import '~@andes/plex/src/lib/css/plex-dropdown';
+// @import '~@andes/plex/src/lib/css/plex-loader';
+// @import '~@andes/plex/src/lib/css/plex-radio';
+// @import '~@andes/plex/src/lib/css/plex-ribbon';
+// @import '~@andes/plex/src/lib/css/plex-select';
+// @import '~@andes/plex/src/lib/css/plex-tabs';
+// @import '~@andes/plex/src/lib/css/plex-text';
+// @import '~@andes/plex/src/lib/css/plex-text-rich';
 // @import '~@andes/plex/src/lib/css/plex-wizard';

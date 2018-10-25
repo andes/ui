@@ -19,7 +19,7 @@ export class ExampleViewer {
   _example: DocExample;
 
   /** Whether the source for the example is being displayed. */
-  showSource = false;
+  showSource = true;
 
   constructor(
     private snackbar: MatSnackBar,
@@ -40,7 +40,7 @@ export class ExampleViewer {
   }
 
   exampleFileUrl(extension: string) {
-    return `/assets/documents/examples/sourcecode/${this.example.title}-example-${extension.toLowerCase()}.html`;
+    return `/assets/documents/examples/sourcecode/${this.example.title}.${extension.toLowerCase()}.html`;
   }
 
   copySource(text: string) {

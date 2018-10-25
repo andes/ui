@@ -15,7 +15,7 @@
     <div class="docs-example-viewer-source" *ngIf="showSource">
         <mat-tab-group>
             <!-- TODO(jelbourn): don't hard-code the html + ts + css structure -->
-            <mat-tab *ngFor="let extension of ['HTML', 'TS', 'CSS']" [label]="extension">
+            <mat-tab *ngFor="let extension of ['HTML', 'TS', 'SCSS']" [label]="extension">
                 <div class="docs-example-source-wrapper">
                     <button mat-icon-button type="button" class="docs-example-source-copy" title="Copy example source" aria-label="Copy example source to clipboard" (click)="copySource(viewer.textContent)">
             <mat-icon>content_copy</mat-icon>
@@ -27,7 +27,9 @@
         </mat-tab-group>
     </div>
 
-    <div class="docs-example-viewer-body">
+    <!-- Muestra el ejemplo en ejecución -->
+    <!-- Por ahora está deshabilitado porque plex se ve horrible con los estilos de material design -->
+    <!-- <div class="docs-example-viewer-body">
         <ng-template [cdkPortalOutlet]="selectedPortal"></ng-template>
-    </div>
+    </div> -->
 </div>

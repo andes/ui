@@ -29,7 +29,7 @@ import { LayoutOverviewExample } from './shared/examples/layout-overview/layout-
 import { LayoutOptgroupExample } from './shared/examples/layout-optgroup/layout-optgroup-example';
 import { TipologiasOverviewExample } from './shared/examples/tipologias-overview/tipologias-overview-example';
 import { TipologiasOptgroupExample } from './shared/examples/tipologias-optgroup/tipologias-optgroup-example';
-import { TemplateFormComponent } from './shared/examples/template-form/template.form.component';
+import { TemplateFormComponent } from './shared/examples/template-form/template-form';
 
 @NgModule({
   imports: [
