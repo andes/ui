@@ -1,14 +1,10 @@
 import { Injectable, Component } from '@angular/core';
 import { ComponentType } from '@angular/cdk/portal';
-import { AutocompleteOverviewExample } from '../examples/autocomplete-overview/autocomplete-overview-example';
-import { AutocompleteOptgroupExample } from '../examples/autocomplete-optgroup/autocomplete-optgroup-example';
 import { LayoutOverviewExample } from '../examples/layout-overview/layout-overview-example';
 import { LayoutOptgroupExample } from '../examples/layout-optgroup/layout-optgroup-example';
 import { TipologiasOverviewExample } from '../examples/tipologias-overview/tipologias-overview-example';
 import { TipologiasOptgroupExample } from '../examples/tipologias-optgroup/tipologias-optgroup-example';
-// import { BoolOverviewExample } from '../examples/bool-overview/bool-overview-example';
-import { BoolOptgroupExample } from '../examples/bool-optgroup/bool-optgroup-example';
-import { BoolOverviewExample } from '../examples/bool-overview/bool-overview-example';
+import { TemplateFormComponent } from '../examples/template-form/template.form.component';
 
 export interface DocExample {
   title: string;
@@ -37,28 +33,12 @@ const DOCS: DocCategory[] = [
         id: 'layout-intro',
         name: 'Qué es un layout?',
         examples: [
-          // {
-          //   title: 'tipologias-overview',
-          //   component: TipologiasOptgroupExample
-          // },
-          // {
-          //   title: 'tipologias-optgroup',
-          //   component: TipologiasOptgroupExample
-          // }
         ]
       },
       {
         id: 'tipologias',
         name: 'Tipologías',
         examples: [
-          // {
-          //   title: 'layout-overview',
-          //   component: LayoutOverviewExample
-          // },
-          // {
-          //   title: 'layout-optgroup',
-          //   component: LayoutOptgroupExample
-          // }
         ]
       },
       {
@@ -96,13 +76,9 @@ const DOCS: DocCategory[] = [
         name: 'Bool',
         examples: [
           {
-            title: 'bool-overview',
-            component: BoolOverviewExample
+            title: 'template-form',
+            component: TemplateFormComponent
           },
-          // {
-          //   title: 'bool-optgroup',
-          //   component: BoolOptgroupExample
-          // }
         ]
       },
       {
@@ -160,14 +136,6 @@ const DOCS: DocCategory[] = [
         id: 'form',
         name: 'Formulario',
         examples: [
-          // {
-          //   title: 'bool-overview',
-          //   component: BoolOverviewExample
-          // },
-          // {
-          //   title: 'bool-optgroup',
-          //   component: BoolOptgroupExample
-          // }
         ]
       },
     ]
