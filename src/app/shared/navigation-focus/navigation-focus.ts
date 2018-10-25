@@ -1,7 +1,7 @@
 import {NgModule, OnInit, Directive, ElementRef} from '@angular/core';
 
 /** The timeout id of the previous focus change. */
-let lastTimeoutId = -1;
+let lastTimeoutId;
 
 @Directive({
   selector: '[focusOnNavigation]',

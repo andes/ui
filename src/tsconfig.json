@@ -3,15 +3,24 @@
     "declaration": false,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "lib": ["es6", "dom"],
+    "lib": [
+      "es6",
+      "dom"
+    ],
     "mapRoot": "./",
     "module": "es6",
     "moduleResolution": "node",
     "outDir": "../dist/out-tsc",
     "sourceMap": true,
     "target": "es5",
-    "types": ["q", "selenium-webdriver", "jasmine"]
+    "typeRoots": [
+      "../node_modules/@types"
+    ]
   },
+  "include": [
+    "./**/*.ts",
+    "../node_modules/@andes/**/*.ts"
+  ],
   "exclude": [
     "assets"
   ]

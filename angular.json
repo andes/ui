@@ -43,7 +43,9 @@
                                 "bundleName": "deeppurple-amber"
                             }
                         ],
-                        "scripts": []
+                        "scripts": [
+                            "node_modules/intro.js/intro.js"
+                        ]
                     },
                     "configurations": {
                         "production": {

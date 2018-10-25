@@ -30,8 +30,6 @@ export class ComponentSidenav implements OnInit {
               private _route: ActivatedRoute,
               private _router: Router,
               zone: NgZone) {
-    // TODO(josephperrott): Move to CDK breakpoint management once available.
-    this.mediaMatcher.addListener(mql => zone.run(() => this.mediaMatcher = mql));
   }
 
   @ViewChild(MatSidenav) sidenav: MatSidenav;
@@ -50,7 +48,7 @@ export class ComponentSidenav implements OnInit {
   }
 
   isScreenSmall(): boolean {
-    return this.mediaMatcher.matches;
+    return false;
   }
 }
 
@@ -125,8 +123,6 @@ export class ComponentNav implements OnInit, OnDestroy {
   }
 
 }
-
-
 @NgModule({
   imports: [
     MatSidenavModule,

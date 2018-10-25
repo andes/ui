@@ -8,6 +8,7 @@ import { TipologiasOverviewExample } from '../examples/tipologias-overview/tipol
 import { TipologiasOptgroupExample } from '../examples/tipologias-optgroup/tipologias-optgroup-example';
 // import { BoolOverviewExample } from '../examples/bool-overview/bool-overview-example';
 import { BoolOptgroupExample } from '../examples/bool-optgroup/bool-optgroup-example';
+import { BoolOverviewExample } from '../examples/bool-overview/bool-overview-example';
 
 export interface DocExample {
   title: string;
@@ -86,18 +87,6 @@ const DOCS: DocCategory[] = [
       },
     ]
   },
-  // {
-  //   id: 'button',
-  //   name: 'Plex-button',
-  //   items: [
-  //     {
-  //       id: 'plex-button',
-  //       name: 'Botones',
-  //       examples: [
-  //       ]
-  //     },
-  //   ]
-  // },
   {
     id: 'componentes',
     name: 'Componentes',
@@ -106,10 +95,10 @@ const DOCS: DocCategory[] = [
         id: 'bool',
         name: 'Bool',
         examples: [
-          // {
-          //   title: 'bool-overview',
-          //   component: BoolOverviewExample
-          // },
+          {
+            title: 'bool-overview',
+            component: BoolOverviewExample
+          },
           // {
           //   title: 'bool-optgroup',
           //   component: BoolOptgroupExample
@@ -158,9 +147,29 @@ const DOCS: DocCategory[] = [
       },
       {
         id: 'icon',
-        name: 'Icono',
+        name: 'Icon',
         examples: []
       }
+    ]
+  },
+  {
+    id: 'templates',
+    name: 'Plantillas',
+    items: [
+      {
+        id: 'form',
+        name: 'Formulario',
+        examples: [
+          // {
+          //   title: 'bool-overview',
+          //   component: BoolOverviewExample
+          // },
+          // {
+          //   title: 'bool-optgroup',
+          //   component: BoolOptgroupExample
+          // }
+        ]
+      },
     ]
   },
 ];

@@ -5,7 +5,7 @@ import { LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { MatNativeDateModule, MatAutocompleteModule, MatBadgeModule, MatBottomSheetModule, MatButtonModule, MatDatepickerModule, MatButtonToggleModule, MatCardModule, MatCheckboxModule, MatChipsModule, MatDialogModule, MatDividerModule, MatExpansionModule, MatFormFieldModule, MatGridListModule, MatIconModule, MatInputModule, MatListModule, MatMenuModule, MatPaginatorModule, MatProgressBarModule, MatProgressSpinnerModule, MatRadioModule, MatRippleModule, MatSelectModule, MatSidenavModule, MatSliderModule, MatSlideToggleModule, MatSnackBarModule, MatSortModule, MatStepperModule, MatTableModule, MatTabsModule, MatToolbarModule, MatTooltipModule, MatTreeModule } from '@angular/material';
-
+import { PlexModule } from '@andes/plex';
 import { MaterialDocsApp } from './material-docs-app';
 import { HomepageModule } from './pages/homepage/homepage';
 import { MATERIAL_DOCS_ROUTES } from './routes';
@@ -43,6 +43,7 @@ import { BoolOptgroupExample } from './shared/examples/bool-optgroup/bool-optgro
     HttpClientModule,
     MatNativeDateModule,
     RouterModule.forRoot(MATERIAL_DOCS_ROUTES),
+    PlexModule,
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
     MatAutocompleteModule, MatBadgeModule, MatBottomSheetModule, MatButtonModule,
     MatButtonToggleModule, MatCardModule, MatCheckboxModule, MatChipsModule, MatDatepickerModule,
