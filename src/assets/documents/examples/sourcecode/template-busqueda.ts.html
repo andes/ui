@@ -1,0 +1,113 @@
+<span class="hljs-keyword">import</span> { Component, OnInit } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> { Plex } <span class="hljs-keyword">from</span> <span class="hljs-string">'@andes/plex'</span>;
+<span class="hljs-keyword">import</span> { SelectEvent } <span class="hljs-keyword">from</span> <span class="hljs-string">'./../../../lib/select/select-event.interface'</span>;
+<span class="hljs-keyword">import</span> { ServiceDemoSelect } <span class="hljs-keyword">from</span> <span class="hljs-string">'./../select/select.service'</span>;
+
+<span class="hljs-meta">@Component</span>({
+    templateUrl: <span class="hljs-string">'template-busqueda.html'</span>
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TemplateBusquedaComponent <span class="hljs-keyword">implements</span> OnInit {
+
+    <span class="hljs-comment">// Propiedades privadas</span>
+
+    <span class="hljs-comment">// Propiedades públicas</span>
+    <span class="hljs-keyword">public</span> listados = [];
+    <span class="hljs-keyword">public</span> fechaDesde: <span class="hljs-built_in">any</span>;
+    <span class="hljs-keyword">public</span> fechaHasta: <span class="hljs-built_in">any</span>;
+    <span class="hljs-keyword">public</span> seleccion: <span class="hljs-built_in">any</span> = [];
+    <span class="hljs-keyword">public</span> sexoArray: <span class="hljs-built_in">any</span> = [];
+    <span class="hljs-keyword">public</span> paises: <span class="hljs-built_in">any</span>;
+    <span class="hljs-keyword">public</span> mostrarMasOpciones = <span class="hljs-literal">false</span>;
+    <span class="hljs-keyword">public</span> loader = <span class="hljs-literal">true</span>;
+
+
+    <span class="hljs-comment">// Eventos</span>
+
+    <span class="hljs-comment">// Constructor</span>
+    <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> plex: Plex, <span class="hljs-keyword">public</span> servicio: ServiceDemoSelect</span>) {
+        <span class="hljs-keyword">this</span>.plex.updateTitle([{
+            route: <span class="hljs-string">'/'</span>,
+            name: <span class="hljs-string">'MÓDULO'</span>
+        }, {
+            name: <span class="hljs-string">'BUSQUEDA'</span>
+        }]);
+        <span class="hljs-keyword">this</span>.listados = [
+            {
+                id: <span class="hljs-number">1</span>,
+                fecha: <span class="hljs-string">'Mon Feb 14 2018 11:15:52 GMT-0300 (ART)'</span>,
+                apellido: <span class="hljs-string">'Saddi'</span>,
+                nombre: <span class="hljs-string">'Nahir'</span>,
+                sexo: <span class="hljs-string">'femenino'</span>,
+                pais: <span class="hljs-string">'Argentina'</span>
+            },
+            {
+                id: <span class="hljs-number">2</span>,
+                fecha: <span class="hljs-string">'Mon Feb 16 2018 11:15:52 GMT-0300 (ART)'</span>,
+                apellido: <span class="hljs-string">'Roa'</span>,
+                nombre: <span class="hljs-string">'Silvina'</span>,
+                sexo: <span class="hljs-string">'femenino'</span>
+            },
+            {
+                id: <span class="hljs-number">3</span>,
+                fecha: <span class="hljs-string">'Mon Feb 20 2018 11:15:52 GMT-0300 (ART)'</span>,
+                apellido: <span class="hljs-string">'Gabriel'</span>,
+                nombre: <span class="hljs-string">'Juan'</span>,
+                sexo: <span class="hljs-string">'masculino'</span>
+            },
+        ];
+    }
+
+    <span class="hljs-comment">// Métodos (privados y públicos)</span>
+
+    ngOnInit() {
+        <span class="hljs-comment">// Por defecto ponemos la fecha de hoy</span>
+        <span class="hljs-keyword">this</span>.fechaDesde = moment().startOf(<span class="hljs-string">'day'</span>);
+        <span class="hljs-keyword">this</span>.fechaHasta = moment().endOf(<span class="hljs-string">'day'</span>);
+
+        <span class="hljs-keyword">this</span>.sexoArray = [{
+            id: <span class="hljs-number">1</span>,
+            nombre: <span class="hljs-string">'Femenino'</span>
+        },
+        {
+            id: <span class="hljs-number">2</span>,
+            nombre: <span class="hljs-string">'Masculino'</span>
+        },
+        {
+            id: <span class="hljs-number">3</span>,
+            nombre: <span class="hljs-string">'Otro'</span>
+        }];
+
+        <span class="hljs-keyword">this</span>.cargarListado();
+
+    }
+
+
+    refreshSelection() {
+        <span class="hljs-keyword">this</span>.seleccion = [];
+        <span class="hljs-keyword">this</span>.cargarListado();
+    }
+
+    cargarPaises(event: SelectEvent) {
+        <span class="hljs-comment">// Event tiene una propiedad 'query' que contiene el texto que el usuario ha escrito en el input.</span>
+        <span class="hljs-comment">// Esto permite enviar a las APIs un parámetro para hacer las búsquedas más eficientes</span>
+        <span class="hljs-keyword">if</span> (event.query) {
+            <span class="hljs-keyword">this</span>.servicio.get(event.query).subscribe(event.callback);
+        } <span class="hljs-keyword">else</span> {
+            event.callback(<span class="hljs-literal">null</span>);
+        }
+    }
+
+    cargarListado() {
+        <span class="hljs-comment">// Simulamos un tiempo de busqueda</span>
+        <span class="hljs-keyword">this</span>.loader = <span class="hljs-literal">true</span>;
+        setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+            <span class="hljs-keyword">this</span>.loader = <span class="hljs-literal">false</span>;
+            <span class="hljs-keyword">let</span> len = <span class="hljs-built_in">Math</span>.floor(<span class="hljs-built_in">Math</span>.random() * <span class="hljs-keyword">this</span>.listados.length);
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; len; i++) {
+                <span class="hljs-keyword">this</span>.seleccion.push(<span class="hljs-keyword">this</span>.listados[i]);
+            }
+
+        }, <span class="hljs-number">3000</span>);
+    }
+
+}

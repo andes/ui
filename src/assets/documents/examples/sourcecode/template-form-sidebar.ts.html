@@ -2,19 +2,18 @@
 <span class="hljs-keyword">import</span> { Plex } <span class="hljs-keyword">from</span> <span class="hljs-string">'@andes/plex'</span>;
 <span class="hljs-keyword">import</span> { TemplateData } <span class="hljs-keyword">from</span> <span class="hljs-string">'./template-data.interface'</span>;
 
+
+
 <span class="hljs-meta">@Component</span>({
-    templateUrl: <span class="hljs-string">'template-form.html'</span>
+    templateUrl: <span class="hljs-string">'template-form-sidebar.html'</span>
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TemplateFormComponent <span class="hljs-keyword">implements</span> OnInit {
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TemplateBotoneraSidebarComponent <span class="hljs-keyword">implements</span> OnInit {
     <span class="hljs-comment">// Propiedades privadas</span>
 
     <span class="hljs-comment">// Propiedades públicas</span>
     <span class="hljs-keyword">public</span> modelo: TemplateData;
-
-    <span class="hljs-comment">// Opciones que se consultan desde la base de datos</span>
     <span class="hljs-keyword">public</span> opcionesLugarNacimiento: <span class="hljs-built_in">any</span>[] = [{ id: <span class="hljs-string">'1'</span>, nombre: <span class="hljs-string">'Neuquén'</span> }, { id: <span class="hljs-string">'2'</span>, nombre: <span class="hljs-string">'Centenario'</span> }, { id: <span class="hljs-string">'3'</span>, nombre: <span class="hljs-string">'Zapala City'</span> }, { id: <span class="hljs-string">'4'</span>, nombre: <span class="hljs-string">'Plottier'</span> }];
     <span class="hljs-keyword">public</span> opcionesSexo: <span class="hljs-built_in">any</span>[] = [{ id: <span class="hljs-string">'femenino'</span>, label: <span class="hljs-string">'femenino'</span> }, { id: <span class="hljs-string">'masculino'</span>, label: <span class="hljs-string">'masculino'</span> }, { id: <span class="hljs-string">'otro'</span>, label: <span class="hljs-string">'otro'</span> }];
-
     <span class="hljs-comment">// Eventos</span>
     <span class="hljs-meta">@Output</span>() save: EventEmitter&lt;TemplateData&gt; = <span class="hljs-keyword">new</span> EventEmitter&lt;TemplateData&gt;();
 
@@ -24,27 +23,19 @@
             route: <span class="hljs-string">'/'</span>,
             name: <span class="hljs-string">'MÓDULO'</span>
         }, {
-            name: <span class="hljs-string">'CARGA'</span>
+            name: <span class="hljs-string">'BOTONERA SIDEBAR'</span>
         }]);
     }
 
     <span class="hljs-comment">// Métodos (privados y públicos)</span>
 
     ngOnInit() {
-        <span class="hljs-keyword">this</span>.plex.updateTitle([{
-            route: <span class="hljs-string">'/'</span>,
-            name: <span class="hljs-string">'MÓDULO'</span>
-        }, {
-            name: <span class="hljs-string">'Carga'</span>
-        }]);
-
         <span class="hljs-comment">// Dummy load</span>
         <span class="hljs-keyword">this</span>.modelo = {
             apellido: <span class="hljs-string">'García'</span>,
             nombre: <span class="hljs-string">'Josefina'</span>,
             sexo: <span class="hljs-string">'femenino'</span>,
-            fechaNacimiento: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(),
-            tieneHijos: <span class="hljs-literal">false</span>
+            fechaNacimiento: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()
         };
     }
 
@@ -60,10 +51,11 @@
             <span class="hljs-comment">// base de datos los guardemos como un string</span>
             <span class="hljs-keyword">this</span>.modelo.sexo = ((<span class="hljs-keyword">typeof</span> <span class="hljs-keyword">this</span>.modelo.sexo === <span class="hljs-string">'string'</span>)) ? <span class="hljs-keyword">this</span>.modelo.sexo : (<span class="hljs-built_in">Object</span>(<span class="hljs-keyword">this</span>.modelo.sexo).id);
             <span class="hljs-keyword">this</span>.plex.info(<span class="hljs-string">'success'</span>, <span class="hljs-string">'Los datos están correctos'</span>);
-            <span class="hljs-comment">// cuando desea retornar el modelo a otro componente</span>
             <span class="hljs-keyword">this</span>.save.emit(<span class="hljs-keyword">this</span>.modelo);
         } <span class="hljs-keyword">else</span> {
             <span class="hljs-keyword">this</span>.plex.info(<span class="hljs-string">'warning'</span>, <span class="hljs-string">'Completar datos requeridos'</span>);
         }
     }
+
+
 }

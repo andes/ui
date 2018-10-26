@@ -1,0 +1,35 @@
+<span class="hljs-keyword">import</span> { Component, OnInit, HostBinding, Output, EventEmitter } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> { Plex } <span class="hljs-keyword">from</span> <span class="hljs-string">'@andes/plex'</span>;
+<span class="hljs-keyword">import</span> { TemplateData } <span class="hljs-keyword">from</span> <span class="hljs-string">'./template-data.interface'</span>;
+
+<span class="hljs-meta">@Component</span>({
+    templateUrl: <span class="hljs-string">'template-visualizacion.html'</span>
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TemplateVisualizacionComponent <span class="hljs-keyword">implements</span> OnInit {
+    <span class="hljs-comment">// Propiedades privadas</span>
+
+    <span class="hljs-comment">// Propiedades públicas</span>
+    <span class="hljs-keyword">public</span> modelo: TemplateData;
+
+    <span class="hljs-comment">// Constructor</span>
+    <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> plex: Plex</span>) {
+        <span class="hljs-keyword">this</span>.plex.updateTitle([{
+            route: <span class="hljs-string">'/'</span>,
+            name: <span class="hljs-string">'MÓDULO'</span>
+        }, {
+            name: <span class="hljs-string">'Visualización'</span>
+        }]);
+    }
+
+    <span class="hljs-comment">// Métodos (privados y públicos)</span>
+    ngOnInit() {
+        <span class="hljs-comment">// Dummy load</span>
+        <span class="hljs-keyword">this</span>.modelo = {
+            apellido: <span class="hljs-string">'García'</span>,
+            nombre: <span class="hljs-string">'Josefina'</span>,
+            sexo: <span class="hljs-string">'femenino'</span>,
+            fechaNacimiento: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(),
+            tieneHijos: <span class="hljs-literal">false</span>
+        };
+    }
+}

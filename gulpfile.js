@@ -5,9 +5,10 @@ const util = require('gulp-util');
 const hljs = require('highlight.js');
 const path = require('path');
 var del = require('del');
+var replace = require('gulp-string-replace');
 
 // Folders
-const source = 'src/app/shared/examples';
+const source = '../plex/src/demo/app/templates';
 const destination = 'src/assets/documents/examples/sourcecode';
 /**
  * Hightlights files
@@ -69,8 +70,10 @@ gulp.task('default', function() {
 
     // Crear archivos
     gulp.src(source + '/**/*.{html,ts,scss}')
+        .pipe(replace(new RegExp('import { Plex } from \'../../../lib/core/service\';', 'g'), 'import { Plex } from \'@andes/plex\';', { logs: { enabled: false } }))
         .pipe(gulpHighlightFiles())
         .pipe(rename(function(path) {
+            console.log(`Creando ejemplo para: ${path.basename}${path.extname}`);
             path.dirname = '';
             path.extname += ".html";
         }))

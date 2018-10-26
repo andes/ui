@@ -25,11 +25,6 @@ import { CanActivateComponentSidenav } from './pages/component-sidenav/component
 import { HttpClientModule } from '@angular/common/http';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
-import { LayoutOverviewExample } from './shared/examples/layout-overview/layout-overview-example';
-import { LayoutOptgroupExample } from './shared/examples/layout-optgroup/layout-optgroup-example';
-import { TipologiasOverviewExample } from './shared/examples/tipologias-overview/tipologias-overview-example';
-import { TipologiasOptgroupExample } from './shared/examples/tipologias-optgroup/tipologias-optgroup-example';
-import { TemplateFormComponent } from './shared/examples/template-form/template-form';
 
 @NgModule({
   imports: [
@@ -70,19 +65,9 @@ import { TemplateFormComponent } from './shared/examples/template-form/template-
     SvgViewerModule,
   ],
   entryComponents: [
-    LayoutOverviewExample,
-    LayoutOptgroupExample,
-    TipologiasOverviewExample,
-    TipologiasOptgroupExample,
-    TemplateFormComponent,
   ],
   declarations: [
-    MaterialDocsApp,
-    LayoutOverviewExample,
-    LayoutOptgroupExample,
-    TipologiasOverviewExample,
-    TipologiasOptgroupExample,
-    TemplateFormComponent
+    MaterialDocsApp
   ],
   providers: [
     Plex,

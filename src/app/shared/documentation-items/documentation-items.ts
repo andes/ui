@@ -1,6 +1,5 @@
 import { Injectable, Component } from '@angular/core';
 import { ComponentType } from '@angular/cdk/portal';
-import { TemplateFormComponent } from '../examples/template-form/template-form';
 
 export interface DocExample {
   title: string;
@@ -122,7 +121,34 @@ const DOCS: DocCategory[] = [
         name: 'Formulario',
         examples: [{
           title: 'template-form',
-          component: TemplateFormComponent
+          component: null // Aquì debería cargar el componente del ejemplo
+        },
+        ]
+      },
+      {
+        id: 'template-form-sidebar',
+        name: 'Formulario sidebar',
+        examples: [{
+          title: 'template-form-sidebar',
+          component: null // Aquì debería cargar el componente del ejemplo
+        },
+        ]
+      },
+      {
+        id: 'template-busqueda',
+        name: 'Búsqueda',
+        examples: [{
+          title: 'template-busqueda',
+          component: null // Aquì debería cargar el componente del ejemplo
+        },
+        ]
+      },
+      {
+        id: 'template-visualizacion',
+        name: 'Visualización',
+        examples: [{
+          title: 'template-visualizacion',
+          component: null // Aquì debería cargar el componente del ejemplo
         },
         ]
       },
