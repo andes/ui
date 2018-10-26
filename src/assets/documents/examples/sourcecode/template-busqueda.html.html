@@ -44,7 +44,7 @@
                 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">"!seleccion?.length &amp;&amp; !loader"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"alert alert-default"</span>&gt;</span>
                     <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mdi mdi-emoticon-sad"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span> No hay resultados que coincidan con los filtros de búsqueda
                 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">table</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">"seleccion?.length"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"table table-striped"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">table</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">"seleccion?.length"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"table table-striped table-hover"</span>&gt;</span>
                     <span class="hljs-tag">&lt;<span class="hljs-name">thead</span>&gt;</span>
                         <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
                             <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>Nombre<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
@@ -54,7 +54,7 @@
                         <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
                     <span class="hljs-tag">&lt;/<span class="hljs-name">thead</span>&gt;</span>
                     <span class="hljs-tag">&lt;<span class="hljs-name">tbody</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hover"</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let item of seleccion"</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hover"</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let item of seleccion"</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">"seleccionar(item)"</span>&gt;</span>
                             <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>
                                 {{ item.nombre }}
                             <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
@@ -62,7 +62,7 @@
                                 {{ item.apellido }}
                             <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
                             <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>
-                                {{ item.fecha| fecha}}
+                                {{ item.fecha | fecha}}
                             <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
                             <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>
                                 {{ item.sexo }}

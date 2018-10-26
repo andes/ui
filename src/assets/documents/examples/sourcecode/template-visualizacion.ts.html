@@ -1,5 +1,5 @@
 <span class="hljs-keyword">import</span> { Component, OnInit, HostBinding, Output, EventEmitter } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
-<span class="hljs-keyword">import</span> { Plex } <span class="hljs-keyword">from</span> <span class="hljs-string">'@andes/plex'</span>;
+<span class="hljs-keyword">import</span> { Plex, SelectEvent } <span class="hljs-keyword">from</span> <span class="hljs-string">'@andes/plex'</span>;
 <span class="hljs-keyword">import</span> { TemplateData } <span class="hljs-keyword">from</span> <span class="hljs-string">'./template-data.interface'</span>;
 
 <span class="hljs-meta">@Component</span>({
@@ -7,9 +7,10 @@
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TemplateVisualizacionComponent <span class="hljs-keyword">implements</span> OnInit {
     <span class="hljs-comment">// Propiedades privadas</span>
+    <span class="hljs-comment">// ...</span>
 
     <span class="hljs-comment">// Propiedades públicas</span>
-    <span class="hljs-keyword">public</span> modelo: TemplateData;
+    modelo: TemplateData;
 
     <span class="hljs-comment">// Constructor</span>
     <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> plex: Plex</span>) {
@@ -21,9 +22,8 @@
         }]);
     }
 
-    <span class="hljs-comment">// Métodos (privados y públicos)</span>
+    <span class="hljs-comment">// Métodos</span>
     ngOnInit() {
-        <span class="hljs-comment">// Dummy load</span>
         <span class="hljs-keyword">this</span>.modelo = {
             apellido: <span class="hljs-string">'García'</span>,
             nombre: <span class="hljs-string">'Josefina'</span>,

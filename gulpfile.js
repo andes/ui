@@ -70,7 +70,8 @@ gulp.task('default', function() {
 
     // Crear archivos
     gulp.src(source + '/**/*.{html,ts,scss}')
-        .pipe(replace(new RegExp('import { Plex } from \'../../../lib/core/service\';', 'g'), 'import { Plex } from \'@andes/plex\';', { logs: { enabled: false } }))
+        .pipe(replace(new RegExp('import { Plex } from \'../../../lib/core/service\';', 'g'), 'import { Plex, SelectEvent } from \'@andes/plex\';', { logs: { enabled: false } }))
+        .pipe(replace(new RegExp('import { SelectEvent } from \'./../../../lib/select/select-event.interface\';', 'g'), '', { logs: { enabled: false } }))
         .pipe(gulpHighlightFiles())
         .pipe(rename(function(path) {
             console.log(`Creando ejemplo para: ${path.basename}${path.extname}`);

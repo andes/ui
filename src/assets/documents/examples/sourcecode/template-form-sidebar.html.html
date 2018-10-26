@@ -1,10 +1,10 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">plex-layout</span> <span class="hljs-attr">main</span>=<span class="hljs-string">"8"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">plex-layout-main</span>&gt;</span>
-        <span class="hljs-comment">&lt;!-- Menu principal --&gt;</span>
+        <span class="hljs-comment">&lt;!-- Contenedor principal --&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">plex-layout-main</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">plex-layout-sidebar</span>&gt;</span>
+        <span class="hljs-comment">&lt;!-- Contenedor lateral --&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">form</span> #<span class="hljs-attr">formulario</span>=<span class="hljs-string">"ngForm"</span>&gt;</span>
-            <span class="hljs-comment">&lt;!-- Menu lateral --&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">legend</span>&gt;</span>Datos principales<span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row"</span>&gt;</span>
@@ -19,7 +19,8 @@
                 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row"</span>&gt;</span>
                     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-md"</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">plex-radio</span> [(<span class="hljs-attr">ngModel</span>)]=<span class="hljs-string">"modelo.sexo"</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Sexo"</span> [<span class="hljs-attr">data</span>]=<span class="hljs-string">"opcionesSexo"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"sexo"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"horizontal"</span> [<span class="hljs-attr">required</span>]=<span class="hljs-string">"true"</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">plex-radio</span> [(<span class="hljs-attr">ngModel</span>)]=<span class="hljs-string">"modelo.sexo"</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Sexo"</span> [<span class="hljs-attr">data</span>]=<span class="hljs-string">"opcionesSexo"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"sexo"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"horizontal"</span>
+                            [<span class="hljs-attr">required</span>]=<span class="hljs-string">"true"</span>&gt;</span>
                         <span class="hljs-tag">&lt;/<span class="hljs-name">plex-radio</span>&gt;</span>
                     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
                 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -28,14 +29,15 @@
                 <span class="hljs-tag">&lt;<span class="hljs-name">legend</span>&gt;</span>Datos de nacimiento<span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row"</span>&gt;</span>
                     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-md"</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">plex-datetime</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"date"</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Fecha de nacimiento"</span> [(<span class="hljs-attr">ngModel</span>)]=<span class="hljs-string">"modelo.fechaNacimiento"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"fechaNacimiento"</span> [<span class="hljs-attr">required</span>]=<span class="hljs-string">"true"</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">plex-datetime</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"date"</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Fecha de nacimiento"</span> [(<span class="hljs-attr">ngModel</span>)]=<span class="hljs-string">"modelo.fechaNacimiento"</span>
+                            <span class="hljs-attr">name</span>=<span class="hljs-string">"fechaNacimiento"</span> [<span class="hljs-attr">required</span>]=<span class="hljs-string">"true"</span>&gt;</span>
                         <span class="hljs-tag">&lt;/<span class="hljs-name">plex-datetime</span>&gt;</span>
                     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
                 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row"</span>&gt;</span>
                     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-md"</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">plex-select</span> [(<span class="hljs-attr">ngModel</span>)]=<span class="hljs-string">"modelo.lugarNacimiento"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"lugarNacimiento"</span> [<span class="hljs-attr">data</span>]=<span class="hljs-string">"opcionesLugarNacimiento"</span> <span class="hljs-attr">labelField</span>=<span class="hljs-string">"nombre"</span>
-                            <span class="hljs-attr">label</span>=<span class="hljs-string">"Lugar de nacimiento"</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">plex-select</span> [(<span class="hljs-attr">ngModel</span>)]=<span class="hljs-string">"modelo.lugarNacimiento"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"lugarNacimiento"</span> [<span class="hljs-attr">data</span>]=<span class="hljs-string">"opcionesLugarNacimiento"</span>
+                            <span class="hljs-attr">labelField</span>=<span class="hljs-string">"nombre"</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Lugar de nacimiento"</span>&gt;</span>
                         <span class="hljs-tag">&lt;/<span class="hljs-name">plex-select</span>&gt;</span>
                     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
                 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -51,6 +53,4 @@
             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">plex-layout-sidebar</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">plex-layout-footer</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">plex-layout-footer</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">plex-layout</span>&gt;</span>

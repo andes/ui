@@ -5,13 +5,13 @@
 ### Iniciar la aplicación
 
 ```bash
-ng serve
+npm start
 ```
 
 ### Compilar & Publicar
 
 ```bash
-ng build
+npm run build
 ```
 
 ### Sólo generar archivos de ejemplos
