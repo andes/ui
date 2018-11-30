@@ -100,12 +100,40 @@
         </tr>
         <tr class="docs-api-properties-row">
             <td class="docs-api-properties-name-cell">
+                <div class="docs-api-input-marker">@Input()</div>
+                <p class="docs-api-property-name"><code>skipBy: Date</code></p>
+            </td>
+            <td class="docs-api-property-description">
+                <p> Agrega botones de navegación rápida que cambia según la unidad de tiempo la fecha selecionada.</p>
+                <p> Valores: <code> 'time' | 'date' | 'datetime' </code></p>
+            </td>
+        </tr>
+        <tr class="docs-api-properties-row">
+            <td class="docs-api-properties-name-cell">
                 <div class="docs-api-output-marker">@Output()</div>
                 <p class="docs-api-property-name"><code>click: EventEmitter&lt;Date&gt;</code></p>
             </td>
             <td class="docs-api-property-description">
                 <p> Evento emitido cuando cambia la fecha y/o hora. </p>
             </td>
-        </tr>             
+        </tr>   
+        <tr class="docs-api-properties-row">
+            <td class="docs-api-properties-name-cell">
+                <div class="docs-api-output-marker">@Output()</div>
+                <p class="docs-api-property-name"><code>focus: EventEmitter&lt;void&gt;</code></p>
+            </td>
+            <td class="docs-api-property-description">
+                <p> Evento emitido cuando el elemento toma foco. </p>
+            </td>
+        </tr>
+        <tr class="docs-api-properties-row">
+            <td class="docs-api-properties-name-cell">
+                <div class="docs-api-output-marker">@Output()</div>
+                <p class="docs-api-property-name"><code>blur: EventEmitter&lt;void&gt;</code></p>
+            </td>
+            <td class="docs-api-property-description">
+                <p> Evento emitido cuando el elemento pierde foco. </p>
+            </td>
+        </tr>          
     </table>
 </div>
