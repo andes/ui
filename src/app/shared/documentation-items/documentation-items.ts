@@ -54,6 +54,11 @@ const DOCS: DocCategory[] = [
         name: 'Footer',
         examples: []
       },
+      {
+        id: 'layout-sin-footer',
+        name: 'Sin footer',
+        examples: []
+      },
     ]
   },
   {
@@ -61,18 +66,23 @@ const DOCS: DocCategory[] = [
     name: 'Componentes',
     items: [
       {
-        id: 'bool',
-        name: 'Bool',
-        examples: []
-      },
-      {
         id: 'accordion',
         name: 'Accordion',
         examples: []
       },
       {
+        id: 'bool',
+        name: 'Bool',
+        examples: []
+      },
+      {
         id: 'button',
         name: 'Button',
+        examples: []
+      },
+      {
+        id: 'component-botonera',
+        name: 'Botonera',
         examples: []
       },
       {
@@ -83,6 +93,11 @@ const DOCS: DocCategory[] = [
       {
         id: 'datetime',
         name: 'Datetime',
+        examples: []
+      },
+      {
+        id: 'component-tabs',
+        name: 'Tabs',
         examples: []
       },
       {
@@ -144,6 +159,11 @@ const DOCS: DocCategory[] = [
         ]
       },
       {
+        id: 'template-listado',
+        name: 'Listado',
+        examples: []
+      },
+      { 
         id: 'template-visualizacion',
         name: 'Visualización',
         examples: [{

@@ -1,6 +1,7 @@
 body {
   font-family: "Roboto","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
   margin: 0;
+  line-height: 1.5;
 }
 
 .docs-button[md-button], .docs-button[md-raised-button] {
@@ -68,6 +69,14 @@ code {
     color: $andes-magenta;
   }
 }
+
+p {
+  .magenta {
+    color: $andes-magenta;
+  }
+  
+}
+
 
 .breadcrump {
   font-size: 10px;
