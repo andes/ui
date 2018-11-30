@@ -1,0 +1,15 @@
+<span class="hljs-keyword">import</span> { Pipe, PipeTransform } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+
+<span class="hljs-comment">/**
+ * Esta es una copia del pipe 'fecha' del proyecto /app con el fin utilizarlo en los templates
+ *
+ * @export
+ * @class FechaPipe
+ * @implements {PipeTransform}
+ */</span>
+<span class="hljs-meta">@Pipe</span>({ name: <span class="hljs-string">'fecha'</span> })
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> FechaPipe <span class="hljs-keyword">implements</span> PipeTransform {
+    transform(value: <span class="hljs-built_in">any</span>, hora: <span class="hljs-built_in">boolean</span>): <span class="hljs-built_in">any</span> {
+        <span class="hljs-keyword">return</span> hora ? moment(value).format(<span class="hljs-string">'HH:mm'</span>) : moment(value).format(<span class="hljs-string">'DD/MM/YYYY'</span>);
+    }
+}
