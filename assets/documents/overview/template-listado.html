@@ -1,0 +1,70 @@
+<html>
+
+<body>
+    <div class="docs-markdown">
+        <badge class="breadcrump rounded">Plantillas</badge>
+        <h3 class="docs-header-link docs-markdown-h3">
+            <span header-link="simple-autocomplete"></span>Listados
+        </h3>
+
+            <h4 class="docs-markdown-h4">Ordenamiento dentro del layout</h4>
+            <p class="docs-markdown-p">
+                La secuencia de componentes que debe encontrar el usuario es:<br>
+                1. Pestañas (en caso de haber)<br>
+                2. Batería de filtros<br>
+                3. Subtítulo (en caso de ser necesario) junto a los botones que operan sobre el listado completo o una selección múltiple.<br>
+                4. Listado
+            </p>
+
+            <img src="assets/img/template-listado-layout.png" alt="" class="andes-img">
+
+        <div class="andes-card">
+            <h4 class="docs-markdown-h4">Jerarquización</h4>
+            <p>
+                Para evitar saturación de información, se recomienda hacer un análisis previo mediante el cual se identifique y diferencie la información principal de la información secundaria, y a su vez, de aquella que el usuario puede visualizar interacción mediante (por ej. en un panel auxiliar o un dropdown).
+            </p>
+            <h4 class="docs-markdown-h4">Item de la lista</h4>
+
+            <img src="assets/img/template-listado.png" alt="" class="andes-img">
+            <p>Dentro del listado, el contenido de cada item se ordena de izq. a der. de la siguiente manera:</p><br> 
+            <cards-container>
+                <div class="andes-card">
+                    <p>
+                        <b>Elementos marginados a la izquierda:</b><br>
+                        1. Checkbox (en caso de haber)<br>
+                        2. Icono (en caso de haber)<br>
+                        3. Título (Dependerá del módulo o finalidad de la pantalla)<br>
+                        4. Subtítulo (Información secundaria: Nombre de profesional, datos de organización, datos secundarios de paciente)
+                    </p>
+                </div>
+                <div class="andes-card">
+                    <p>
+                        <b>Elementos marginados a la derecha:</b><br>
+                        1. Badge (estados, fechas, advertencias)<br>
+                        2. Acciones (textuales e/o iconográficas)<br>
+                            a. Acciones sensibles<br>
+                            b. Acciones de neutras (actualización, modificación)<br>
+                            c. Acciones de confirmación<br>
+                            d. Checkbox (en caso de ser seleccionable)<br>
+                        3. Dropdown<br>
+                            a. aloja opciones secundarias (por ej.: ver detalle)            
+                    </p>
+                </div>
+            </cards-container>
+            <img src="assets/img/template-listado-sidebar.png" alt="" class="andes-img">
+
+            <p class="note">
+                    Importante! En pantallas de menor dimensión (> 780px), las acciones se jerarquizan, identificando la acción principal y relegando el resto de los elementos se solapan en el dropdown.
+            </p>
+            <p>
+                <h4 class="docs-markdown-h4">Mobile</h4> 
+                <li class="andes-item">Se secuencian las pantallas</li>
+                <li class="andes-item">El friso se mantiene fijo mientras se scrollea el contenido</li>
+                <li class="andes-item">En caso de haber pestañas, estarán visibles en tanto el scroll esté en posición inicial. Si el usuario comienza a interactuar con los elementos, las pesatañas hacen fade-out. (se entiende que el usuario desea estar en dicha pestaña).</li>
+            </p>
+                <img src="assets/img/template-listado-mobile.png" alt="" class="andes-img">
+        </div>
+        </div>
+    </body>
+    
+</html>
