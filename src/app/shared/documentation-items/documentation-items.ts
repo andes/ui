@@ -124,7 +124,23 @@ const DOCS: DocCategory[] = [
         id: 'icon',
         name: 'Icon',
         examples: []
-      }
+      },
+      {
+        id: 'title',
+        name: 'Title',
+        examples: []
+      },
+    ]
+  },
+  {
+    id: 'directivas',
+    name: 'Directivas',
+    items: [
+      {
+        id: 'justify',
+        name: 'Justify',
+        examples: []
+      },
     ]
   },
   {
