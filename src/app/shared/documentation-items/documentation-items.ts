@@ -130,6 +130,11 @@ const DOCS: DocCategory[] = [
         name: 'Title',
         examples: []
       },
+      {
+        id: 'plex-help',
+        name: 'Help',
+        examples: []
+      },
     ]
   },
   {
@@ -179,7 +184,7 @@ const DOCS: DocCategory[] = [
         name: 'Listado',
         examples: []
       },
-      { 
+      {
         id: 'template-visualizacion',
         name: 'Visualización',
         examples: [{
