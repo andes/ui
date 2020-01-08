@@ -6,26 +6,26 @@
     &#x3C;plex-datetime label=&#x22;Ingrese la fecha y la hora del evento&#x22; [(ngModel)]=&#x22;tModel.fechaHora&#x22; name=&#x22;fechaHora&#x22; required&#x3E;&#x3C;/plex-datetime&#x3E;
             </pre>
         </code>
-    </p> 
+    </p>
     <p>
         <code>
             <pre>
     &#x3C;plex-datetime label=&#x22;Ingrese la fecha del cumplea&#xF1;os mayor a 1/1/1970&#x22; type=&#x22;date&#x22; [(ngModel)]=&#x22;tModel.fecha&#x22; name=&#x22;fecha&#x22; [required]=&#x22;true&#x22; [min]=&#x22;tModel.min&#x22; [max]=&#x22;tModel.max&#x22;&#x3E;&#x3C;/plex-datetime&#x3E;
             </pre>
         </code>
-    </p> 
+    </p>
     <h3 id="directives" class="docs-header-link docs-api-h3">
         <span header-link="directives"></span> Componente
     </h3>
     <h4 id="MatAutocomplete" class="docs-header-link docs-api-h4 docs-api-class-name">
-        <span header-link="MatAutocomplete"></span> 
+        <span header-link="MatAutocomplete"></span>
         <code>PlexDatetime</code>
     </h4>
     <p class="docs-api-directive-selectors">
-        <span class="docs-api-class-selector-label">Selector:</span> 
+        <span class="docs-api-class-selector-label">Selector:</span>
         <span class="docs-api-class-selector-name">plex-datetime</span>
     </p>
-    <span class="docs-api-class-export-label">Exported as:</span> 
+    <span class="docs-api-class-export-label">Exported as:</span>
     <span class="docs-api-class-export-name">PlexDateTimeComponent</span>
 
     <h5 class="docs-api-h5 docs-api-method-header">Propiedades</h5>
@@ -49,10 +49,10 @@
                 <p class="docs-api-property-name"><code>type: string</code></p>
             </td>
             <td class="docs-api-property-description">
-                <p> Tipo de selector.</p> 
+                <p> Tipo de selector.</p>
                 <p> Valores: <code> 'time' | 'date' | 'datetime' </code></p>
             </td>
-        </tr>                     
+        </tr>
         <tr class="docs-api-properties-row">
             <td class="docs-api-properties-name-cell">
                 <div class="docs-api-input-marker">@Input()</div>
@@ -61,7 +61,7 @@
             <td class="docs-api-property-description">
                 <p> Placeholder a mostrar en el input.</p>
             </td>
-        </tr>   
+        </tr>
         <tr class="docs-api-properties-row">
             <td class="docs-api-properties-name-cell">
                 <div class="docs-api-input-marker">@Input()</div>
@@ -110,13 +110,41 @@
         </tr>
         <tr class="docs-api-properties-row">
             <td class="docs-api-properties-name-cell">
+                <div class="docs-api-input-marker">@Input()</div>
+                <p class="docs-api-property-name"><code>size: string</code></p>
+                <p class="docs-api-property-name"><code>opcional</code></p>
+            </td>
+            <td class="docs-api-property-description">
+                <p> Establece el tamaño del input. Valores <code> 'sm' |  'md' | 'lg' </code>.</p>
+            </td>
+        </tr>
+        <tr class="docs-api-properties-row">
+            <td class="docs-api-properties-name-cell">
+                <div class="docs-api-input-marker">@Input()</div>
+                <p class="docs-api-property-name"><code>debounce: number</code></p>
+            </td>
+            <td class="docs-api-property-description">
+                <p> Demora la ejecución del evento <i>change</i>.</p>
+            </td>
+        </tr>
+        <tr class="docs-api-properties-row">
+            <td class="docs-api-properties-name-cell">
+                <div class="docs-api-input-marker">@Input()</div>
+                <p class="docs-api-property-name"><code>btnOnly: number</code></p>
+            </td>
+            <td class="docs-api-property-description">
+                <p> Muestra solo el botón para activar el calendario. El input queda oculto.</p>
+            </td>
+        </tr>
+        <tr class="docs-api-properties-row">
+            <td class="docs-api-properties-name-cell">
                 <div class="docs-api-output-marker">@Output()</div>
-                <p class="docs-api-property-name"><code>click: EventEmitter&lt;Date&gt;</code></p>
+                <p class="docs-api-property-name"><code>change: EventEmitter&lt;Date&gt;</code></p>
             </td>
             <td class="docs-api-property-description">
                 <p> Evento emitido cuando cambia la fecha y/o hora. </p>
             </td>
-        </tr>   
+        </tr>
         <tr class="docs-api-properties-row">
             <td class="docs-api-properties-name-cell">
                 <div class="docs-api-output-marker">@Output()</div>
@@ -134,6 +162,6 @@
             <td class="docs-api-property-description">
                 <p> Evento emitido cuando el elemento pierde foco. </p>
             </td>
-        </tr>          
+        </tr>
     </table>
 </div>
