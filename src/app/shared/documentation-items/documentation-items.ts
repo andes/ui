@@ -135,6 +135,16 @@ const DOCS: DocCategory[] = [
         name: 'Help',
         examples: []
       },
+      {
+        id: 'plex-copy',
+        name: 'Copy',
+        examples: []
+      },
+      {
+        id: 'plex-detail',
+        name: 'Detail',
+        examples: []
+      }
     ]
   },
   {

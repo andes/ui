@@ -1,0 +1,72 @@
+<div class="docs-api">
+    <h2>plex-detail</h2>
+    <p>
+        <code>
+            <pre>
+    &#x3C;plex-detail size=&#x22;md&#x22; direction=&#x22;column&#x22; [items]=&#x22;datos&#x22;&#x3E;
+        &#x3C;img src="{{ paciente.foto }}"&#47;&#x3E;
+        &#x3C;plex-badge size="lg"&#x3E;{{ paciente.estado }}&#x3C;&#47;plex-badge&#x3E;
+        &#x3C;div title &#x3E;{{ paciente.nombreCompleto }}&#x3C;&#47;div&#x3E;
+        &#x3C;div subtitle &#x3E;{{ paciente.documento }}&#x3C;&#47;div&#x3E;
+    &#x3C;&#47;plex-detail&#x3E;
+
+    &#x3C;plex-detail size=&#x22;lg&#x22; direction=&#x22;row&#x22;&#x3E;
+        &#x3C;img src="{{ paciente.foto }}"&#47;&#x3E;
+        &#x3C;plex-badge size="lg"&#x3E;{{ paciente.estado }}&#x3C;&#47;plex-badge&#x3E;
+        &#x3C;div title &#x3E;{{ paciente.nombreCompleto }}&#x3C;&#47;div&#x3E;
+        &#x3C;div subtitle &#x3E;{{ paciente.documento }}&#x3C;&#47;div&#x3E;
+        &#x3C;plex-label &#x3E;titulo=&#x22;label&#x22;subtitulo=&#x22;valor&#x22;&#x3C;&#47;plex-label&#x3E;
+        &#x3C;plex-label &#x3E;titulo=&#x22;label&#x22;subtitulo=&#x22;valor&#x22;&#x3C;&#47;plex-label&#x3E;
+    &#x3C;&#47;plex-detail&#x3E;
+            </pre>
+        </code>
+    </p>
+    <h3 id="directives" class="docs-header-link docs-api-h3">
+        <span header-link="directives"></span> Componente
+    </h3>
+    <h4 id="MatAutocomplete" class="docs-header-link docs-api-h4 docs-api-class-name">
+        <span header-link="MatAutocomplete"></span>
+        <code>PlexDetail</code>
+    </h4>
+    <p class="docs-api-directive-selectors">
+        <span class="docs-api-class-selector-label">Selector:</span>
+        <span class="docs-api-class-selector-name">plex-detail</span>
+    </p>
+    <span class="docs-api-class-export-label">Exported as:</span>
+    <span class="docs-api-class-export-name">PlexDetailComponent</span>
+
+    <h5 class="docs-api-h5 docs-api-method-header">Propiedades</h5>
+    <table class="docs-api-properties-table">
+        <tr class="docs-api-properties-header-row">
+            <th class="docs-api-properties-th">Nombre</th>
+            <th class="docs-api-properties-th">Descripción</th>
+        </tr>
+        <tr class="docs-api-properties-row">
+            <td class="docs-api-properties-name-cell">
+                <div class="docs-api-input-marker">@Input()</div>
+                <p class="docs-api-property-name"><code>size: 'xs' | 'md' | 'lg' = 'md'</code></p>
+            </td>
+            <td class="docs-api-property-description">
+                <p>Define el tamaño del componente.</p>
+            </td>
+        </tr>
+        <tr class="docs-api-properties-row">
+            <td class="docs-api-properties-name-cell">
+                <div class="docs-api-input-marker">@Input()</div>
+                <p class="docs-api-property-name"><code>direction: 'column' | 'row' = 'row'</code></p>
+            </td>
+            <td class="docs-api-property-description">
+                <p>Define la dirección en la que se alinean los elementos del componente.</p>
+            </td>
+        </tr>
+        <tr class="docs-api-properties-row">
+            <td class="docs-api-properties-name-cell">
+                <div class="docs-api-input-marker">@Input()</div>
+                <p class="docs-api-property-name"><code>items: []</code></p>
+            </td>
+            <td class="docs-api-property-description">
+                <p>Array de datos secundarios que se corresponden con el label y el valor de los plex-label.</p>
+            </td>
+        </tr>
+    </table>
+</div>

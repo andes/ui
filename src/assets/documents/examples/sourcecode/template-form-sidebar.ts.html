@@ -3,7 +3,6 @@
 <span class="hljs-keyword">import</span> { TemplateData } <span class="hljs-keyword">from</span> <span class="hljs-string">'./template-data.interface'</span>;
 
 
-
 <span class="hljs-meta">@Component</span>({
     templateUrl: <span class="hljs-string">'template-form-sidebar.html'</span>
 })
@@ -14,7 +13,7 @@
     <span class="hljs-keyword">public</span> modelo: TemplateData;
     <span class="hljs-keyword">public</span> opcionesLugarNacimiento: <span class="hljs-built_in">any</span>[] = [{ id: <span class="hljs-string">'1'</span>, nombre: <span class="hljs-string">'Neuquén'</span> }, { id: <span class="hljs-string">'2'</span>, nombre: <span class="hljs-string">'Centenario'</span> }, { id: <span class="hljs-string">'3'</span>, nombre: <span class="hljs-string">'Zapala City'</span> }, { id: <span class="hljs-string">'4'</span>, nombre: <span class="hljs-string">'Plottier'</span> }];
     <span class="hljs-keyword">public</span> opcionesSexo: <span class="hljs-built_in">any</span>[] = [{ id: <span class="hljs-string">'femenino'</span>, label: <span class="hljs-string">'femenino'</span> }, { id: <span class="hljs-string">'masculino'</span>, label: <span class="hljs-string">'masculino'</span> }, { id: <span class="hljs-string">'otro'</span>, label: <span class="hljs-string">'otro'</span> }];
-   
+
     <span class="hljs-comment">// Eventos</span>
     <span class="hljs-meta">@Output</span>() save: EventEmitter&lt;TemplateData&gt; = <span class="hljs-keyword">new</span> EventEmitter&lt;TemplateData&gt;();
 

@@ -140,7 +140,7 @@ cards-container {
 
   .andes-card-30 {
     @extend %base;
-    width: 30%;
+    width: 25%;
   }
 
   .andes-card {
@@ -170,4 +170,9 @@ cards-container {
 
   img.andes-img {
     width: 100%;
+
+      &.h-25 {
+        height: 25rem;
+        object-fit: contain;
+      }
     }
