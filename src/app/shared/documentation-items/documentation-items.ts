@@ -144,6 +144,26 @@ const DOCS: DocCategory[] = [
         id: 'plex-detail',
         name: 'Detail',
         examples: []
+      },
+      {
+        id: 'plex-radio',
+        name: 'Radio',
+        examples: []
+      },
+      {
+        id: 'plex-options',
+        name: 'Options',
+        examples: []
+      },
+      {
+        id: 'plex-list',
+        name: 'List',
+        examples: []
+      },
+      {
+        id: 'plex-visualizador',
+        name: 'Visualizador',
+        examples: []
       }
     ]
   },

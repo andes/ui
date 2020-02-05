@@ -1,0 +1,76 @@
+<div class="docs-api">
+    <h2>Plex List</h2>
+
+    <code>
+        <pre>
+            &lt;plex-list height="70%" (scrolled)="onScroll()"&gt;
+                &lt;plex-heading [sticky]="true"&gt;
+                    &lt;b label&gt;1&lt;/b&gt;
+                    &lt;b badge&gt;3&lt;/b&gt;
+                &lt;/plex-heading&gt;
+                &lt;plex-item [selected]="item.selected"&gt;
+                    &lt;plex-bool name="activo"&gt;&lt;/plex-bool&gt;
+                    &lt;plex-label titulo="Otro titulo del item" subtitulo="Otro subtítulo" size="sm"&gt;&lt;/plex-label&gt;
+                    &lt;plex-button type="danger" size="sm" icon="delete"&gt;&lt;/plex-button&gt;
+                    &lt;plex-badge type="danger"&gt;ausente&lt;/plex-badge&gt;
+                    &lt;plex-button type="success" size="sm" icon="check-circle"&gt;&lt;/plex-button&gt;
+                    &lt;plex-button type="warning" size="sm" icon="clock"&gt;&lt;/plex-button&gt;
+                &lt;/plex-item&gt;
+            &lt;/plex-list&gt;
+        </pre>
+    </code>
+
+    <h1>List</h1>
+    <!-- <p class="docs-api-module-import"><code>import {MatAutocompleteModule} from '@angular/material/autocomplete';</code></p> -->
+    <h3 id="directives" class="docs-header-link docs-api-h3"><span header-link="directives"></span> Directives</h3>
+    <h4 id="MatAutocomplete" class="docs-header-link docs-api-h4 docs-api-class-name"><span
+              header-link="MatAutocomplete"></span> <code>PlexList</code></h4>
+    <p class="docs-api-directive-selectors"><span class="docs-api-class-selector-label">Selector:</span> <span
+              class="docs-api-class-selector-name">plex-list</span></p>
+    <span class="docs-api-class-export-label">Exported as:</span> <span
+          class="docs-api-class-export-name">PlexListComponent</span>
+
+    <h5 class="docs-api-h5 docs-api-method-header">Propiedades</h5>
+    <table class="docs-api-properties-table">
+        <tr class="docs-api-properties-header-row">
+            <th class="docs-api-properties-th">Nombre</th>
+            <th class="docs-api-properties-th">Descripción</th>
+        </tr>
+        <tr class="docs-api-properties-row">
+            <td class="docs-api-properties-name-cell">
+                <div class="docs-api-input-marker">@Input()</div>
+                <p class="docs-api-property-name"><code>striped: boolean</code></p>
+            </td>
+            <td class="docs-api-property-description">
+                <p>Renderiza el listado franjeado (items con fondo gris intercalados).</p>
+            </td>
+        </tr>
+        <tr class="docs-api-properties-row">
+            <td class="docs-api-properties-name-cell">
+                <div class="docs-api-input-marker">@Input()</div>
+                <p class="docs-api-property-name"><code>height: string</code></p>
+            </td>
+            <td class="docs-api-property-description">
+                <p> Valor de la altura del listado (necesario para el funcionamiento del scroll infinito).</p>
+            </td>
+        </tr>
+        <tr class="docs-api-properties-row">
+            <td class="docs-api-properties-name-cell">
+                <div class="docs-api-output-marker">@Output()</div>
+                <p class="docs-api-property-name"><code>scrolled: EventEmitter&lt;void&gt;</code></p>
+            </td>
+            <td class="docs-api-property-description">
+                <p> Evento emitido para recuperar más items.</p>
+            </td>
+        </tr>
+        <tr class="docs-api-properties-row">
+            <td class="docs-api-properties-name-cell">
+                <div class="docs-api-input-marker">@Input()</div>
+                <p class="docs-api-property-name"><code>selected: boolean</code></p>
+            </td>
+            <td class="docs-api-property-description">
+                <p>Establece si el item ha sido seleccionado.<b> *aplica al plex-item</b></p>
+            </td>
+        </tr>
+    </table>
+</div>
