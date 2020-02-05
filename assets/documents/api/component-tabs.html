@@ -1,0 +1,82 @@
+<div class="docs-api">
+    <h2>Plex Tabs</h2>
+    <code>
+        <pre>
+            &lt;plex-tabs [activeIndex]="activo"&gt;
+                &lt;plex-tab label="titulo de la pestaña" icon="pencil"&gt;
+                    &lt;El contenido de la pestaña acepta html&gt;            
+                &lt;/plex-tab&gt;
+                &lt;plex-tab label="titulo de la segunda pestaña" icon="pencil"&gt;
+                    &lt;El contenido de la pestaña acepta html&gt;            
+                &lt;/plex-tab&gt;
+                &lt;plex-tab label="titulo de la tercera pestaña" icon="account" [allowClose]="true"&gt;
+                    &lt;El contenido de la pestaña acepta html&gt;            
+                &lt;/plex-tab&gt;
+            &lt;/plex-tabs&gt;
+        </pre>
+    </code>
+
+    <h1>Tabs</h1>
+    <!-- <p class="docs-api-module-import"><code>import {MatAutocompleteModule} from '@angular/material/autocomplete';</code></p> -->
+    <h3 id="directives" class="docs-header-link docs-api-h3"><span header-link="directives"></span> Directives</h3>
+    <h4 id="MatAutocomplete" class="docs-header-link docs-api-h4 docs-api-class-name"><span
+              header-link="MatAutocomplete"></span> <code>PlexTabs</code></h4>
+    <p class="docs-api-directive-selectors"><span class="docs-api-class-selector-label">Selector:</span> <span
+              class="docs-api-class-selector-name">plex-tabs</span></p>
+    <span class="docs-api-class-export-label">Exported as:</span> <span
+          class="docs-api-class-export-name">PlexTabsComponent</span>
+
+    <h5 class="docs-api-h5 docs-api-method-header">Propiedades</h5>
+    <table class="docs-api-properties-table">
+        <tr class="docs-api-properties-header-row">
+            <th class="docs-api-properties-th">Nombre</th>
+            <th class="docs-api-properties-th">Descripción</th>
+        </tr>
+        <tr class="docs-api-properties-row">
+            <td class="docs-api-properties-name-cell">
+                <div class="docs-api-input-marker">@Input()</div>
+                <p class="docs-api-property-name"><code>label: string</code></p>
+            </td>
+            <td class="docs-api-property-description">
+                <p>Muestra el titulo de la pestaña.</p>
+            </td>
+        </tr>
+        <tr class="docs-api-properties-row">
+            <td class="docs-api-properties-name-cell">
+                <div class="docs-api-input-marker">@Input()</div>
+                <p class="docs-api-property-name"><code>icon: string</code></p>
+            </td>
+            <td class="docs-api-property-description">
+                <p>Renderiza un icono de (Material Design Icons / Andes Font) ingresando sólo el nombre del icono (sin
+                    prefijos).</p>
+            </td>
+        </tr>
+        <tr class="docs-api-properties-row">
+            <td class="docs-api-properties-name-cell">
+                <div class="docs-api-input-marker">@Input()</div>
+                <p class="docs-api-property-name"><code>active: boolean</code></p>
+            </td>
+            <td class="docs-api-property-description">
+                <p>Establece si la pestaña se encuentra en estado activo.<b> *aplica al plex-tab</b></p>
+            </td>
+        </tr>
+        <tr class="docs-api-properties-row">
+            <td class="docs-api-properties-name-cell">
+                <div class="docs-api-input-marker">@Input()</div>
+                <p class="docs-api-property-name"><code>allowClose: boolean</code></p>
+            </td>
+            <td class="docs-api-property-description">
+                <p>Define si se permite cerrar la pestaña o no. Útil en el caso de las pestañas dinámicas.</p>
+            </td>
+        </tr>
+        <tr class="docs-api-properties-row">
+            <td class="docs-api-properties-name-cell">
+                <div class="docs-api-input-marker">@Input()</div>
+                <p class="docs-api-property-name"><code>color: string</code></p>
+            </td>
+            <td class="docs-api-property-description">
+                <p>Define el color del texto del titulo.</p>
+            </td>
+        </tr>
+    </table>
+</div>
