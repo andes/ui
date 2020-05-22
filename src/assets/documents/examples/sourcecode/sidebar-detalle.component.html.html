@@ -1,67 +1,171 @@
-<span class="hljs-tag">&lt;<span class="hljs-name">plex-options</span> [<span class="hljs-attr">items</span>]=<span class="hljs-string">"items"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">plex-options</span> [<span class="hljs-attr">items</span>]=<span
+          class="hljs-string">"items"</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">plex-options</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">"paciente$ | async as paciente"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">plex-detail</span> <span class="hljs-attr">direction</span>=<span class="hljs-string">"row"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"{{ paciente.foto }}"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">plex-badge</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"xs"</span>&gt;</span>{{ paciente.estado }}<span class="hljs-tag">&lt;/<span class="hljs-name">plex-badge</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">plex-badge</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">"paciente.fechaFallecimiento != null"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"danger"</span>&gt;</span>Fallecido:
-            {{ paciente.fechaFallecimiento }}
-        <span class="hljs-tag">&lt;/<span class="hljs-name">plex-badge</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">title</span>&gt;</span>{{ paciente.nombre }}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">subtitle</span>&gt;</span>{{ paciente.documento }}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">plex-label</span> <span class="hljs-attr">titulo</span>=<span class="hljs-string">"Fecha de Nacimiento"</span> <span class="hljs-attr">subtitulo</span>=<span class="hljs-string">"{{ paciente.fechaNacimiento }}"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">plex-label</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">plex-label</span> <span class="hljs-attr">titulo</span>=<span class="hljs-string">"CUIL"</span> <span class="hljs-attr">subtitulo</span>=<span class="hljs-string">"{{ paciente.cuil }}"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">plex-label</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">plex-label</span> <span class="hljs-attr">titulo</span>=<span class="hljs-string">"Edad"</span> <span class="hljs-attr">subtitulo</span>=<span class="hljs-string">"{{ paciente.edad }}"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">plex-label</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">plex-label</span> <span class="hljs-attr">titulo</span>=<span class="hljs-string">"Sexo"</span> <span class="hljs-attr">subtitulo</span>=<span class="hljs-string">"{{ paciente.sexo }}"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">plex-label</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">plex-label</span> <span class="hljs-attr">titulo</span>=<span class="hljs-string">"Género"</span> <span class="hljs-attr">subtitulo</span>=<span class="hljs-string">"{{ paciente.genero }}"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">plex-label</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">plex-label</span> <span class="hljs-attr">titulo</span>=<span class="hljs-string">"Financiador"</span> <span class="hljs-attr">subtitulo</span>=<span class="hljs-string">"{{ paciente.financiador }}"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">plex-label</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">plex-detail</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">plex-title</span> <span class="hljs-attr">titulo</span>=<span class="hljs-string">"Este es un subtitulo"</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"sm"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">plex-button</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"sm"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"success"</span> <span class="hljs-attr">icon</span>=<span class="hljs-string">"check"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">plex-button</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">plex-button</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"sm"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"info"</span> <span class="hljs-attr">icon</span>=<span class="hljs-string">"plus"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">plex-button</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">plex-button</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"sm"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"warning"</span> <span class="hljs-attr">icon</span>=<span class="hljs-string">"pencil"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">plex-button</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">plex-title</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> *<span class="hljs-attr">ngIf</span>=<span
+          class="hljs-string">"paciente$ | async as paciente"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">plex-detail</span> <span class="hljs-attr">direction</span>=<span
+          class="hljs-string">"row"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span
+          class="hljs-string">"{{ paciente.foto }}"</span> <span class="hljs-attr">alt</span>=<span
+          class="hljs-string">""</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">plex-badge</span> <span class="hljs-attr">size</span>=<span
+          class="hljs-string">"xs"</span>&gt;</span>{{ paciente.estado }}<span class="hljs-tag">&lt;/<span
+          class="hljs-name">plex-badge</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">plex-badge</span> *<span class="hljs-attr">ngIf</span>=<span
+          class="hljs-string">"paciente.fechaFallecimiento != null"</span> <span class="hljs-attr">type</span>=<span
+          class="hljs-string">"danger"</span>&gt;</span>Fallecido:
+{{ paciente.fechaFallecimiento }}
+<span class="hljs-tag">&lt;/<span class="hljs-name">plex-badge</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span
+          class="hljs-attr">title</span>&gt;</span>{{ paciente.nombre }}<span class="hljs-tag">&lt;/<span
+          class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span
+          class="hljs-attr">subtitle</span>&gt;</span>{{ paciente.documento }}<span class="hljs-tag">&lt;/<span
+          class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">plex-label</span> <span class="hljs-attr">titulo</span>=<span
+          class="hljs-string">"Fecha de Nacimiento"</span> <span class="hljs-attr">subtitulo</span>=<span
+          class="hljs-string">"{{ paciente.fechaNacimiento }}"</span>&gt;</span><span class="hljs-tag">&lt;/<span
+          class="hljs-name">plex-label</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">plex-label</span> <span class="hljs-attr">titulo</span>=<span
+          class="hljs-string">"CUIL"</span> <span class="hljs-attr">subtitulo</span>=<span
+          class="hljs-string">"{{ paciente.cuil }}"</span>&gt;</span><span class="hljs-tag">&lt;/<span
+          class="hljs-name">plex-label</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">plex-label</span> <span class="hljs-attr">titulo</span>=<span
+          class="hljs-string">"Edad"</span> <span class="hljs-attr">subtitulo</span>=<span
+          class="hljs-string">"{{ paciente.edad }}"</span>&gt;</span><span class="hljs-tag">&lt;/<span
+          class="hljs-name">plex-label</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">plex-label</span> <span class="hljs-attr">titulo</span>=<span
+          class="hljs-string">"Sexo"</span> <span class="hljs-attr">subtitulo</span>=<span
+          class="hljs-string">"{{ paciente.sexo }}"</span>&gt;</span><span class="hljs-tag">&lt;/<span
+          class="hljs-name">plex-label</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">plex-label</span> <span class="hljs-attr">titulo</span>=<span
+          class="hljs-string">"Género"</span> <span class="hljs-attr">subtitulo</span>=<span
+          class="hljs-string">"{{ paciente.genero }}"</span>&gt;</span><span class="hljs-tag">&lt;/<span
+          class="hljs-name">plex-label</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">plex-label</span> <span class="hljs-attr">titulo</span>=<span
+          class="hljs-string">"Financiador"</span> <span class="hljs-attr">subtitulo</span>=<span
+          class="hljs-string">"{{ paciente.financiador }}"</span>&gt;</span><span class="hljs-tag">&lt;/<span
+          class="hljs-name">plex-label</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">plex-detail</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">plex-title</span> <span class="hljs-attr">titulo</span>=<span
+          class="hljs-string">"Este es un subtitulo"</span> <span class="hljs-attr">size</span>=<span
+          class="hljs-string">"sm"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">plex-button</span> <span class="hljs-attr">size</span>=<span
+          class="hljs-string">"sm"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"success"</span>
+    <span class="hljs-attr">icon</span>=<span class="hljs-string">"check"</span>&gt;</span><span
+      class="hljs-tag">&lt;/<span class="hljs-name">plex-button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">plex-button</span> <span class="hljs-attr">size</span>=<span
+          class="hljs-string">"sm"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"info"</span>
+    <span class="hljs-attr">icon</span>=<span class="hljs-string">"plus"</span>&gt;</span><span
+      class="hljs-tag">&lt;/<span class="hljs-name">plex-button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">plex-button</span> <span class="hljs-attr">size</span>=<span
+          class="hljs-string">"sm"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"warning"</span>
+    <span class="hljs-attr">icon</span>=<span class="hljs-string">"pencil"</span>&gt;</span><span
+      class="hljs-tag">&lt;/<span class="hljs-name">plex-button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">plex-title</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">"selectedOption === '1'"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">"paciente$ | async as paciente"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">plex-detail</span> <span class="hljs-attr">direction</span>=<span class="hljs-string">"row"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"{{ paciente.foto }}"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">plex-badge</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"xs"</span>&gt;</span>{{ paciente.estado }}<span class="hljs-tag">&lt;/<span class="hljs-name">plex-badge</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">plex-badge</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">"paciente.fechaFallecimiento != 'null'"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"danger"</span>&gt;</span>Fallecido:
-                {{ paciente.fechaFallecimiento }}
-            <span class="hljs-tag">&lt;/<span class="hljs-name">plex-badge</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">title</span>&gt;</span>{{ paciente.nombre }}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">subtitle</span>&gt;</span>{{ paciente.documento }}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">plex-label</span> <span class="hljs-attr">titulo</span>=<span class="hljs-string">"Fecha de Nacimiento"</span> <span class="hljs-attr">subtitulo</span>=<span class="hljs-string">"{{ paciente.fechaNacimiento }}"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">plex-label</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">plex-label</span> <span class="hljs-attr">titulo</span>=<span class="hljs-string">"CUIL"</span> <span class="hljs-attr">subtitulo</span>=<span class="hljs-string">"{{ paciente.cuil }}"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">plex-label</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">plex-label</span> <span class="hljs-attr">titulo</span>=<span class="hljs-string">"Edad"</span> <span class="hljs-attr">subtitulo</span>=<span class="hljs-string">"{{ paciente.edad }}"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">plex-label</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">plex-label</span> <span class="hljs-attr">titulo</span>=<span class="hljs-string">"Sexo"</span> <span class="hljs-attr">subtitulo</span>=<span class="hljs-string">"{{ paciente.sexo }}"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">plex-label</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">plex-label</span> <span class="hljs-attr">titulo</span>=<span class="hljs-string">"Género"</span> <span class="hljs-attr">subtitulo</span>=<span class="hljs-string">"{{ paciente.genero }}"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">plex-label</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">plex-label</span> <span class="hljs-attr">titulo</span>=<span class="hljs-string">"Financiador"</span> <span class="hljs-attr">subtitulo</span>=<span class="hljs-string">"{{ paciente.financiador }}"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">plex-label</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">plex-detail</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">plex-title</span> <span class="hljs-attr">titulo</span>=<span class="hljs-string">"Este es un subtitulo"</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"sm"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">plex-button</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"sm"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"success"</span> <span class="hljs-attr">icon</span>=<span class="hljs-string">"check"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">plex-button</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">plex-button</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"sm"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"info"</span> <span class="hljs-attr">icon</span>=<span class="hljs-string">"plus"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">plex-button</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">plex-button</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"sm"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"warning"</span> <span class="hljs-attr">icon</span>=<span class="hljs-string">"pencil"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">plex-button</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">plex-title</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> *<span class="hljs-attr">ngIf</span>=<span
+          class="hljs-string">"selectedOption === '1'"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> *<span class="hljs-attr">ngIf</span>=<span
+          class="hljs-string">"paciente$ | async as paciente"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">plex-detail</span> <span class="hljs-attr">direction</span>=<span
+          class="hljs-string">"row"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span
+          class="hljs-string">"{{ paciente.foto }}"</span> <span class="hljs-attr">alt</span>=<span
+          class="hljs-string">""</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">plex-badge</span> <span class="hljs-attr">size</span>=<span
+          class="hljs-string">"xs"</span>&gt;</span>{{ paciente.estado }}<span class="hljs-tag">&lt;/<span
+          class="hljs-name">plex-badge</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">plex-badge</span> *<span class="hljs-attr">ngIf</span>=<span
+          class="hljs-string">"paciente.fechaFallecimiento != 'null'"</span> <span class="hljs-attr">type</span>=<span
+          class="hljs-string">"danger"</span>&gt;</span>Fallecido:
+{{ paciente.fechaFallecimiento }}
+<span class="hljs-tag">&lt;/<span class="hljs-name">plex-badge</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span
+          class="hljs-attr">title</span>&gt;</span>{{ paciente.nombre }}<span class="hljs-tag">&lt;/<span
+          class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span
+          class="hljs-attr">subtitle</span>&gt;</span>{{ paciente.documento }}<span class="hljs-tag">&lt;/<span
+          class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">plex-label</span> <span class="hljs-attr">titulo</span>=<span
+          class="hljs-string">"Fecha de Nacimiento"</span> <span class="hljs-attr">subtitulo</span>=<span
+          class="hljs-string">"{{ paciente.fechaNacimiento }}"</span>&gt;</span><span class="hljs-tag">&lt;/<span
+          class="hljs-name">plex-label</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">plex-label</span> <span class="hljs-attr">titulo</span>=<span
+          class="hljs-string">"CUIL"</span> <span class="hljs-attr">subtitulo</span>=<span
+          class="hljs-string">"{{ paciente.cuil }}"</span>&gt;</span><span class="hljs-tag">&lt;/<span
+          class="hljs-name">plex-label</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">plex-label</span> <span class="hljs-attr">titulo</span>=<span
+          class="hljs-string">"Edad"</span> <span class="hljs-attr">subtitulo</span>=<span
+          class="hljs-string">"{{ paciente.edad }}"</span>&gt;</span><span class="hljs-tag">&lt;/<span
+          class="hljs-name">plex-label</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">plex-label</span> <span class="hljs-attr">titulo</span>=<span
+          class="hljs-string">"Sexo"</span> <span class="hljs-attr">subtitulo</span>=<span
+          class="hljs-string">"{{ paciente.sexo }}"</span>&gt;</span><span class="hljs-tag">&lt;/<span
+          class="hljs-name">plex-label</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">plex-label</span> <span class="hljs-attr">titulo</span>=<span
+          class="hljs-string">"Género"</span> <span class="hljs-attr">subtitulo</span>=<span
+          class="hljs-string">"{{ paciente.genero }}"</span>&gt;</span><span class="hljs-tag">&lt;/<span
+          class="hljs-name">plex-label</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">plex-label</span> <span class="hljs-attr">titulo</span>=<span
+          class="hljs-string">"Financiador"</span> <span class="hljs-attr">subtitulo</span>=<span
+          class="hljs-string">"{{ paciente.financiador }}"</span>&gt;</span><span class="hljs-tag">&lt;/<span
+          class="hljs-name">plex-label</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">plex-detail</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">plex-title</span> <span class="hljs-attr">titulo</span>=<span
+          class="hljs-string">"Este es un subtitulo"</span> <span class="hljs-attr">size</span>=<span
+          class="hljs-string">"sm"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">plex-button</span> <span class="hljs-attr">size</span>=<span
+          class="hljs-string">"sm"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"success"</span>
+    <span class="hljs-attr">icon</span>=<span class="hljs-string">"check"</span>&gt;</span><span
+      class="hljs-tag">&lt;/<span class="hljs-name">plex-button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">plex-button</span> <span class="hljs-attr">size</span>=<span
+          class="hljs-string">"sm"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"info"</span>
+    <span class="hljs-attr">icon</span>=<span class="hljs-string">"plus"</span>&gt;</span><span
+      class="hljs-tag">&lt;/<span class="hljs-name">plex-button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">plex-button</span> <span class="hljs-attr">size</span>=<span
+          class="hljs-string">"sm"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"warning"</span>
+    <span class="hljs-attr">icon</span>=<span class="hljs-string">"pencil"</span>&gt;</span><span
+      class="hljs-tag">&lt;/<span class="hljs-name">plex-button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">plex-title</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
 
-    <span class="hljs-comment">&lt;!-- Desacoplar listado --&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">plex-list</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">plex-heading</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">b</span> <span class="hljs-attr">label</span>&gt;</span>Titulo del item<span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">b</span> <span class="hljs-attr">badge</span>&gt;</span>Estado/acciones<span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">plex-heading</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">plex-item</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let item of historial"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">plex-bool</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">plex-bool</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">plex-label</span> <span class="hljs-attr">titulo</span>=<span class="hljs-string">"{{ item.fecha }}"</span> <span class="hljs-attr">subtitulo</span>=<span class="hljs-string">"{{ item.prestacion }}"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">plex-label</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">plex-badge</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"info"</span>&gt;</span>{{ item.estado }}<span class="hljs-tag">&lt;/<span class="hljs-name">plex-badge</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">plex-button</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"sm"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"warning"</span> <span class="hljs-attr">icon</span>=<span class="hljs-string">"pencil"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">plex-button</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">plex-item</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">plex-list</span>&gt;</span>
+<span class="hljs-comment">&lt;!-- Desacoplar listado --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">plex-list</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">plex-heading</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">b</span> <span class="hljs-attr">label</span>&gt;</span>Titulo del
+item<span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">b</span> <span
+          class="hljs-attr">badge</span>&gt;</span>Estado/acciones<span class="hljs-tag">&lt;/<span
+          class="hljs-name">b</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">plex-heading</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">plex-item</span> *<span class="hljs-attr">ngFor</span>=<span
+          class="hljs-string">"let item of historial"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">plex-bool</span> <span class="hljs-attr">type</span>=<span
+          class="hljs-string">"checkbox"</span>&gt;</span><span class="hljs-tag">&lt;/<span
+          class="hljs-name">plex-bool</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">plex-label</span> <span class="hljs-attr">titulo</span>=<span
+          class="hljs-string">"{{ item.fecha }}"</span> <span class="hljs-attr">subtitulo</span>=<span
+          class="hljs-string">"{{ item.prestacion }}"</span>&gt;</span><span class="hljs-tag">&lt;/<span
+          class="hljs-name">plex-label</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">plex-badge</span> <span class="hljs-attr">type</span>=<span
+          class="hljs-string">"info"</span>&gt;</span>{{ item.estado }}<span class="hljs-tag">&lt;/<span
+          class="hljs-name">plex-badge</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">plex-button</span> <span class="hljs-attr">size</span>=<span
+          class="hljs-string">"sm"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"warning"</span>
+    <span class="hljs-attr">icon</span>=<span class="hljs-string">"pencil"</span>&gt;</span><span
+      class="hljs-tag">&lt;/<span class="hljs-name">plex-button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">plex-item</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">plex-list</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">"selectedOption === '2'"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">plex-title</span> <span class="hljs-attr">titulo</span>=<span class="hljs-string">"Opcion 2"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">plex-button</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"sm"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"warning"</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Toggle Items"</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">"toggleItems()"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">plex-button</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">plex-title</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> *<span class="hljs-attr">ngIf</span>=<span
+          class="hljs-string">"selectedOption === '2'"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">plex-title</span> <span class="hljs-attr">titulo</span>=<span
+          class="hljs-string">"Opcion 2"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">plex-button</span> <span class="hljs-attr">size</span>=<span
+          class="hljs-string">"sm"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"warning"</span>
+    <span class="hljs-attr">label</span>=<span class="hljs-string">"Toggle Items"</span> (<span
+          class="hljs-attr">click</span>)=<span class="hljs-string">"toggleItems()"</span>&gt;</span><span
+      class="hljs-tag">&lt;/<span class="hljs-name">plex-button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">plex-title</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>

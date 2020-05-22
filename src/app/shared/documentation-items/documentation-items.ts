@@ -181,6 +181,16 @@ const DOCS: DocCategory[] = [
         name: 'Justify',
         examples: []
       },
+      {
+        id: 'tooltip',
+        name: 'Tooltip',
+        examples: []
+      },
+      {
+        id: 'hint',
+        name: 'Hint',
+        examples: []
+      },
     ]
   },
   {

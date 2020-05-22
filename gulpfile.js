@@ -13,7 +13,7 @@ const destination = 'src/assets/documents/examples/sourcecode';
 /**
  * Hightlights files
  */
-let gulpHighlightFiles = function() {
+let gulpHighlightFiles = function () {
     // Write default options
     let options = {
         language: null,
@@ -25,7 +25,7 @@ let gulpHighlightFiles = function() {
     // Configure hljs with the specified options
     hljs.configure(options.hljsConfig);
 
-    return through2.obj(function(file, enc, cb) {
+    return through2.obj(function (file, enc, cb) {
         if (file.isNull()) {
             this.push(file);
             return cb();
@@ -64,7 +64,7 @@ let gulpHighlightFiles = function() {
     }
 };
 
-gulp.task('default', function() {
+gulp.task('default', async function () {
     // Vaciar directorio
     del(destination + '/**');
 
@@ -73,7 +73,7 @@ gulp.task('default', function() {
         .pipe(replace(new RegExp('import { Plex } from \'../../../lib/core/service\';', 'g'), 'import { Plex, SelectEvent } from \'@andes/plex\';', { logs: { enabled: false } }))
         .pipe(replace(new RegExp('import { SelectEvent } from \'./../../../lib/select/select-event.interface\';', 'g'), '', { logs: { enabled: false } }))
         .pipe(gulpHighlightFiles())
-        .pipe(rename(function(path) {
+        .pipe(rename(function (path) {
             console.log(`Creando ejemplo para: ${path.basename}${path.extname}`);
             path.dirname = '';
             path.extname += ".html";
