@@ -1,0 +1,36 @@
+<span class="hljs-keyword">import</span> { Component, Output, ViewChild, Input, EventEmitter } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> { PlexModalComponent } <span class="hljs-keyword">from</span> <span class="hljs-string">'../../../../../lib/modal/modal.component'</span>;
+
+<span class="hljs-meta">@Component</span>({
+    selector: <span class="hljs-string">'plex-modal-template'</span>,
+    templateUrl: <span class="hljs-string">'plex-modal-template.html'</span>
+})
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> ModalTemplateComponent {
+
+    <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">'modal'</span>, { <span class="hljs-keyword">static</span>: <span class="hljs-literal">true</span> }) modal: PlexModalComponent;
+
+    <span class="hljs-meta">@Output</span>() motivoAccesoHuds = <span class="hljs-keyword">new</span> EventEmitter&lt;<span class="hljs-built_in">any</span>&gt;();
+
+    <span class="hljs-keyword">public</span> motivosAccesoHuds = [
+        { id: <span class="hljs-string">'auditoria'</span>, label: <span class="hljs-string">'Procesos de Auditoría'</span> },
+        { id: <span class="hljs-string">'urgencia'</span>, label: <span class="hljs-string">'Intervención de Urgencia/Emergencia'</span> },
+        { id: <span class="hljs-string">'administrativo'</span>, label: <span class="hljs-string">'Procesos Administrativos'</span> },
+        { id: <span class="hljs-string">'continuidad'</span>, label: <span class="hljs-string">'Intervención en el proceso de cuidado del paciente'</span> }
+    ];
+
+    <span class="hljs-keyword">public</span> motivoSelected = <span class="hljs-literal">null</span>;
+
+    motivoSelect() {
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.motivoSelected === <span class="hljs-literal">null</span>;
+    }
+
+    notificarAccion(flag: <span class="hljs-built_in">boolean</span>) {
+        <span class="hljs-keyword">if</span> (flag) {
+            <span class="hljs-keyword">const</span> item = <span class="hljs-keyword">this</span>.motivosAccesoHuds.find(<span class="hljs-function">(<span class="hljs-params">elem</span>) =&gt;</span> elem.id === <span class="hljs-keyword">this</span>.motivoSelected);
+            <span class="hljs-keyword">this</span>.motivoAccesoHuds.emit(item.label);
+        } <span class="hljs-keyword">else</span> {
+            <span class="hljs-keyword">this</span>.motivoAccesoHuds.emit(<span class="hljs-literal">null</span>);
+        }
+    }
+}

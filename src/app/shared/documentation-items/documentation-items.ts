@@ -164,6 +164,11 @@ const DOCS: DocCategory[] = [
         id: 'plex-visualizador',
         name: 'Visualizador',
         examples: []
+      },
+      {
+        id: 'plex-wrapper',
+        name: 'Wrapper',
+        examples: []
       }
     ]
   },

@@ -1,0 +1,46 @@
+<div class="docs-api">
+    <h2>plex-wrapper</h2>
+    <pre>
+        &#x3C;plex-wrapper&#x3E;
+            &#x3C;plex-datetime label="Ingrese la fecha"&#x3E;&#x3C;/plex-datetime&#x3E;
+            &#x3C;plex-select label="Ingrese la fecha"&#x3E;{{ paciente.estado }}&#x3C;&#47;plex-select&#x3E;
+            &#x3C;plex-select grow="auto" label="Seleccione efector con nombre largo"&#x3E;&#x3C;/plex-select&#x3E;
+            &#x3C;plex-text label="Buscar paciente" name="nombre"&#x3E;&#x3C;/plex-text&#x3E;
+            &#x3C;div collapse&#x3E;
+                &#x3C;plex-bool type="slide" label="¿Está activo?"&#x3E;&#x3C;/plex-bool&#x3E;
+                &#x3C;plex-float placeholder="Ingrese porcentaje entre 10.5 y 90.4" [min]="10.5" [max]="90.4" suffix="%"&#x3E;{{ paciente.estado }}&#x3C;&#47;plex-float &#x3E;
+                &#x3C;plex-select grow="2" label="Seleccione efector"&#x3E;&#x3C;/plex-select&#x3E;
+            &#x3C;&#47;div&#x3E;
+        &#x3C;&#47;plex-wrapper&#x3E;
+    </pre>
+    <h3 id="directives" class="docs-header-link docs-api-h3">
+        <span header-link="directives"></span> Componente
+    </h3>
+    <h4 id="MatAutocomplete" class="docs-header-link docs-api-h4 docs-api-class-name">
+        <span header-link="MatAutocomplete"></span>
+        <code>PlexWrapper</code>
+    </h4>
+    <p class="docs-api-directive-selectors">
+        <span class="docs-api-class-selector-label">Selector:</span>
+        <span class="docs-api-class-selector-name">plex-wrapper</span>
+    </p>
+    <span class="docs-api-class-export-label">Exported as:</span>
+    <span class="docs-api-class-export-name">PlexWrapperComponent</span>
+
+    <h5 class="docs-api-h5 docs-api-method-header">Propiedades</h5>
+    <table class="docs-api-properties-table">
+        <tr class="docs-api-properties-header-row">
+            <th class="docs-api-properties-th">Nombre</th>
+            <th class="docs-api-properties-th">Descripción</th>
+        </tr>
+        <tr class="docs-api-properties-row">
+            <td class="docs-api-properties-name-cell">
+                <div class="docs-api-input-marker">Grow(directiva)</div>
+                <p class="docs-api-property-name"><code>grow: '1' | '2' | '3' | '4' | 'auto'= 'auto'</code></p>
+            </td>
+            <td class="docs-api-property-description">
+                <p>Directiva que define el espacio potencial que puede acaparar un elemento dentro del componente.</p>
+            </td>
+        </tr>
+    </table>
+</div>
