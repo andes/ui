@@ -3,7 +3,7 @@
     <p>
         <code>
             <pre>
-    &#x3C;plex-icon prefix=&#x22;adi&#x22; name=&#x22;load&#x22;&#x3E;&#x3C;/plex-icon&#x3E;
+    &#x3C;plex-icon name=&#x22;load&#x22;&#x3E;&#x3C;/plex-icon&#x3E;
             </pre>
         </code>
     </p>
@@ -16,10 +16,10 @@
     </h4>
     <p class="docs-api-directive-selectors">
         <span class="docs-api-class-selector-label">Selector:</span>
-        <span class="docs-api-class-selector-name">plex-icon</span>
+        <span class="docs-api-class-selector-name">plex-copy</span>
     </p>
     <span class="docs-api-class-export-label">Exported as:</span>
-    <span class="docs-api-class-export-name">PlexIconComponent</span>
+    <span class="docs-api-class-export-name">PlexCopyComponent</span>
 
     <h5 class="docs-api-h5 docs-api-method-header">Propiedades</h5>
     <table class="docs-api-properties-table">
@@ -30,36 +30,18 @@
         <tr class="docs-api-properties-row">
             <td class="docs-api-properties-name-cell">
                 <div class="docs-api-input-marker">@Input()</div>
-                <p class="docs-api-property-name"><code>name: string</code></p>
+                <p class="docs-api-property-name"><code>value: string</code></p>
             </td>
             <td class="docs-api-property-description">
-                <p>Nombre del icono tanto de Material Design Icons (MDI) como de Andes Font (ADI)</p>
+                <p>Valor a copiar</p>
             </td>
-        <tr class="docs-api-properties-row">
-            <td class="docs-api-properties-name-cell">
-                <div class="docs-api-input-marker">@Input()</div>
-                <p class="docs-api-property-name"><code>prefix: string</code></p>
-            </td>
-            <td class="docs-api-property-description">
-                <p>Establece el prefijo del sistema de iconos a utilizar (MDI o ADI)</p>
-            </td>
-        </tr>
         <tr class="docs-api-properties-row">
             <td class="docs-api-properties-name-cell">
                 <div class="docs-api-input-marker">@Input()</div>
                 <p class="docs-api-property-name"><code>type: string</code></p>
             </td>
             <td class="docs-api-property-description">
-                <p>Especifica la tipología, y por ende, el color que adquiere el componente. Los valores: 'success' |
-                    'info' | 'warning' | 'danger' | 'primary'.</p>
-            </td>
-        <tr class="docs-api-properties-row">
-            <td class="docs-api-properties-name-cell">
-                <div class="docs-api-input-marker">@Input()</div>
-                <p class="docs-api-property-name"><code>size: string</code></p>
-            </td>
-            <td class="docs-api-property-description">
-                <p>Los valores que se pueden asignar son: '18' | '24' | '36' | '48'.</p>
+                <p>Tipo de dato a copiar</p>
             </td>
         </tr>
     </table>
