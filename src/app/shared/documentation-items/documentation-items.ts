@@ -177,8 +177,18 @@ const DOCS: DocCategory[] = [
     name: 'Directivas',
     items: [
       {
+        id: 'grow',
+        name: 'Grow',
+        examples: []
+      },
+      {
         id: 'justify',
         name: 'Justify',
+        examples: []
+      },
+      {
+        id: 'hint',
+        name: 'Hint',
         examples: []
       },
       {
@@ -187,8 +197,8 @@ const DOCS: DocCategory[] = [
         examples: []
       },
       {
-        id: 'hint',
-        name: 'Hint',
+        id: 'responsive',
+        name: 'Responsive',
         examples: []
       },
     ]
