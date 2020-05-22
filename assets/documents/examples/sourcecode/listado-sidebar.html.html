@@ -1,0 +1,86 @@
+<span class="hljs-tag">&lt;<span class="hljs-name">plex-layout</span> <span class="hljs-attr">main</span>=<span class="hljs-string">"8"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">plex-layout-main</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">plex-title</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"lg"</span> <span class="hljs-attr">titulo</span>=<span class="hljs-string">"Bienvenido a Plex"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">plex-button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"success"</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"sm"</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">"showModal = true"</span>&gt;</span>Accion Modal<span class="hljs-tag">&lt;/<span class="hljs-name">plex-button</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">plex-modal-template</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">"showModal"</span> (<span class="hljs-attr">motivoAccesoHuds</span>)=<span class="hljs-string">"showModal = false"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">plex-modal-template</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-name">plex-help</span> <span class="hljs-attr">titulo</span>=<span class="hljs-string">"Ayuda de este panel"</span> <span class="hljs-attr">tituloBoton</span>=<span class="hljs-string">"TOP"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">info</span>&gt;</span>
+                    contenido del plex-help
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">plex-help</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">plex-title</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">plex-wrapper</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">plex-datetime</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Ingrese la fecha"</span> [(<span class="hljs-attr">ngModel</span>)]=<span class="hljs-string">"tModel.fechaHora"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"fechaHora"</span> <span class="hljs-attr">required</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">plex-datetime</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">plex-select</span> <span class="hljs-attr">grow</span>=<span class="hljs-string">"3"</span> [(<span class="hljs-attr">ngModel</span>)]=<span class="hljs-string">"modelo1.select"</span> [<span class="hljs-attr">data</span>]=<span class="hljs-string">"opciones"</span>
+                         <span class="hljs-attr">label-field</span>=<span class="hljs-string">"nombre + ' (' + continente + ')'"</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Seleccione un país"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">plex-select</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">plex-float</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"plex-float"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Ingrese porcentaje entre 10.5 y 90.4"</span> [(<span class="hljs-attr">ngModel</span>)]=<span class="hljs-string">"tModel.valor"</span>
+                        <span class="hljs-attr">name</span>=<span class="hljs-string">"valor"</span> [<span class="hljs-attr">min</span>]=<span class="hljs-string">"10.5"</span> [<span class="hljs-attr">max</span>]=<span class="hljs-string">"90.4"</span> <span class="hljs-attr">suffix</span>=<span class="hljs-string">"%"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">plex-float</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">collapse</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">plex-float</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"plex-float"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Ingrese porcentaje entre 10.5 y 90.4"</span>
+                            [(<span class="hljs-attr">ngModel</span>)]=<span class="hljs-string">"tModel.valor"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"valor"</span> [<span class="hljs-attr">min</span>]=<span class="hljs-string">"10.5"</span> [<span class="hljs-attr">max</span>]=<span class="hljs-string">"90.4"</span> <span class="hljs-attr">suffix</span>=<span class="hljs-string">"%"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">plex-float</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">plex-bool</span> [(<span class="hljs-attr">ngModel</span>)]=<span class="hljs-string">"modelo.slide"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"slide"</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"¿Está activo?"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"slide"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">plex-bool</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">plex-phone</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Número telefónico"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Número de celular"</span> [(<span class="hljs-attr">ngModel</span>)]=<span class="hljs-string">"tModel.valor"</span>
+                            <span class="hljs-attr">name</span>=<span class="hljs-string">"valor"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">plex-phone</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">plex-select</span> <span class="hljs-attr">grow</span>=<span class="hljs-string">"2"</span> [(<span class="hljs-attr">ngModel</span>)]=<span class="hljs-string">"modelo1.select"</span> [<span class="hljs-attr">data</span>]=<span class="hljs-string">"opciones"</span>
+                             <span class="hljs-attr">label-field</span>=<span class="hljs-string">"nombre + ' (' + continente + ')'"</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Seleccione un país"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">plex-select</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">plex-wrapper</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">plex-main-listado</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;/<span class="hljs-name">plex-main-listado</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">plex-layout-main</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">plex-layout-sidebar</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"invert"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">plex-tabs</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"full"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">plex-tab</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"tab-1"</span> <span class="hljs-attr">icon</span>=<span class="hljs-string">"star"</span> <span class="hljs-attr">active</span>=<span class="hljs-string">"true"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">router-outlet</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">router-outlet</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">plex-tab</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-name">plex-tab</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"tab-2"</span> <span class="hljs-attr">icon</span>=<span class="hljs-string">"star"</span> <span class="hljs-attr">active</span>=<span class="hljs-string">"true"</span>&gt;</span>
+                <span class="hljs-comment">&lt;!-- Formulario --&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">plex-wrapper</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;/<span class="hljs-name">plex-wrapper</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"grow"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">plex-text</span> <span class="hljs-attr">multiline</span>=<span class="hljs-string">true</span> [(<span class="hljs-attr">ngModel</span>)]=<span class="hljs-string">"prueba"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">plex-text</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">plex-button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"danger"</span> <span class="hljs-attr">icon</span>=<span class="hljs-string">"pencil"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">plex-button</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">justify</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">plex-button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"success"</span>&gt;</span> LABEL <span class="hljs-tag">&lt;/<span class="hljs-name">plex-button</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">plex-button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"warning"</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">plex-icon</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"pencil"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">plex-icon</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">plex-button</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">plex-button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"danger"</span> <span class="hljs-attr">icon</span>=<span class="hljs-string">"pencil"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">plex-button</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">plex-button</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"sm"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"info"</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"LABEL"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">plex-button</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;/<span class="hljs-name">plex-tab</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-name">plex-tab</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"tab-3"</span> <span class="hljs-attr">icon</span>=<span class="hljs-string">"star"</span> <span class="hljs-attr">active</span>=<span class="hljs-string">"true"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">plex-accordion</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">plex-panel</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">plex-accordion-title</span>&gt;</span>Titulo<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>algo<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">plex-panel</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">plex-panel</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">plex-accordion-title</span>&gt;</span>Titulo 2<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>otra cosa<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">plex-panel</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">plex-panel</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">plex-accordion-title</span>&gt;</span>Titulo 3<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>tercer acordion<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">plex-panel</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">plex-accordion</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">plex-tab</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">plex-tabs</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">plex-layout-sidebar</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">plex-layout</span>&gt;</span>

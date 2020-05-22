@@ -1,0 +1,28 @@
+<span class="hljs-tag">&lt;<span class="hljs-name">plex-modal</span> #<span class="hljs-attr">modal</span> [<span class="hljs-attr">startOpen</span>]=<span class="hljs-string">"true"</span> (<span class="hljs-attr">closed</span>)=<span class="hljs-string">"notificarAccion(false)"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">plex-icon</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"alert-circle"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"danger"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">plex-icon</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">plex-modal-title</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"danger"</span>&gt;</span>Este es el título del modal<span class="hljs-tag">&lt;/<span class="hljs-name">plex-modal-title</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">plex-modal-subtitle</span> <span class="hljs-attr">type</span>=<span class="hljs-string">""</span>&gt;</span>Este es el texto secundario del modal<span class="hljs-tag">&lt;/<span class="hljs-name">plex-modal-subtitle</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">main</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"w-50"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">plex-radio</span> [(<span class="hljs-attr">ngModel</span>)]=<span class="hljs-string">"motivoSelected"</span> [<span class="hljs-attr">data</span>]=<span class="hljs-string">"motivosAccesoHuds"</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">plex-radio</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-4"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span>
+                    Recuerde que todos los ingresos y acciones realizados por UD. en la HUDS quedarán registrados
+                <span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">main</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">plex-button</span> <span class="hljs-attr">modal</span> <span class="hljs-attr">right</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"success"</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">"notificarAccion(true)"</span> [<span class="hljs-attr">disabled</span>]=<span class="hljs-string">"motivoSelect()"</span>&gt;</span>
+        ACEPTAR
+    <span class="hljs-tag">&lt;/<span class="hljs-name">plex-button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">plex-button</span> <span class="hljs-attr">modal</span> <span class="hljs-attr">left</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"danger"</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">"notificarAccion(false)"</span>&gt;</span>
+        CANCELAR
+    <span class="hljs-tag">&lt;/<span class="hljs-name">plex-button</span>&gt;</span>
+
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">plex-modal</span>&gt;</span>

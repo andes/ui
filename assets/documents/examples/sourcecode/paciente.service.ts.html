@@ -1,0 +1,24 @@
+<span class="hljs-keyword">import</span> { Injectable } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> { Paciente } <span class="hljs-keyword">from</span> <span class="hljs-string">'./paciente'</span>;
+<span class="hljs-keyword">import</span> { PACIENTES } <span class="hljs-keyword">from</span> <span class="hljs-string">'./mock-pacientes'</span>;
+<span class="hljs-keyword">import</span> { Observable, of } <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs'</span>;
+<span class="hljs-keyword">import</span> { map } <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs/operators'</span>;
+
+<span class="hljs-meta">@Injectable</span>()
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> PacienteService {
+
+    <span class="hljs-keyword">constructor</span>(<span class="hljs-params"></span>) {
+    }
+
+    getPacientes(): Observable&lt;Paciente[]&gt; {
+        <span class="hljs-keyword">return</span> of(PACIENTES);
+    }
+
+    getPaciente(id: <span class="hljs-built_in">number</span> | <span class="hljs-built_in">string</span>) {
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.getPacientes().pipe(
+            map(<span class="hljs-function">(<span class="hljs-params">pacientes: Paciente[]</span>) =&gt;</span> pacientes.find(<span class="hljs-function"><span class="hljs-params">paciente</span> =&gt;</span> paciente.id === +id))
+        );
+    }
+
+}

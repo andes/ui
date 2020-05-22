@@ -1,0 +1,23 @@
+<span class="hljs-comment">// Listado-Sidebar</span>
+plex-item<span class="hljs-selector-class">.pacienteFallecido</span> {
+
+    <span class="hljs-selector-tag">div</span><span class="hljs-selector-class">.item-list</span> {
+
+        plex-<span class="hljs-selector-tag">label</span>, <span class="hljs-selector-tag">img</span>, <span class="hljs-selector-class">.badge-success</span>, <span class="hljs-selector-class">.badge-warning</span>, <span class="hljs-selector-class">.badge-info</span> {
+            <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0.45</span><span class="hljs-meta">!important</span>;
+            <span class="hljs-attribute">filter</span>: grayscale(<span class="hljs-number">100%</span>)<span class="hljs-meta">!important</span>;       
+        }
+    }
+}
+
+<span class="hljs-selector-class">.displayNone</span> {
+    <span class="hljs-attribute">display</span>: none;
+}
+
+<span class="hljs-selector-class">.text-success</span> {
+    <span class="hljs-attribute">color</span>: <span class="hljs-variable">$green</span>;
+}
+
+<span class="hljs-selector-class">.text-warning</span> {
+    <span class="hljs-attribute">color</span>: <span class="hljs-variable">$orange</span>;
+}

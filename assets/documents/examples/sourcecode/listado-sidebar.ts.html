@@ -1,0 +1,108 @@
+<span class="hljs-keyword">import</span> { Component, OnInit } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> { Observable } <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs'</span>;
+<span class="hljs-keyword">import</span> { ActivatedRoute } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/router'</span>;
+<span class="hljs-keyword">import</span> { switchMap } <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs/operators'</span>;
+
+<span class="hljs-comment">// Servicios y modelo</span>
+<span class="hljs-keyword">import</span> { PacienteService } <span class="hljs-keyword">from</span> <span class="hljs-string">'../service/paciente.service'</span>;
+<span class="hljs-keyword">import</span> { Paciente } <span class="hljs-keyword">from</span> <span class="hljs-string">'../service/paciente'</span>;
+
+<span class="hljs-keyword">import</span> { Plex } <span class="hljs-keyword">from</span> <span class="hljs-string">'./../../../../lib/core/service'</span>;
+
+<span class="hljs-meta">@Component</span>({
+    templateUrl: <span class="hljs-string">'listado-sidebar.html'</span>,
+    styleUrls: [<span class="hljs-string">'listado-sidebar.scss'</span>],
+})
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> ListadoSidebarComponent <span class="hljs-keyword">implements</span> OnInit {
+
+    <span class="hljs-keyword">public</span> tModel: <span class="hljs-built_in">any</span>;
+    <span class="hljs-keyword">public</span> opciones: <span class="hljs-built_in">any</span>[];
+    <span class="hljs-keyword">public</span> modelo1 = { select: <span class="hljs-literal">null</span> };
+    <span class="hljs-keyword">public</span> modelo2 = {
+        select: <span class="hljs-literal">null</span>,
+        soloLectura: <span class="hljs-literal">false</span>,
+        selectMultiple: <span class="hljs-literal">null</span>
+    };
+    <span class="hljs-comment">// public prueba = '';</span>
+    <span class="hljs-keyword">public</span> templateModel2: <span class="hljs-built_in">any</span>;
+    <span class="hljs-keyword">public</span> modelo: <span class="hljs-built_in">any</span>;
+
+    <span class="hljs-keyword">public</span> showModal = <span class="hljs-literal">false</span>;
+
+    <span class="hljs-comment">// public listadoPaciente: Paciente[];</span>
+    pacientes$: Observable&lt;Paciente[]&gt;;
+    selectedId: <span class="hljs-built_in">Number</span>;
+    <span class="hljs-keyword">public</span> prueba = <span class="hljs-string">''</span>;
+    <span class="hljs-keyword">public</span> cambio = <span class="hljs-string">''</span>;
+    <span class="hljs-keyword">constructor</span>(<span class="hljs-params">
+        <span class="hljs-keyword">private</span> pacienteService: PacienteService,
+        <span class="hljs-keyword">private</span> route: ActivatedRoute,
+        <span class="hljs-keyword">private</span> plex: Plex
+    </span>) { }
+
+    ngOnInit() {
+        <span class="hljs-keyword">this</span>.pacientes$ = <span class="hljs-keyword">this</span>.route.paramMap.pipe(
+            switchMap(<span class="hljs-function"><span class="hljs-params">params</span> =&gt;</span> {
+                <span class="hljs-keyword">this</span>.selectedId = +params.get(<span class="hljs-string">'id'</span>);
+                <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.pacienteService.getPacientes();
+            })
+        );
+
+
+        <span class="hljs-comment">// plex-datetime</span>
+        <span class="hljs-keyword">this</span>.tModel = {
+            fechaHora: <span class="hljs-literal">null</span>,
+            fecha: <span class="hljs-literal">null</span>,
+            hora: <span class="hljs-literal">null</span>,
+            horados: <span class="hljs-literal">null</span>,
+            disabled: <span class="hljs-literal">false</span>,
+            min: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(<span class="hljs-number">1970</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>),
+            minHora: moment().add(<span class="hljs-number">30</span>, <span class="hljs-string">'minutes'</span>),
+            maxHora: moment().add(<span class="hljs-number">180</span>, <span class="hljs-string">'minutes'</span>),
+            fechaDecounce: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(<span class="hljs-number">1970</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>),
+        };
+
+        <span class="hljs-comment">// plex-phone</span>
+        <span class="hljs-comment">// plex-float</span>
+        <span class="hljs-keyword">this</span>.tModel = { valor: <span class="hljs-literal">null</span> };
+
+        <span class="hljs-comment">// plex-select</span>
+        <span class="hljs-keyword">this</span>.opciones = [{
+            id: <span class="hljs-number">1</span>,
+            nombre: <span class="hljs-string">'Argentina'</span>,
+            continente: <span class="hljs-string">'Latinoamerica'</span>,
+        },
+        {
+            id: <span class="hljs-number">2</span>,
+            nombre: <span class="hljs-string">'Brasil'</span>,
+            continente: <span class="hljs-string">'Latinoamerica'</span>,
+        },
+        {
+            id: <span class="hljs-number">3</span>,
+            nombre: <span class="hljs-string">'Hospital Provincial Neuquen "Dr. Eduardo Castro Rendón"'</span>,
+            continente: <span class="hljs-string">'Latinoamerica'</span>,
+        }];
+
+        <span class="hljs-keyword">this</span>.modelo1.select = <span class="hljs-keyword">this</span>.modelo2.select = <span class="hljs-keyword">this</span>.opciones[<span class="hljs-number">1</span>];
+
+        <span class="hljs-comment">// plex-text</span>
+        <span class="hljs-keyword">this</span>.templateModel2 = { nombre: <span class="hljs-literal">null</span>, min: <span class="hljs-number">10</span>, max: <span class="hljs-number">15</span> };
+
+        <span class="hljs-comment">// plex-bool</span>
+        <span class="hljs-keyword">this</span>.modelo = { checkbox: <span class="hljs-literal">false</span>, slide: <span class="hljs-literal">false</span> };
+    }
+
+    updateMaxHora() {
+        <span class="hljs-keyword">this</span>.tModel.minHora = moment().add(<span class="hljs-number">30</span>, <span class="hljs-string">'minutes'</span>).add(<span class="hljs-number">1</span>, <span class="hljs-string">'days'</span>);
+    }
+
+    horaPlus() {
+        <span class="hljs-keyword">return</span> moment(<span class="hljs-keyword">this</span>.tModel.hora).add(<span class="hljs-number">30</span>, <span class="hljs-string">'minutes'</span>);
+    }
+
+    onChange() {
+        <span class="hljs-keyword">this</span>.plex.info(<span class="hljs-string">'success'</span>, <span class="hljs-string">'Este cartel se demoro un segundo en aparecer después de escribir.'</span>);
+    }
+}
+
