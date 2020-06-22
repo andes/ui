@@ -1,14 +1,18 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">plex-layout</span> <span class="hljs-attr">main</span>=<span class="hljs-string">"8"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">plex-layout-main</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">plex-title</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"lg"</span> <span class="hljs-attr">titulo</span>=<span class="hljs-string">"Bienvenido a Plex"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">plex-button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"success"</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"sm"</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">"showModal = true"</span>&gt;</span>Accion Modal<span class="hljs-tag">&lt;/<span class="hljs-name">plex-button</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">plex-modal-template</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">"showModal"</span> (<span class="hljs-attr">motivoAccesoHuds</span>)=<span class="hljs-string">"showModal = false"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">plex-modal-template</span>&gt;</span>
-
-            <span class="hljs-tag">&lt;<span class="hljs-name">plex-help</span> <span class="hljs-attr">titulo</span>=<span class="hljs-string">"Ayuda de este panel"</span> <span class="hljs-attr">tituloBoton</span>=<span class="hljs-string">"TOP"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">plex-help</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"help"</span> <span class="hljs-attr">titulo</span>=<span class="hljs-string">"Ayuda de este panel"</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"sm"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"este es un atributo [title]"</span>
+                       <span class="hljs-attr">class</span>=<span class="hljs-string">"mr-1"</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">info</span>&gt;</span>
-                    contenido del plex-help
+                    <span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span>Organización:<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                    prestacion.solicitud.organizacion.nombre
+                    <span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span>Fecha:<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                    prestacion.solicitud.fecha | date
+                    <span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span>Prestación de origen:<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                    prestacion.solicitud.prestacionOrigen
                 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">plex-help</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">plex-button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"success"</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"sm"</span> <span class="hljs-attr">icon</span>=<span class="hljs-string">"chevron-down"</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">"showModal = true"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">plex-button</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">plex-title</span>&gt;</span>
 
         <span class="hljs-tag">&lt;<span class="hljs-name">plex-wrapper</span>&gt;</span>
