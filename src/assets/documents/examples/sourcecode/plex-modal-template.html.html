@@ -1,28 +1,167 @@
-<span class="hljs-tag">&lt;<span class="hljs-name">plex-modal</span> #<span class="hljs-attr">modal</span> [<span class="hljs-attr">startOpen</span>]=<span class="hljs-string">"true"</span> (<span class="hljs-attr">closed</span>)=<span class="hljs-string">"notificarAccion(false)"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">plex-icon</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"alert-circle"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"danger"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">plex-icon</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">plex-modal-title</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"danger"</span>&gt;</span>Este es el título del modal<span class="hljs-tag">&lt;/<span class="hljs-name">plex-modal-title</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">plex-modal-subtitle</span> <span class="hljs-attr">type</span>=<span class="hljs-string">""</span>&gt;</span>Este es el texto secundario del modal<span class="hljs-tag">&lt;/<span class="hljs-name">plex-modal-subtitle</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">main</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"w-50"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">plex-radio</span> [(<span class="hljs-attr">ngModel</span>)]=<span class="hljs-string">"motivoSelected"</span> [<span class="hljs-attr">data</span>]=<span class="hljs-string">"motivosAccesoHuds"</span>&gt;</span>
-                <span class="hljs-tag">&lt;/<span class="hljs-name">plex-radio</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">plex-layout</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">plex-layout-main</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">plex-title</span> <span class="hljs-attr">titulo</span>=<span class="hljs-string">"Ventanas Modales"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">plex-badge</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"danger"</span>&gt;</span>
+                Modal md (50% ancho) con Formulario
+                <span class="hljs-tag">&lt;<span class="hljs-name">plex-button</span> <span class="hljs-attr">icon</span>=<span class="hljs-string">"eye"</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">"openModal(0)"</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">plex-button</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">plex-badge</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">plex-badge</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"warning"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ml-2"</span>&gt;</span>
+                Modal md con texto largo
+                <span class="hljs-tag">&lt;<span class="hljs-name">plex-button</span> <span class="hljs-attr">icon</span>=<span class="hljs-string">"eye"</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">"openModal(1)"</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">plex-button</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">plex-badge</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">plex-badge</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"success"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ml-2"</span>&gt;</span>
+                Modal sm (25% ancho)
+                <span class="hljs-tag">&lt;<span class="hljs-name">plex-button</span> <span class="hljs-attr">icon</span>=<span class="hljs-string">"eye"</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">"openModal(2)"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">plex-button</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">plex-badge</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">plex-badge</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"info"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ml-2"</span>&gt;</span>
+                Modal lg (80% ancho)
+                <span class="hljs-tag">&lt;<span class="hljs-name">plex-button</span> <span class="hljs-attr">icon</span>=<span class="hljs-string">"eye"</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">"openModal(3)"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">plex-button</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">plex-badge</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">plex-title</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">main</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"main"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"inner"</span>&gt;</span>
+            <span class="hljs-comment">&lt;!-- &lt;h4 class="cover-heading"&gt;Modals de Plex&lt;/h4&gt; --&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"lead"</span>&gt;</span>Además de soportar múliples propiedades (o Inputs) y opciones<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+                los modals de Plex pueden cumplir varias funciones:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list-item"</span>&gt;</span>Realizar acción contextual de un módulo<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list-item"</span>&gt;</span>Advertir al usuario de tomar una acción necesaria para continuar<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list-item"</span>&gt;</span>Simplemente comunicar, de una manera agradable para el usuario<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"lead"</span>&gt;</span>
+                Algunas de las propiedades (Inputs) que soporta <span class="hljs-tag">&lt;<span class="hljs-name">em</span>&gt;</span>plex-modal<span class="hljs-tag">&lt;/<span class="hljs-name">em</span>&gt;</span> son:
             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">ol</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list-item"</span>&gt;</span>startOpen: se abre apenas carga<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list-item"</span>&gt;</span>allowClose: muestra una cruz en la esquina<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list-item"</span>&gt;</span>allowEscClose: permite cerrar con tecla ESC
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list-item"</span>&gt;</span>allowBackdropClose: permite cerrar con un click afuera<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">ol</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span>Todas aceptan valores true | false<span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+            Para más opciones ver <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://ui.andes.gob.ar/components/plex-modal/overview"</span> <span class="hljs-attr">target</span>=<span class="hljs-string">"_blank"</span>&gt;</span>la
+                documentación oficial<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.
+        <span class="hljs-tag">&lt;/<span class="hljs-name">main</span>&gt;</span>
 
-            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-4"</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span>
-                    Recuerde que todos los ingresos y acciones realizados por UD. en la HUDS quedarán registrados
-                <span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">main</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">plex-modal</span> #<span class="hljs-attr">modal</span> [<span class="hljs-attr">startOpen</span>]=<span class="hljs-string">"true"</span> [<span class="hljs-attr">allowEscClose</span>]=<span class="hljs-string">"false"</span> [<span class="hljs-attr">allowBackdropClose</span>]=<span class="hljs-string">"false"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">plex-icon</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"alert-circle"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"danger"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">plex-icon</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">plex-modal-title</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"danger"</span>&gt;</span>¡Modal Invasivo!<span class="hljs-tag">&lt;/<span class="hljs-name">plex-modal-title</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">plex-modal-subtitle</span>&gt;</span>
+                Este modal bloquea el flujo de la aplicación
+            <span class="hljs-tag">&lt;/<span class="hljs-name">plex-modal-subtitle</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">main</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-2"</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span>No se puede continuar sin elegir una opción y aceptar:<span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">form</span> #<span class="hljs-attr">formulario</span>=<span class="hljs-string">"ngForm"</span> (<span class="hljs-attr">close</span>)=<span class="hljs-string">"notificarAccion(false)"</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">plex-radio</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"motivos"</span> [(<span class="hljs-attr">ngModel</span>)]=<span class="hljs-string">"motivoSelected"</span> [<span class="hljs-attr">data</span>]=<span class="hljs-string">"motivosAccesoHuds"</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">plex-radio</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">main</span>&gt;</span>
 
-    <span class="hljs-tag">&lt;<span class="hljs-name">plex-button</span> <span class="hljs-attr">modal</span> <span class="hljs-attr">right</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"success"</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">"notificarAccion(true)"</span> [<span class="hljs-attr">disabled</span>]=<span class="hljs-string">"motivoSelect()"</span>&gt;</span>
-        ACEPTAR
-    <span class="hljs-tag">&lt;/<span class="hljs-name">plex-button</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">plex-button</span> <span class="hljs-attr">modal</span> <span class="hljs-attr">left</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"danger"</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">"notificarAccion(false)"</span>&gt;</span>
-        CANCELAR
-    <span class="hljs-tag">&lt;/<span class="hljs-name">plex-button</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">plex-button</span> <span class="hljs-attr">modal</span> <span class="hljs-attr">left</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"danger"</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">"closeModal(0, formulario.form)"</span> [<span class="hljs-attr">validateForm</span>]=<span class="hljs-string">"formulario"</span>&gt;</span>
+                CANCELAR
+            <span class="hljs-tag">&lt;/<span class="hljs-name">plex-button</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">plex-button</span> <span class="hljs-attr">modal</span> <span class="hljs-attr">right</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"success"</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">"closeModal(0, formulario.form)"</span>
+                         [<span class="hljs-attr">disabled</span>]=<span class="hljs-string">"motivoSelect()"</span>&gt;</span>
+                ACEPTAR
+            <span class="hljs-tag">&lt;/<span class="hljs-name">plex-button</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">plex-modal</span>&gt;</span>
 
+        <span class="hljs-tag">&lt;<span class="hljs-name">plex-modal</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"md"</span> #<span class="hljs-attr">modal</span> [<span class="hljs-attr">startOpen</span>]=<span class="hljs-string">"false"</span> (<span class="hljs-attr">closed</span>)=<span class="hljs-string">"notificarAccion(false)"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">plex-icon</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"alert-circle"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"warning"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">plex-icon</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">plex-modal-title</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"warning"</span>&gt;</span>Modal 50% ancho<span class="hljs-tag">&lt;/<span class="hljs-name">plex-modal-title</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">plex-modal-subtitle</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"warning"</span>&gt;</span>Con un texto bien largo<span class="hljs-tag">&lt;/<span class="hljs-name">plex-modal-subtitle</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">main</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>El Ministerio de Salud de la Provincia de Neuquén en el contexto de la Plataforma ANDES se
+                        encuentra
+                        comprometido y comparte la responsabilidad de resguardar los derechos a la intimidad y
+                        confidencialidad de la información de los pacientes.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Cualquier integrante de los equipos de salud, que en función de hacer posible el proceso de
+                        asistencia sanitaria a dichas personas, tenga acceso a esta información almacenada en ANDES,
+                        debe
+                        cumplir con la normativa jurídica que protege estos derechos:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">ol</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Artículos 18, 19 y 43 de la Constitución Nacional (derechos a la intimidad y habeas data);
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span> Artículo 52 de Código Civil y Comercial Nacional (derecho a la intimidad);<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span> Artículo 11 de la Ley Nacional 17132 de Ejercicio de la Medicina, Odontología, y
+                            actividades de
+                            colaboración con ambas disciplinas (secreto profesional);<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span> Artículo 2 incisos c y d de la Ley nacional 26.529 de Derechos del Paciente en su Relación
+                            con
+                            los Profesionales e Instituciones de la Salud (derechos a la intimidad y confidencialidad);
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Artículos 8 y 10 de la ley Nacional 25.326 de Protección de Datos Personales;<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">ol</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Y las siguientes leyes provinciales:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">ol</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>La ley 578, de Ejercicio de la medicina, odontología y actividades de colaboración;<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Artículo 8 de la Ley 2611, de derechos y obligaciones de los pacientes y usuarios de los
+                            serviciosde Salud públicos y privados de la Provincia (derecho a la confidencialidad y a la
+                            intimidad);<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>La ley 2399 de protección de Datos Personales.<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">ol</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Ante incumplimiento de estas obligaciones sepa que puede tener consecuencias legales. Asimismo,
+                        desde
+                        este Ministerio se procederá a:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Iniciar sumario administrativo por falta grave.<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Se le suspenderán en forma automática los permisos de acceso a ANDES.<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>En caso de ser profesional se informará al comité de ética deontológico correspondiente.
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">main</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">plex-button</span> <span class="hljs-attr">modal</span> <span class="hljs-attr">left</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"danger"</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">"closeModal(1)"</span>&gt;</span>
+                CANCELAR
+            <span class="hljs-tag">&lt;/<span class="hljs-name">plex-button</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">plex-button</span> <span class="hljs-attr">modal</span> <span class="hljs-attr">right</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"success"</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">"closeModal(1)"</span>&gt;</span>
+                ACEPTAR
+            <span class="hljs-tag">&lt;/<span class="hljs-name">plex-button</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">plex-modal</span>&gt;</span>
 
-<span class="hljs-tag">&lt;/<span class="hljs-name">plex-modal</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">plex-modal</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"sm"</span> [<span class="hljs-attr">allowClose</span>]=<span class="hljs-string">"true"</span> #<span class="hljs-attr">modal</span> (<span class="hljs-attr">closed</span>)=<span class="hljs-string">"notificarAccion(false)"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">plex-icon</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"alert-circle"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"success"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">plex-icon</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">plex-modal-title</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"success"</span>&gt;</span>Modal 25% ancho<span class="hljs-tag">&lt;/<span class="hljs-name">plex-modal-title</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">plex-modal-subtitle</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"success"</span>&gt;</span>Puede usarse como confirm<span class="hljs-tag">&lt;/<span class="hljs-name">plex-modal-subtitle</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">main</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">plex-title</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"sm"</span> <span class="hljs-attr">titulo</span>=<span class="hljs-string">"Con mayor funcionalidad"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">plex-title</span>&gt;</span>
+                    Ya que además de permitir estilos
+                    <span class="hljs-tag">&lt;<span class="hljs-name">u</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-warning hover"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"tengo complejos"</span>&gt;</span>más complejos<span class="hljs-tag">&lt;/<span class="hljs-name">u</span>&gt;</span>, puede<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+                    contener formularios y otros componentes
+                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-2"</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span>
+                            Este modal se puede cerrar con la tecla ESC, con la cruz en la esquina superior derecha, o
+                            haciendo click fuera del mismo.
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">main</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">plex-button</span> <span class="hljs-attr">modal</span> <span class="hljs-attr">center</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"success"</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">"closeModal(2)"</span>&gt;</span>
+                ACEPTAR
+            <span class="hljs-tag">&lt;/<span class="hljs-name">plex-button</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">plex-modal</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">plex-modal</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"lg"</span> #<span class="hljs-attr">modal</span> [<span class="hljs-attr">startOpen</span>]=<span class="hljs-string">"false"</span> (<span class="hljs-attr">closed</span>)=<span class="hljs-string">"notificarAccion(false)"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">plex-modal-title</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"info"</span>&gt;</span>Modal 80% ancho<span class="hljs-tag">&lt;/<span class="hljs-name">plex-modal-title</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">main</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">plex-text</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Escriba el informe"</span> [(<span class="hljs-attr">ngModel</span>)]=<span class="hljs-string">"contenido"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"contenido2"</span> [<span class="hljs-attr">html</span>]=<span class="hljs-string">"true"</span>
+                           [<span class="hljs-attr">height</span>]=<span class="hljs-string">"'50vh'"</span> [<span class="hljs-attr">readonly</span>]=<span class="hljs-string">"false"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"w-100"</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">plex-text</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">main</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">plex-button</span> <span class="hljs-attr">modal</span> <span class="hljs-attr">left</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"danger"</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">"closeModal(3)"</span>&gt;</span>
+                CANCELAR
+            <span class="hljs-tag">&lt;/<span class="hljs-name">plex-button</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">plex-button</span> <span class="hljs-attr">modal</span> <span class="hljs-attr">right</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"success"</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">"closeModal(3)"</span>&gt;</span>
+                ACEPTAR
+            <span class="hljs-tag">&lt;/<span class="hljs-name">plex-button</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">plex-modal</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;/<span class="hljs-name">plex-layout-main</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">plex-layout</span>&gt;</span>

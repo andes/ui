@@ -169,6 +169,11 @@ const DOCS: DocCategory[] = [
         id: 'plex-wrapper',
         name: 'Wrapper',
         examples: []
+      },
+      {
+        id: 'plex-grid',
+        name: 'Grid',
+        examples: []
       }
     ]
   },
