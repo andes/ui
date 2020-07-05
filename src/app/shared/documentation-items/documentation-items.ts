@@ -192,23 +192,28 @@ const DOCS: DocCategory[] = [
                 examples: []
             },
             {
-                id: 'justify',
-                name: 'Justify',
-                examples: []
-            },
-            {
                 id: 'hint',
                 name: 'Hint',
                 examples: []
             },
             {
-                id: 'tooltip',
-                name: 'Tooltip',
+                id: 'justify',
+                name: 'Justify',
                 examples: []
             },
             {
                 id: 'responsive',
                 name: 'Responsive',
+                examples: []
+            },
+            {
+                id: 'span',
+                name: 'Span',
+                examples: []
+            },
+            {
+                id: 'tooltip',
+                name: 'Tooltip',
                 examples: []
             },
         ]
