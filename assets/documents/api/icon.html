@@ -3,7 +3,7 @@
     <p>
         <code>
             <pre>
-    &#x3C;plex-icon prefix=&#x22;adi&#x22; name=&#x22;hospital&#x22;&#x3E;&#x3C;/plex-icon&#x3E;
+    &#x3C;plex-icon name=&#x22;hospital&#x22; type=&#x22;info&#x22; size=&#x22;md&#x22;&#x3E;&#x3C;/plex-icon&#x3E;
             </pre>
         </code>
     </p>
@@ -33,33 +33,35 @@
                 <p class="docs-api-property-name"><code>name: string</code></p>
             </td>
             <td class="docs-api-property-description">
-                <p>Nombre del icono tanto de Material Design Icons (MDI) como de Andes Font (ADI)</p>
+                <p>Nombre del icono de <a href="https://github.com/andes/andes-font-icon">Andes Font (ADI)</a></p>
             </td>
         <tr class="docs-api-properties-row">
             <td class="docs-api-properties-name-cell">
                 <div class="docs-api-input-marker">@Input()</div>
-                <p class="docs-api-property-name"><code>prefix: string</code></p>
+                <p class="docs-api-property-name"><code>prefix: 'adi' | 'mdi' (deprecated)</code></p>
             </td>
             <td class="docs-api-property-description">
-                <p>Establece el prefijo del sistema de iconos a utilizar (MDI o ADI)</p>
+                <p>Establece el prefijo del sistema de iconos a utilizar (MDI o ADI). <br>
+                    Su valor por defecto es 'adi'</p>
             </td>
         </tr>
         <tr class="docs-api-properties-row">
             <td class="docs-api-properties-name-cell">
                 <div class="docs-api-input-marker">@Input()</div>
-                <p class="docs-api-property-name"><code>type: string</code></p>
+                <p class="docs-api-property-name">
+                    <code>type: 'light' | 'dark' | 'success' | 'info' | 'warning' | 'danger' | 'default'</code></p>
             </td>
             <td class="docs-api-property-description">
-                <p>Especifica la tipología, y por ende, el color que adquiere el componente. Los valores: 'success' |
-                    'info' | 'warning' | 'danger' | 'primary'.</p>
+                <p>Especifica la tipología, y por ende, el color que adquiere el componente.<br>
+                    Su valor por defecto es 'dark'</p>
             </td>
         <tr class="docs-api-properties-row">
             <td class="docs-api-properties-name-cell">
                 <div class="docs-api-input-marker">@Input()</div>
-                <p class="docs-api-property-name"><code>size: string</code></p>
+                <p class="docs-api-property-name"><code>size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl'</code></p>
             </td>
             <td class="docs-api-property-description">
-                <p>Los valores que se pueden asignar son: '18' | '24' | '36' | '48'.</p>
+                <p>Su valor por defecto es 'sm'</p>
             </td>
         </tr>
     </table>
