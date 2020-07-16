@@ -32,7 +32,7 @@
 
     <span class="hljs-comment">// public listadoPaciente: Paciente[];</span>
     pacientes$: Observable&lt;Paciente[]&gt;;
-    selectedId: <span class="hljs-built_in">Number</span>;
+    foco = <span class="hljs-string">'main'</span>;
     <span class="hljs-keyword">public</span> prueba = <span class="hljs-string">''</span>;
     <span class="hljs-keyword">public</span> cambio = <span class="hljs-string">''</span>;
     <span class="hljs-keyword">constructor</span>(<span class="hljs-params">
@@ -41,15 +41,8 @@
         <span class="hljs-keyword">private</span> plex: Plex
     </span>) { }
 
+
     ngOnInit() {
-        <span class="hljs-keyword">this</span>.pacientes$ = <span class="hljs-keyword">this</span>.route.paramMap.pipe(
-            switchMap(<span class="hljs-function"><span class="hljs-params">params</span> =&gt;</span> {
-                <span class="hljs-keyword">this</span>.selectedId = +params.get(<span class="hljs-string">'id'</span>);
-                <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.pacienteService.getPacientes();
-            })
-        );
-
-
         <span class="hljs-comment">// plex-datetime</span>
         <span class="hljs-keyword">this</span>.tModel = {
             fechaHora: <span class="hljs-literal">null</span>,
