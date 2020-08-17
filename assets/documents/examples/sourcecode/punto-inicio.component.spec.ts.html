@@ -1,0 +1,25 @@
+<span class="hljs-keyword">import</span> { <span class="hljs-keyword">async</span>, ComponentFixture, TestBed } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core/testing'</span>;
+
+<span class="hljs-keyword">import</span> { PuntoInicioComponent } <span class="hljs-keyword">from</span> <span class="hljs-string">'./punto-inicio.component'</span>;
+
+describe(<span class="hljs-string">'PuntoInicioComponent'</span>, <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+  <span class="hljs-keyword">let</span> component: PuntoInicioComponent;
+  <span class="hljs-keyword">let</span> fixture: ComponentFixture&lt;PuntoInicioComponent&gt;;
+
+  beforeEach(<span class="hljs-keyword">async</span>(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+    TestBed.configureTestingModule({
+      declarations: [ PuntoInicioComponent ]
+    })
+    .compileComponents();
+  }));
+
+  beforeEach(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+    fixture = TestBed.createComponent(PuntoInicioComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it(<span class="hljs-string">'should create'</span>, <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+    expect(component).toBeTruthy();
+  });
+});
