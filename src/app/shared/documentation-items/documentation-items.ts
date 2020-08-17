@@ -59,6 +59,11 @@ const DOCS: DocCategory[] = [
                 name: 'Sin footer',
                 examples: []
             },
+            {
+                id: 'layout-responsive',
+                name: 'Layout responsive',
+                examples: []
+            }
         ]
     },
     {
@@ -216,6 +221,11 @@ const DOCS: DocCategory[] = [
                 name: 'Tooltip',
                 examples: []
             },
+            {
+                id: 'pltab',
+                name: 'plTab',
+                examples: []
+            }
         ]
     },
     {

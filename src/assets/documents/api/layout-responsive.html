@@ -1,0 +1,50 @@
+<div class="docs-api">
+    <h2>plex-layout responsive: estático</h2>
+    <table>
+        <td class="docs-api-property-description">
+            <xmp class="andes-wrap">
+                <plex-layout main="8">
+                    <plex-layout-main>
+                        ...
+                    </plex-layout-main>
+                    <plex-layout-sidebar>
+                        ...
+                    </plex-layout-sidebar>
+                </plex-layout>
+            </xmp>
+        </td>
+    </table>
+
+    <h2>plex-layout responsive: manual</h2>
+    <table>
+        <td class="docs-api-property-description">
+            <xmp class="andes-wrap">
+                <plex-layout main="8" foco="main">
+                    ....
+                </plex-layout>
+
+                <plex-layout main="8" foco="sidebar">
+                    ....
+                </plex-layout>
+            </xmp>
+        </td>
+    </table>
+
+    <h2>plex-layout responsive: automático</h2>
+    <table>
+        <td class="docs-api-property-description">
+            <xmp class="andes-wrap">
+                <plex-layout aspect="8">
+                    <plex-layout-main>
+                        ....
+                    </plex-layout-main>
+                    <plex-layout-sidebar>
+
+                        <router-outlet>
+
+                    </plex-layout-sidebar>
+                </plex-layout>
+            </xmp>
+        </td>
+    </table>
+</div>
