@@ -1,0 +1,50 @@
+<span class="hljs-keyword">import</span> { Component, OnInit } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+
+<span class="hljs-meta">@Component</span>({
+    selector: <span class="hljs-string">'plex-datos-notas'</span>,
+    templateUrl: <span class="hljs-string">'./datos-notas.component.html'</span>,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> DatosNotasComponent <span class="hljs-keyword">implements</span> OnInit {
+
+    <span class="hljs-keyword">public</span> templateModel1: <span class="hljs-built_in">any</span>;
+    <span class="hljs-keyword">public</span> templateModel2: <span class="hljs-built_in">any</span>;
+    <span class="hljs-keyword">public</span> nuevaNota = <span class="hljs-literal">false</span>;
+
+    <span class="hljs-keyword">constructor</span>(<span class="hljs-params">
+    </span>) { }
+
+    ngOnInit() {
+        <span class="hljs-comment">// plex-text</span>
+        <span class="hljs-keyword">this</span>.templateModel2 = { nombre: <span class="hljs-literal">null</span>, min: <span class="hljs-number">8</span>, max: <span class="hljs-number">8</span> };
+    }
+
+    onFocus() {
+        <span class="hljs-keyword">this</span>.templateModel1.usuario = <span class="hljs-string">'FOCUSED'</span>;
+    }
+
+    agregarNota() {
+        <span class="hljs-keyword">this</span>.nuevaNota = !<span class="hljs-keyword">this</span>.nuevaNota;
+    }
+
+    notas = [
+        {
+            fecha: <span class="hljs-string">'07/03/2008'</span>,
+            titulo: <span class="hljs-string">'titulo de nota'</span>,
+            nota: <span class="hljs-string">'Este es el texto de la nota que puede superar las dos lineas de texto, por esto se agrega la propiedad "multilinea" al input de carga de notas'</span>,
+            destacada: <span class="hljs-literal">false</span>,
+        },
+        {
+            fecha: <span class="hljs-string">'21/11/2012'</span>,
+            titulo: <span class="hljs-string">'titulo de nota'</span>,
+            nota: <span class="hljs-string">'Pellentesque eleifend, lorem in vestibulum bibendum volutpat massa a ultricies. In sed vestibulum lorem. Vivamus sit amet posuere massa.'</span>,
+            destacada: <span class="hljs-literal">false</span>,
+        },
+        {
+            fecha: <span class="hljs-string">'23/09/2017'</span>,
+            titulo: <span class="hljs-string">'titulo de nota'</span>,
+            nota: <span class="hljs-string">'Nunc elementum libero non libero interdum, id varius tortor pharetra. Morbi semper, metus a ultrices condimentum, diam arcu dictum ligula, a euismod neque mauris eget lacus. Donec porttitor quam nisi, at aliquam sem rhoncus vel. Duis ullamcorper nisl a sapien auctor'</span>,
+            destacada: <span class="hljs-literal">true</span>,
+        },
+    ];
+
+}

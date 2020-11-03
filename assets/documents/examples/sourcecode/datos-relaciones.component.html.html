@@ -1,0 +1,50 @@
+<span class="hljs-tag">&lt;<span class="hljs-name">plex-title</span> <span class="hljs-attr">titulo</span>=<span class="hljs-string">"Relaciones existentes"</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"sm"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">plex-button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"info"</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"sm"</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">"agregarRelacion()"</span>&gt;</span>agregar relación<span class="hljs-tag">&lt;/<span class="hljs-name">plex-button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">plex-title</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">plex-wrapper</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">"nuevaRelacion === true"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">plex-text</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Buscar relación de paciente"</span> <span class="hljs-attr">grow</span>=<span class="hljs-string">"full"</span>
+               <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Escanee un documento digital, o escriba un documento / apellido / nombre"</span>
+               [(<span class="hljs-attr">ngModel</span>)]=<span class="hljs-string">"templateModel2.nombre"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"nombre"</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">plex-text</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">plex-title</span> <span class="hljs-attr">grow</span>=<span class="hljs-string">"full"</span> <span class="hljs-attr">titulo</span>=<span class="hljs-string">"Resultado"</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"sm"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">plex-title</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- Resultado de busqueda al agregar relacion --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">plex-list</span> <span class="hljs-attr">grow</span>=<span class="hljs-string">"full"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">plex-item</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let paciente of pacientes$ | async | slice:5"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"{{ paciente.foto }}"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">plex-label</span> <span class="hljs-attr">titulo</span>=<span class="hljs-string">"{{ paciente.nombre }} {{ paciente.apellido }}"</span> <span class="hljs-attr">subtitulo</span>=<span class="hljs-string">"{{ paciente.documento }}"</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">plex-label</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">plex-label</span> <span class="hljs-attr">titulo</span>=<span class="hljs-string">"{{ paciente.edad }} Años"</span> <span class="hljs-attr">subtitulo</span>=<span class="hljs-string">"{{ paciente.fechaNacimiento }}"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">plex-label</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">plex-badge</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"info"</span>&gt;</span>{{ paciente.sexo }}
+            <span class="hljs-tag">&lt;/<span class="hljs-name">plex-badge</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">plex-badge</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"info"</span>&gt;</span>{{ paciente.relaciones }}
+            <span class="hljs-tag">&lt;/<span class="hljs-name">plex-badge</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">plex-badge</span> <span class="hljs-attr">type</span>=<span class="hljs-string">""</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span>
+                        [<span class="hljs-attr">ngClass</span>]=<span class="hljs-string">"{'text-success' : paciente.estado === 'validado' , 'text-warning' : paciente.estado === 'temporal'} "</span>&gt;</span>
+                {{ paciente.estado }}
+            <span class="hljs-tag">&lt;/<span class="hljs-name">plex-badge</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">plex-button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"danger"</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"sm"</span> <span class="hljs-attr">icon</span>=<span class="hljs-string">"close"</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">plex-button</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">plex-item</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">plex-list</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">plex-wrapper</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- Relaciones existentes --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">plex-list</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">plex-item</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let paciente of pacientes$ | async"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"{{ paciente.foto }}"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">plex-label</span> <span class="hljs-attr">titulo</span>=<span class="hljs-string">"{{ paciente.nombre }} {{ paciente.apellido }}"</span> <span class="hljs-attr">subtitulo</span>=<span class="hljs-string">"{{ paciente.documento }}"</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">plex-label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">plex-label</span> <span class="hljs-attr">titulo</span>=<span class="hljs-string">"{{ paciente.edad }} Años"</span> <span class="hljs-attr">subtitulo</span>=<span class="hljs-string">"{{ paciente.fechaNacimiento }}"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">plex-label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">plex-badge</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"info"</span>&gt;</span>{{ paciente.sexo }}
+        <span class="hljs-tag">&lt;/<span class="hljs-name">plex-badge</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">plex-badge</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"info"</span>&gt;</span>{{ paciente.relaciones }}
+        <span class="hljs-tag">&lt;/<span class="hljs-name">plex-badge</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">plex-badge</span> <span class="hljs-attr">type</span>=<span class="hljs-string">""</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span>
+                    [<span class="hljs-attr">ngClass</span>]=<span class="hljs-string">"{'text-success' : paciente.estado === 'validado' , 'text-warning' : paciente.estado === 'temporal'} "</span>&gt;</span>
+            {{ paciente.estado }}
+        <span class="hljs-tag">&lt;/<span class="hljs-name">plex-badge</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">plex-button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"danger"</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"sm"</span> <span class="hljs-attr">icon</span>=<span class="hljs-string">"close"</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">plex-button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">plex-item</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">plex-list</span>&gt;</span>

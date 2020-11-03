@@ -1,20 +1,25 @@
-<span class="hljs-keyword">import</span> { Component, OnInit, ContentChild } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
-<span class="hljs-keyword">import</span> { PacienteService } <span class="hljs-keyword">from</span> <span class="hljs-string">'../../../service/paciente.service'</span>;
-<span class="hljs-keyword">import</span> { Paciente } <span class="hljs-keyword">from</span> <span class="hljs-string">'../../../service/paciente'</span>;
+<span class="hljs-keyword">import</span> { Component, OnInit, Output, EventEmitter } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> { PacienteService } <span class="hljs-keyword">from</span> <span class="hljs-string">'../../../../service/paciente.service'</span>;
+<span class="hljs-keyword">import</span> { Paciente } <span class="hljs-keyword">from</span> <span class="hljs-string">'../../../../service/paciente'</span>;
 <span class="hljs-keyword">import</span> { Router, ActivatedRoute, ParamMap } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/router'</span>;
 <span class="hljs-keyword">import</span> { Observable } <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs'</span>;
 <span class="hljs-keyword">import</span> { switchMap } <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs/operators'</span>;
-<span class="hljs-keyword">import</span> { PlexOptionsComponent } <span class="hljs-keyword">from</span> <span class="hljs-string">'../../../../../../lib/options/options.component'</span>;
 
 <span class="hljs-meta">@Component</span>({
-    selector: <span class="hljs-string">'plex-sidebar-detalle'</span>,
-    templateUrl: <span class="hljs-string">'./sidebar-detalle.component.html'</span>,
+    selector: <span class="hljs-string">'plex-mpi-sidebar-detalle'</span>,
+    templateUrl: <span class="hljs-string">'./mpi-detalle.component.html'</span>,
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> SidebarDetalleComponent <span class="hljs-keyword">implements</span> OnInit {
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> MpiDetalleComponent <span class="hljs-keyword">implements</span> OnInit {
 
-    <span class="hljs-meta">@ContentChild</span>(PlexOptionsComponent, { <span class="hljs-keyword">static</span>: <span class="hljs-literal">true</span> }) plexOptions: PlexOptionsComponent;
+    sidebar = <span class="hljs-number">12</span>;
+    <span class="hljs-meta">@Output</span>() cerrar = <span class="hljs-keyword">new</span> EventEmitter&lt;<span class="hljs-built_in">number</span>&gt;();
+
+    cerrarSidebar() {
+        <span class="hljs-keyword">this</span>.cerrar.emit(<span class="hljs-keyword">this</span>.sidebar);
+    }
 
     <span class="hljs-keyword">public</span> listadoPaciente: Paciente[];
+    pacientes$: Observable&lt;Paciente[]&gt;;
     paciente$: Observable&lt;Paciente&gt;;
     <span class="hljs-keyword">public</span> items = [
         {
@@ -30,8 +35,6 @@
             key: <span class="hljs-string">'3'</span>,
         }
     ];
-    <span class="hljs-keyword">public</span> viewOptions = <span class="hljs-literal">true</span>;
-    <span class="hljs-keyword">public</span> selectedOption = <span class="hljs-string">'1'</span>;
 
     <span class="hljs-keyword">constructor</span>(<span class="hljs-params">
         <span class="hljs-keyword">private</span> pacienteService: PacienteService,
@@ -68,6 +71,7 @@
     ];
 
     ngOnInit() {
+        <span class="hljs-keyword">this</span>.pacientes$ = <span class="hljs-keyword">this</span>.pacienteService.getPacientes();
 
         <span class="hljs-keyword">this</span>.paciente$ = <span class="hljs-keyword">this</span>.route.paramMap.pipe(
             switchMap(<span class="hljs-function">(<span class="hljs-params">params: ParamMap</span>) =&gt;</span>
@@ -77,22 +81,6 @@
 
     gotoPacientes(paciente: Paciente) {
         <span class="hljs-keyword">const</span> pacienteId = paciente ? paciente.id : <span class="hljs-literal">null</span>;
-        <span class="hljs-keyword">this</span>.router.navigate([<span class="hljs-string">'/listado-sidebar'</span>, { id: pacienteId, foo: <span class="hljs-string">'foo'</span> }]);
-    }
-
-    toggleItems() {
-        <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.items.length === <span class="hljs-number">2</span>) {
-            <span class="hljs-keyword">this</span>.items.push({ label: <span class="hljs-string">'opcion 3'</span>, key: <span class="hljs-string">'3'</span> });
-        } <span class="hljs-keyword">else</span> {
-            <span class="hljs-keyword">this</span>.items = <span class="hljs-keyword">this</span>.items.filter(<span class="hljs-function"><span class="hljs-params">item</span> =&gt;</span> item.key !== <span class="hljs-string">'3'</span>);
-            <span class="hljs-keyword">this</span>.items = [
-                { label: <span class="hljs-string">'otras 1'</span>, key: <span class="hljs-string">'7'</span> },
-                { label: <span class="hljs-string">'otas 2'</span>, key: <span class="hljs-string">'8'</span> },
-            ];
-        }
-    }
-
-    onActiveOption(opcion) {
-        <span class="hljs-keyword">this</span>.selectedOption = opcion;
+        <span class="hljs-keyword">this</span>.router.navigate([<span class="hljs-string">'/listado-sidebar'</span>, { id: pacienteId }]);
     }
 }

@@ -1,0 +1,24 @@
+<span class="hljs-tag">&lt;<span class="hljs-name">plex-layout</span> <span class="hljs-attr">main</span>=<span class="hljs-string">"{{ sidebar }}"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">plex-layout-main</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">header</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">plex-title</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"lg"</span> <span class="hljs-attr">titulo</span>=<span class="hljs-string">"Busqueda de pacientes"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">plex-button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"danger"</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"md"</span> <span class="hljs-attr">routerLink</span>=<span class="hljs-string">"/templates"</span>&gt;</span>Volver<span class="hljs-tag">&lt;/<span class="hljs-name">plex-button</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">plex-title</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">plex-wrapper</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">plex-text</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Buscar paciente"</span>
+                       <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Escanee un documento digital, o escriba un documento / apellido / nombre"</span>
+                       [(<span class="hljs-attr">ngModel</span>)]=<span class="hljs-string">"templateModel2.nombre"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"nombre"</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">plex-text</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">plex-button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"info"</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"md"</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">"goToAlta()"</span>&gt;</span>Nuevo paciente<span class="hljs-tag">&lt;/<span class="hljs-name">plex-button</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">plex-wrapper</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">plex-mpi-listado</span> (<span class="hljs-attr">enviar</span>)=<span class="hljs-string">"recibirSidebar($event)"</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;/<span class="hljs-name">plex-mpi-listado</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">plex-layout-main</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">plex-layout-sidebar</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"invert"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">router-outlet</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">router-outlet</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">plex-layout-sidebar</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">plex-layout</span>&gt;</span>

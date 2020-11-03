@@ -58,6 +58,9 @@
                     <span class="hljs-tag">&lt;<span class="hljs-name">form</span> #<span class="hljs-attr">formulario</span>=<span class="hljs-string">"ngForm"</span> (<span class="hljs-attr">close</span>)=<span class="hljs-string">"notificarAccion(false)"</span>&gt;</span>
                         <span class="hljs-tag">&lt;<span class="hljs-name">plex-radio</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"motivos"</span> [(<span class="hljs-attr">ngModel</span>)]=<span class="hljs-string">"motivoSelected"</span> [<span class="hljs-attr">data</span>]=<span class="hljs-string">"motivosAccesoHuds"</span>&gt;</span>
                         <span class="hljs-tag">&lt;/<span class="hljs-name">plex-radio</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">plex-text</span> <span class="hljs-attr">email</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"email"</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Ingrese su email"</span> [(<span class="hljs-attr">ngModel</span>)]=<span class="hljs-string">"email"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"email"</span>
+                                   <span class="hljs-attr">prefix</span>=<span class="hljs-string">"email"</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">plex-text</span>&gt;</span>
                     <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
                 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">main</span>&gt;</span>
@@ -149,7 +152,7 @@
         <span class="hljs-tag">&lt;/<span class="hljs-name">plex-modal</span>&gt;</span>
 
         <span class="hljs-tag">&lt;<span class="hljs-name">plex-modal</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"lg"</span> #<span class="hljs-attr">modal</span> [<span class="hljs-attr">startOpen</span>]=<span class="hljs-string">"false"</span> (<span class="hljs-attr">closed</span>)=<span class="hljs-string">"notificarAccion(false)"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">plex-modal-title</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"info"</span>&gt;</span>Modal 80% ancho<span class="hljs-tag">&lt;/<span class="hljs-name">plex-modal-title</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">plex-modal-title</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"info"</span>&gt;</span>Modal 80% ancho, sin ícono<span class="hljs-tag">&lt;/<span class="hljs-name">plex-modal-title</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">main</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">plex-text</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Escriba el informe"</span> [(<span class="hljs-attr">ngModel</span>)]=<span class="hljs-string">"contenido"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"contenido2"</span> [<span class="hljs-attr">html</span>]=<span class="hljs-string">"true"</span>
                            [<span class="hljs-attr">height</span>]=<span class="hljs-string">"'50vh'"</span> [<span class="hljs-attr">readonly</span>]=<span class="hljs-string">"false"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"w-100"</span>&gt;</span>
