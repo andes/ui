@@ -1,0 +1,27 @@
+<div class="docs-api">
+    <h2>Plex List</h2>
+    <p>Para más información dirigirse a <a href="https://www.andes.gob.ar/plex/doc/components/PlexTableComponent.html"
+           target="_blank">PlexTableComponent</a>
+    </p>
+    <code>
+        <pre>
+            &lt;plex-table [columns]="columns" #table="plTable" #table="plTable"&gt;
+                &lt;plex-title titulo="Tabla de ejemplo"&gt;
+                &lt;plex-table-columns [selected]="colsVisibles"&gt;
+                &lt;/plex-table-columns&gt;
+                &lt;/plex-title&gt;
+                &lt;plex-item [selected]="item.selected"&gt;
+                    &lt;li *plTableCol="'col-1'"&gt;&lt;/li&gt;
+                    &lt;li *plTableCol="'col-2'"&gt;&lt;/li&gt;
+                    &lt;li *plTableCol="'col-3'"&gt;&lt;/li&gt;
+                    &lt;li *plTableCol="'col-4'"&gt;&lt;/li&gt;
+                    &lt;li *plTableCol="'col-5'"&gt;&lt;/li&gt;
+                    &lt;li *plTableCol="'col-6'"&gt;&lt;
+                    &lt;plex-badge type="info">{{ item.fecha | date}}&lt;/plex-badge&gt;
+                    &lt;plex-button type="warning" icon="pencil" size="sm"&gt;&lt;/plex-button&gt;
+                    &lt;/li&gt;
+                &lt;/plex-item&gt;
+            &lt;/plex-table&gt;
+        </pre>
+    </code>
+</div>

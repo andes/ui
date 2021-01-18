@@ -1,7 +1,7 @@
-<span class="hljs-keyword">import</span> { Component, OnInit } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> { Component, OnInit, Input } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
 <span class="hljs-keyword">import</span> { PacienteService } <span class="hljs-keyword">from</span> <span class="hljs-string">'../../../service/paciente.service'</span>;
 <span class="hljs-keyword">import</span> { Paciente } <span class="hljs-keyword">from</span> <span class="hljs-string">'../../../service/paciente'</span>;
-<span class="hljs-keyword">import</span> { Observable } <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs'</span>;
+<span class="hljs-keyword">import</span> { Observable, of } <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs'</span>;
 <span class="hljs-keyword">import</span> { ActivatedRoute, Router } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/router'</span>;
 <span class="hljs-keyword">import</span> { switchMap } <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs/operators'</span>;
 
@@ -30,4 +30,68 @@
         <span class="hljs-keyword">this</span>.selectedId = paciente.id;
         <span class="hljs-keyword">this</span>.router.navigate([<span class="hljs-string">'templates'</span>, <span class="hljs-string">'listado-sidebar'</span>, <span class="hljs-keyword">this</span>.selectedId]);
     }
+
+    colsVisibles = {
+        <span class="hljs-string">'col-1'</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-string">'col-2'</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-string">'col-3'</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-string">'col-4'</span>: <span class="hljs-literal">false</span>,
+        <span class="hljs-string">'col-5'</span>: <span class="hljs-literal">true</span>,
+    };
+
+    <span class="hljs-comment">// Permite :hover y click()</span>
+    <span class="hljs-meta">@Input</span>() selectable = <span class="hljs-literal">true</span>;
+
+    <span class="hljs-comment">// Muestra efecto de selección</span>
+    <span class="hljs-comment">//@Input() selected = false;</span>
+
+    <span class="hljs-keyword">public</span> sortBy: <span class="hljs-built_in">string</span>;
+    <span class="hljs-keyword">public</span> sortOrder = <span class="hljs-string">'desc'</span>;
+    botonera = <span class="hljs-literal">true</span>;
+
+    <span class="hljs-keyword">public</span> columns = [
+        {
+            key: <span class="hljs-string">'col-1'</span>,
+            label: <span class="hljs-string">'columna 1'</span>,
+            sorteable: <span class="hljs-literal">true</span>,
+            opcional: <span class="hljs-literal">true</span>,
+            sort: <span class="hljs-function">(<span class="hljs-params">a: <span class="hljs-built_in">any</span>, b: <span class="hljs-built_in">any</span></span>) =&gt;</span> a.foto.localeCompare(b.foto)
+        },
+        {
+            key: <span class="hljs-string">'col-2'</span>,
+            label: <span class="hljs-string">'columna 2'</span>,
+            sorteable: <span class="hljs-literal">true</span>,
+            opcional: <span class="hljs-literal">true</span>,
+            sort: <span class="hljs-function">(<span class="hljs-params">a: <span class="hljs-built_in">any</span>, b: <span class="hljs-built_in">any</span></span>) =&gt;</span> a.nombre.localeCompare(b.nombre)
+        },
+        {
+            key: <span class="hljs-string">'col-3'</span>,
+            label: <span class="hljs-string">'columna 3'</span>,
+            sorteable: <span class="hljs-literal">true</span>,
+            opcional: <span class="hljs-literal">true</span>,
+            sort: <span class="hljs-function">(<span class="hljs-params">a: <span class="hljs-built_in">any</span>, b: <span class="hljs-built_in">any</span></span>) =&gt;</span> a.apellido.localeCompare(b.apellido)
+        },
+        {
+            key: <span class="hljs-string">'col-4'</span>,
+            label: <span class="hljs-string">'columna 4'</span>,
+            sorteable: <span class="hljs-literal">true</span>,
+            opcional: <span class="hljs-literal">true</span>,
+            sort: <span class="hljs-function">(<span class="hljs-params">a: <span class="hljs-built_in">any</span>, b: <span class="hljs-built_in">any</span></span>) =&gt;</span> a.documento.localeCompare(b.documento)
+        },
+        <span class="hljs-comment">//{</span>
+        <span class="hljs-comment">//    key: 'col-4',</span>
+        <span class="hljs-comment">//    label: 'columna 4',</span>
+        <span class="hljs-comment">//    sorteable: true,</span>
+        <span class="hljs-comment">//    opcional: true,</span>
+        <span class="hljs-comment">//    sort: (a: any, b: any) =&gt; a.fecha.getTime() - b.fecha.getTime()</span>
+        <span class="hljs-comment">//},</span>
+        {
+            key: <span class="hljs-string">'col-5'</span>,
+            label: <span class="hljs-string">'columna 5'</span>,
+            sorteable: <span class="hljs-literal">true</span>,
+            opcional: <span class="hljs-literal">true</span>,
+            sort: <span class="hljs-function">(<span class="hljs-params">a: <span class="hljs-built_in">any</span>, b: <span class="hljs-built_in">any</span></span>) =&gt;</span> a.estado.localeCompare(b.estado),
+        },
+    ];
+
 }
