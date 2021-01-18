@@ -171,6 +171,11 @@ const DOCS: DocCategory[] = [
                 examples: []
             },
             {
+                id: 'plex-table',
+                name: 'Table',
+                examples: []
+            },
+            {
                 id: 'plex-visualizador',
                 name: 'Visualizador',
                 examples: []

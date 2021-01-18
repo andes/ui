@@ -1,0 +1,27 @@
+<div class="docs-api">
+    <h2>Plex List</h2>
+    <code>
+        <pre>
+            &lt;plex-table [columns]="columns" #table="plTable" #table="plTable"&gt;
+                &lt;plex-title titulo="Tabla de ejemplo"&gt;
+                &lt;plex-table-columns [selected]="colsVisibles"&gt;
+                &lt;/plex-table-columns&gt;
+                &lt;/plex-title&gt;
+                &lt;tr *ngFor="let item of (data$ | plSort:table | async)" [class.selected]="item.selected"
+                (click)="item.selected = !item.selected" [class.selectable]="selectable"&gt;
+                    &lt;td *plTableCol="'col-1'"&gt;{{item.nombre }}&lt;/td&gt;
+                    &lt;td *plTableCol="'col-2'"&gt;{{item.apellido }}&lt;/td&gt;
+                    &lt;td *plTableCol="'col-3'"&gt;{{item.documento }}&lt;/td&gt;
+                    &lt;td *plTableCol="'col-4'"&gt;{{item.ciudad }}&lt;/td&gt;
+                    &lt;td *plTableCol="'col-5'"&gt;&lt;
+                    &lt;plex-badge type="info">{{ item.fecha | date}}&lt;/plex-badge&gt;
+                    &lt;plex-button type="warning" icon="pencil" size="sm"&gt;&lt;/plex-button&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/plex-table&gt;
+        </pre>
+    </code>
+    <p>Para más información dirigirse a<a
+           href="https://www.andes.gob.ar/plex/doc/components/PlexTableComponent.html">PlexTableComponent</a>
+    </p>
+</div>

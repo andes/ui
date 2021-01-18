@@ -1,0 +1,66 @@
+<span class="hljs-keyword">import</span> { Component, OnInit } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> { PacienteService } <span class="hljs-keyword">from</span> <span class="hljs-string">'../../../../../service/paciente.service'</span>;
+<span class="hljs-keyword">import</span> { Paciente } <span class="hljs-keyword">from</span> <span class="hljs-string">'../../../../../service/paciente'</span>;
+<span class="hljs-keyword">import</span> { Observable } <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs'</span>;
+
+<span class="hljs-meta">@Component</span>({
+    selector: <span class="hljs-string">'plex-datos-relaciones'</span>,
+    templateUrl: <span class="hljs-string">'./datos-relaciones.component.html'</span>,
+})
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> DatosRelacionesComponent <span class="hljs-keyword">implements</span> OnInit {
+
+    pacientes$: Observable&lt;Paciente[]&gt;;
+    selectedId: <span class="hljs-built_in">string</span>;
+    <span class="hljs-keyword">public</span> modelo1 = { select: <span class="hljs-literal">null</span> };
+    <span class="hljs-keyword">public</span> templateModel2: <span class="hljs-built_in">any</span>;
+    <span class="hljs-keyword">public</span> opciones6 = [];
+    nuevaRelacion = <span class="hljs-literal">false</span>;
+
+    <span class="hljs-keyword">constructor</span>(<span class="hljs-params">
+        <span class="hljs-keyword">private</span> pacienteService: PacienteService,
+
+    </span>) { }
+
+    ngOnInit() {
+        <span class="hljs-keyword">this</span>.pacientes$ = <span class="hljs-keyword">this</span>.pacienteService.getPacientes();
+
+        <span class="hljs-comment">// relaciones</span>
+        <span class="hljs-keyword">this</span>.opciones6 = [{
+            id: <span class="hljs-number">1</span>,
+            nombre: <span class="hljs-string">'Abuelo/a'</span>,
+        },
+        {
+            id: <span class="hljs-number">2</span>,
+            nombre: <span class="hljs-string">'Hermano/a'</span>,
+        },
+        {
+            id: <span class="hljs-number">3</span>,
+            nombre: <span class="hljs-string">'Hijo/a"'</span>,
+        },
+        {
+            id: <span class="hljs-number">4</span>,
+            nombre: <span class="hljs-string">'Nieto/a"'</span>,
+        },
+        {
+            id: <span class="hljs-number">5</span>,
+            nombre: <span class="hljs-string">'Otro"'</span>,
+        },
+        {
+            id: <span class="hljs-number">6</span>,
+            nombre: <span class="hljs-string">'Progenito/a"'</span>,
+        },
+        {
+            id: <span class="hljs-number">7</span>,
+            nombre: <span class="hljs-string">'Tutor/a"'</span>,
+        }
+        ];
+
+        <span class="hljs-comment">// plex-text</span>
+        <span class="hljs-keyword">this</span>.templateModel2 = { nombre: <span class="hljs-literal">null</span>, min: <span class="hljs-number">8</span>, max: <span class="hljs-number">8</span> };
+    }
+
+    agregarRelacion() {
+        <span class="hljs-keyword">this</span>.nuevaRelacion = !<span class="hljs-keyword">this</span>.nuevaRelacion;
+    }
+}

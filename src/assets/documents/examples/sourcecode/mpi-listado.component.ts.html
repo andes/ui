@@ -1,0 +1,35 @@
+<span class="hljs-keyword">import</span> { Component, OnInit, Output, EventEmitter } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> { PacienteService } <span class="hljs-keyword">from</span> <span class="hljs-string">'../../../../service/paciente.service'</span>;
+<span class="hljs-keyword">import</span> { Paciente } <span class="hljs-keyword">from</span> <span class="hljs-string">'../../../../service/paciente'</span>;
+<span class="hljs-keyword">import</span> { Observable } <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs'</span>;
+<span class="hljs-keyword">import</span> { Router } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/router'</span>;
+
+<span class="hljs-meta">@Component</span>({
+    selector: <span class="hljs-string">'plex-mpi-listado'</span>,
+    templateUrl: <span class="hljs-string">'./mpi-listado.component.html'</span>,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> MpiListadoComponent <span class="hljs-keyword">implements</span> OnInit {
+    pacientes$: Observable&lt;Paciente[]&gt;;
+    selectedId: <span class="hljs-built_in">string</span>;
+
+
+    sidebar = <span class="hljs-number">8</span>;
+    <span class="hljs-meta">@Output</span>() enviar = <span class="hljs-keyword">new</span> EventEmitter&lt;<span class="hljs-built_in">number</span>&gt;();
+
+    <span class="hljs-keyword">constructor</span>(<span class="hljs-params">
+        <span class="hljs-keyword">private</span> pacienteService: PacienteService,
+        <span class="hljs-keyword">private</span> router: Router,
+    </span>) {
+
+    }
+    ngOnInit() {
+
+        <span class="hljs-keyword">this</span>.pacientes$ = <span class="hljs-keyword">this</span>.pacienteService.getPacientes();
+    }
+
+    selected(paciente) {
+        <span class="hljs-keyword">this</span>.selectedId = paciente.id;
+        <span class="hljs-keyword">this</span>.router.navigate([<span class="hljs-string">'templates'</span>, <span class="hljs-string">'mpi-maquetado'</span>, <span class="hljs-keyword">this</span>.selectedId]);
+        <span class="hljs-keyword">this</span>.enviar.emit(<span class="hljs-keyword">this</span>.sidebar);
+    }
+}
