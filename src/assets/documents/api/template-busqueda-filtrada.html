@@ -1,0 +1,21 @@
+<div class="docs-api">
+    <h2>Template búsqueda filtrada</h2>
+    <pre>
+        &#x3C;plex-grid type="full" size="lg"&#x3E;
+            &#x3C;plex-detail size=&#x22;md&#x22;&#x3E;
+                &#x3C;img src="{{ pacienteSelected | foto }}"&#47;&#x3E;
+                &#x3C;div title&#x3E;{{ pacienteSelected | nombre }}&#x3C;&#47;div&#x3E;
+                &#x3C;div subtitle&#x3E;{{ (pacienteSelected.documento | number) || 'Sin DNI'}}
+                    &#x3C;plex-button label=&#x22;buscar otro paciente&#x22; size=&#x22;sm&#x22;&#x3E;&#x3C;/plex-button&#x3E;
+                &#x3C;&#47;div&#x3E;
+             &#x3C;&#47;plex-detail&#x3E;
+            &#x3C;plex-wrapper&#x3E;
+                &#x3C;plex-text grow="auto" label="Número de ficha" name="ficha"&#x3E;&#x3C;/plex-text&#x3E;
+                &#x3C;plex-datetime grow="auto" label="Ingrese la fecha"&#x3E;&#x3C;/plex-datetime&#x3E;
+                &#x3C;plex-select grow="auto" label="Ingrese estado"&#x3E;{{ paciente.estado }}&#x3C;&#47;plex-select&#x3E;
+                &#x3C;plex-select grow="auto" label="Seleccione efector con nombre largo"&#x3E;&#x3C;/plex-select&#x3E;
+                &#x3C;plex-button label=&#x22;buscar ficha&#x22; type=&#x22;success&#x22; size=&#x22;md&#x22;&#x3E;&#x3C;/plex-button&#x3E;
+            &#x3C;&#47;plex-wrapper&#x3E;
+        &#x3C;&#47;plex-grid&#x3E;
+    </pre>
+</div>

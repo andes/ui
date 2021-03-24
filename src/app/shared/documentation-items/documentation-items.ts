@@ -278,6 +278,12 @@ const DOCS: DocCategory[] = [
                 },
                 ]
             },
+            {
+                id: 'template-busqueda-filtrada',
+                name: 'Búsqueda filtrada',
+                examples: [
+                ]
+            },
         ]
     },
 ];
